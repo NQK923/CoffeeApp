@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using DTO;
+using BLL;
 
 namespace GUI
 {
     public partial class ManagementAll : Form
 	{
+		private OrderBLL orderBLL = new OrderBLL();
+		private StaffBLL staffBLL = new StaffBLL();
+		private DrinkOrderBLL DrinkOrderBLL = new DrinkOrderBLL();
+		private ProductBLL productBLL = new ProductBLL();
 		public ManagementAll()
 		{
 			InitializeComponent();
@@ -15,21 +20,21 @@ namespace GUI
 			ShowStaffs();
 		}
 
-
         private void btnShowOrder_Click_1(object sender, EventArgs e)
 		{
+			
 			DateTime time = inputTimeShowOrder.Value;
 			TableShowOrder.Columns.Clear();
 			string option = optionShowOrder.Text.ToString();
 			if (option != "option")
 			{
-				List<Order> orders = GetOrders();
-				List<Order> filteredOrders = new List<Order>(); // Create a new list for filtered orders
+				List<OrderDTO> orders = orderBLL.GetOrders();
+				List<OrderDTO> filteredOrders = new List<OrderDTO>(); // Create a new list for filtered orders
 
 				if (option == "Date")
 				{
 					filteredOrders = orders.FindAll(order => order.DateTime.Date == time.Date
-						&& order.DateTime.Month == time.Month && order.DateTime.Year == time.Year);
+                        && order.DateTime.Month == time.Month && order.DateTime.Year == time.Year);
 				}
 				else if (option == "Month")
 				{
@@ -42,7 +47,7 @@ namespace GUI
 				}
 				else if (option == "All table")
 				{
-					filteredOrders = GetOrders();
+					filteredOrders = orderBLL.GetOrders();
 				}
 				TableShowOrder.DataSource = filteredOrders;
 				TableShowOrder.Columns.Remove("PointUse");
@@ -59,10 +64,10 @@ namespace GUI
 
 		private void btnCalculateRevenue_Click(object sender, EventArgs e)
 		{
-			List<Order> orders = new List<Order>();
-			orders = GetOrders();
+			List<OrderDTO> orders = new List<OrderDTO>();
+			orders = orderBLL.GetOrders();
 			int totalRevenue = 0;
-			foreach (Order order in orders)
+			foreach (OrderDTO order in orders)
 			{
 				totalRevenue += order.Total;
 			}
@@ -77,12 +82,12 @@ namespace GUI
 			}
 			else
 			{
-				Staff staff = new Staff();
+				StaffDTO staff = new StaffDTO();
 				staff.Salary = int.Parse(inputSalary.Text.ToString());
 				staff.Name = inputName.Text.ToString();
 				staff.Shift = inputShift.Text.ToString();
 				staff.UserId = int.Parse(inputUserId.Text.ToString());
-				CreateStaff(staff);
+				staffBLL.CreateStaff(staff);
 				ShowStaffs();
 			}
 
@@ -117,7 +122,7 @@ namespace GUI
 
 		private void btnCalculateProfit_Click(object sender, EventArgs e)
 		{
-			decimal profit = CalculateProfit();
+			decimal profit = DrinkOrderBLL.CalculateProfit();
 			labelProfit.Text = profit.ToString() + "VND";
 		}
 		private void btnUpdateStaff_Click(object sender, EventArgs e)
@@ -128,13 +133,13 @@ namespace GUI
 			}
 			else
 			{
-				Staff staff = new Staff();
+				StaffDTO staff = new StaffDTO();
 				staff.StaffId = int.Parse(inputStaffId.Text);
 				staff.Shift = inputShift.Text.ToString();
 				staff.Name = inputName.Text.ToString();
 				staff.UserId = int.Parse(inputUserId.Text.ToString());
 				staff.Salary = int.Parse(inputSalary.Text.ToString());
-				UpdateStaff(staff);
+				staffBLL.UpdateStaff(staff);
 				ShowStaffs();
 				
 			}
@@ -147,25 +152,23 @@ namespace GUI
 			}
 			else
 			{
-				DeleteStaff(int.Parse(inputStaffId.Text));
+				staffBLL.DeleteStaff(int.Parse(inputStaffId.Text));
 				ShowStaffs();
 				
 			}
-
-
 		}
 		public void ShowStaffs()
 		{
-			List<Staff> staff = new List<Staff>();
-			staff = GetAllStaff();
+			List<StaffDTO> staff = new List<StaffDTO>();
+			staff = staffBLL.GetAllStaff();
 			TableShowStaff.DataSource = staff;
 			TableShowStaff.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			TableShowStaff.Columns[4].HeaderText = "StoreId";
 		}
 		private void btnShowProduct_Click(object sender, EventArgs e)
 		{
-			List<Product> products = new List<Product>();
-			products = GetProducts();
+			List<ProductDTO> products = new List<ProductDTO>();
+			products = productBLL.GetProducts();
 			TableShowOrder.DataSource = products;
 			TableShowOrder.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			TableShowOrder.Columns[0].HeaderText = "ProductId";
@@ -177,16 +180,16 @@ namespace GUI
 		{
 			if (inputProductId.Text != "")
 			{
-				Product product = new Product();
+				ProductDTO product = new ProductDTO();
 				product.Cost = decimal.Parse(inputProductCost.Text);
 				product.DrinkName = inputProductName.Text.ToString();
 				product.Price = decimal.Parse(inputProductPrice.Text);
 				product.Provider = inputProductQuantity.Text.ToString();
 				product.DrinkId = int.Parse(inputProductId.Text);
-				UpdateDrink(product);
-				List<Product> products = new List<Product>();
+				productBLL.UpdateDrink(product);
+				List<ProductDTO> products = new List<ProductDTO>();
 
-				products = GetProducts();
+				products = productBLL.GetProducts();
 				TableShowOrder.DataSource = products;
 				TableShowOrder.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			}
@@ -216,37 +219,6 @@ namespace GUI
 			}
 		}
 		
-		public decimal CalculateProfit()
-		{
-			decimal totalProfit = 0;
-
-			using (SqlConnection connection = new SqlConnection(connectionString))
-			{
-				connection.Open();
-
-				// Retrieve data from the DrinkOrder table and join with the Drink table to get price and cost information
-				string query = "SELECT DO.DrinkOrderId, DO.DrinkId, DO.Quantity, D.Price, D.Cost FROM DrinkOrder DO " +
-							   "INNER JOIN Drink D ON DO.DrinkId = D.DrinkId";
-
-				using (SqlCommand command = new SqlCommand(query, connection))
-				using (SqlDataReader reader = command.ExecuteReader())
-				{
-					while (reader.Read())
-					{
-						int drinkOrderId = (int)reader["DrinkOrderId"];
-						int drinkId = (int)reader["DrinkId"];
-						int quantity = (int)reader["Quantity"];
-						decimal price = (decimal)reader["Price"];
-						decimal cost = (decimal)reader["Cost"];
-
-						decimal profit = (price - cost) * quantity;
-						totalProfit += profit;
-					}
-				}
-			}
-
-			return totalProfit;
-		}
 		public void AdditemtoComboBox()
 		{
 			inputShift.Items.Add("9h-12h");
@@ -260,64 +232,6 @@ namespace GUI
 			optionShowOrder.Items.Add("Month");
 			optionShowOrder.Items.Add("Year");
 			optionShowOrder.Items.Add("All Order");
-		}
-
-
-		
-
-		public List<Product> GetProducts()
-		{
-			List<Product> products = new List<Product>();
-
-			using (SqlConnection connection = new SqlConnection(connectionString))
-			{
-				connection.Open();
-
-				string query = "SELECT DrinkId, DrinkName, Price, Cost, Provider FROM Drink";
-
-				using (SqlCommand command = new SqlCommand(query, connection))
-				using (SqlDataReader reader = command.ExecuteReader())
-				{
-					while (reader.Read())
-					{
-						Product drink = new Product
-						{
-							DrinkId = reader.GetInt32(0),
-							DrinkName = reader.GetString(1),
-							Price = reader.GetDecimal(2),
-							Cost = reader.GetDecimal(3),
-							Provider = reader.GetString(4)
-						};
-
-						products.Add(drink);
-					}
-				}
-			}
-
-			return products;
-		}
-		public void UpdateDrink(Product product)
-		{
-			using (SqlConnection connection = new SqlConnection(connectionString))
-			{
-				connection.Open();
-
-				string query = "UPDATE Drink SET DrinkName = @DrinkName, Price = @Price, Cost = @Cost, Provider = @Provider WHERE DrinkId = @DrinkId";
-
-				using (SqlCommand command = new SqlCommand(query, connection))
-				{
-
-					command.Parameters.AddWithValue("@DrinkId", product.DrinkId);
-					command.Parameters.AddWithValue("@DrinkName", product.DrinkName);
-					command.Parameters.AddWithValue("@Price", product.Price);
-					command.Parameters.AddWithValue("@Cost", product.Cost);
-					command.Parameters.AddWithValue("@Provider", product.Provider);
-
-					command.ExecuteNonQuery();
-				}
-			}
-		}
-		
+		}	
 	}
-
 }

@@ -1,6 +1,9 @@
-﻿namespace GUI
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace GUI
 {
-    partial class SubMenu1
+    partial class SubMenu
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,11 +32,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubMenu1));
-            //Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubMenu));
             panel1 = new Panel();
-            //guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
+
             Menulabel = new Label();
             Hambutton = new PictureBox();
             sidebar = new FlowLayoutPanel();
@@ -150,7 +151,7 @@
             // 
             panel1.BackColor = Color.IndianRed;
             //panel1.Controls.Add(guna2ImageButton1);
-            panel1.Controls.Add(nightControlBox1);
+            
             panel1.Controls.Add(Menulabel);
             panel1.Controls.Add(Hambutton);
             panel1.Dock = DockStyle.Top;
@@ -158,43 +159,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1754, 93);
             panel1.TabIndex = 0;
-            // 
-            // guna2ImageButton1
-            // 
-            //guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
-            //guna2ImageButton1.HoverState.ImageSize = new Size(64, 64);
-            ///guna2ImageButton1.Image = (Image)resources.GetObject("guna2ImageButton1.Image");
-            //guna2ImageButton1.ImageOffset = new Point(0, 0);
-            //guna2ImageButton1.ImageRotate = 0F;
-            //guna2ImageButton1.Location = new Point(1223, 72);
-            //guna2ImageButton1.Name = "guna2ImageButton1";
-            //guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
-            //guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            //guna2ImageButton1.Size = new Size(96, 81);
-            //guna2ImageButton1.TabIndex = 3;
-            // 
-            // nightControlBox1
-            // 
-            nightControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            nightControlBox1.BackColor = Color.Transparent;
-            nightControlBox1.CloseHoverColor = Color.FromArgb(199, 80, 80);
-            nightControlBox1.CloseHoverForeColor = Color.White;
-            nightControlBox1.DefaultLocation = true;
-            nightControlBox1.DisableMaximizeColor = Color.FromArgb(105, 105, 105);
-            nightControlBox1.DisableMinimizeColor = Color.FromArgb(105, 105, 105);
-            nightControlBox1.EnableCloseColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.EnableMaximizeButton = true;
-            nightControlBox1.EnableMaximizeColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.EnableMinimizeButton = true;
-            nightControlBox1.EnableMinimizeColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.Location = new Point(1615, 0);
-            nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
-            nightControlBox1.MaximizeHoverForeColor = Color.White;
-            nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
-            nightControlBox1.MinimizeHoverForeColor = Color.White;
-            nightControlBox1.Name = "nightControlBox1";
-            nightControlBox1.Size = new Size(139, 31);
-            nightControlBox1.TabIndex = 2;
             // 
             // Menulabel
             // 
@@ -1214,7 +1178,6 @@
 
         private Panel panel1;
         private Label Menulabel;
-        private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private FlowLayoutPanel sidebar;
         private Panel DashBoardpanel;
         private Button Dashboardbutton;
@@ -1302,7 +1265,6 @@
         private Label numberLycheeTea;
         private Button btnPlusLycheeTea;
         private GroupBox groupBox1;
-        //private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private PictureBox Hambutton;
         private ComboBox PaymentMethods;
         private Label label2;

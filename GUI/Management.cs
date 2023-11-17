@@ -3,7 +3,6 @@ using BLL;
 using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 
 namespace GUI
 {
@@ -36,7 +35,7 @@ namespace GUI
 			string option = optionShowOrder.Text.ToString();
 			if (option != "option")
 			{
-				List<OrderDTO> orders = OrderBLL.GetOrderDTOsByUserId(user.UserId);
+				List<OrderDTO> orders = OrderBLL.GetOrdersByUserId(user.UserId);
 				List<OrderDTO> filteredOrders = new List<OrderDTO>(); // Create a new list for filtered orders
 
 				if (option == "Date")
@@ -55,7 +54,7 @@ namespace GUI
 				}
 				else if (option == "All table")
 				{
-					filteredOrders = OrderBLL.GetOrderDTOsByUserId(user.UserId);
+					filteredOrders = OrderBLL.GetOrdersByUserId(user.UserId);
 				}
 
 				TableShowOrder.DataSource = filteredOrders;
@@ -72,7 +71,7 @@ namespace GUI
 		private void btnCalculateRevenue_Click(object sender, EventArgs e)
 		{
 			List<OrderDTO> orders = new List<OrderDTO>();
-			orders = OrderBLL.GetOrderDTOsByUserId(user.UserId);
+			orders = OrderBLL.GetOrdersByUserId(user.UserId);
 
             int totalRevenue = 0;
 			foreach (OrderDTO order in orders)

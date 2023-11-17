@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
 using DTO;
 
@@ -7,7 +6,7 @@ namespace DAL
 {
     public class StaffDAL
     {
-        private string connectionString = "DataSource=DESKTOP-0HUV1DN\\SQLEXPRESS;InitialCatalog=Coffee;UserID=sa;Password=123;TrustServerCertificate=true;";
+        private string connectionString = @"Data Source=DESKTOP-0HUV1DN\SQLEXPRESS;Initial Catalog=Coffee;User ID=sa;Password=123;TrustServerCertificate=true;";
 
         public List<StaffDTO> GetStaffByUserId(int userId)
         {

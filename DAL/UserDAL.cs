@@ -6,7 +6,7 @@ namespace DAL
 {
     public class UserDAL
     {
-        private string connectionString = "DataSource=DESKTOP-0HUV1DN\\SQLEXPRESS;InitialCatalog=Coffee;UserID=sa;Password=123;TrustServerCertificate=true;";
+        private string connectionString = @"Data Source=DESKTOP-0HUV1DN\SQLEXPRESS;Initial Catalog=Coffee;User ID=sa;Password=123;TrustServerCertificate=true;";
 
         public UserDTO getUserByUsernameAndPassword(string username, string password)
         {
@@ -66,10 +66,11 @@ namespace DAL
         }
         public int getId(string username, string password)
         {
+            System.Console.WriteLine("Test");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand("SELECT id FROM Employees WHERE username = @username AND password = @password", connection))
+                using (SqlCommand command = new SqlCommand("SELECT UserId FROM [User] WHERE username = @username AND password = @password", connection))
                 {
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@password", password);

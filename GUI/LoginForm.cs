@@ -19,8 +19,8 @@ namespace GUI
             string password = txtPasswordLogin.Text;
 
             int userId = userBLL.getId(username, password);
-
-            if (userId != -1)
+            System.Console.WriteLine(userId);
+            if (userId != -1 && userId != null)
             {
                 var userRoles = new List<string>();
                 userRoles = userBLL.getUserRoles(userId);
@@ -28,7 +28,7 @@ namespace GUI
                 if (userRoles.Contains("Branch stores"))
                 {
 
-                    SubMenu1 subMenu1 = new SubMenu1();
+                    SubMenu subMenu1 = new SubMenu();
                     subMenu1.SetDataFromLogin(userBLL.getUserByUsernameAndPassword(username, password));
                     subMenu1.Show();
                 }
@@ -49,6 +49,5 @@ namespace GUI
                 MessageBox.Show("Invalid username or password");
             }
         }
-
     }
 }

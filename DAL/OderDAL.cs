@@ -7,9 +7,9 @@ namespace DAL
 {
     public class OderDAL
     {
-        private string connectionString = "DataSource=DESKTOP-0HUV1DN\\SQLEXPRESS;InitialCatalog=Coffee;UserID=sa;Password=123;TrustServerCertificate=true;";
+        private string connectionString = @"Data Source=DESKTOP-0HUV1DN\SQLEXPRESS;Initial Catalog=Coffee;User ID=sa;Password=123;TrustServerCertificate=true;";
 
-        public List<OrderDTO> GetOrderDTOsByUserId(int userId)
+        public List<OrderDTO> GetOrdersByUserId(int userId)
 		{
 			List<OrderDTO> orders = new List<OrderDTO>();
 
@@ -79,6 +79,77 @@ namespace DAL
                 }
             }
             return orders;
+        }
+
+        public Tuple<int, string, decimal> GetDrinkDetailsByOrderId(int drinkOrderId)
+        {
+            int quantity = 0;
+            string drinkName = "";
+            decimal price = 0;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                // Query to get the Quantity and DrinkId from DrinkOrder
+                string query = "SELECT Quantity, DrinkId FROM DrinkOrder WHERE DrinkOrderId = @DrinkOrderId";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@DrinkOrderId", drinkOrderId);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            quantity = (int)reader["Quantity"];
+                            int drinkId = (int)reader["DrinkId"];
+
+                            // Close the first SqlDataReader to avoid the error
+                            reader.Close();
+
+                            // Query to get DrinkName and Price from Drink
+                            string drinkQuery = "SELECT DrinkName, Price FROM Drink WHERE DrinkId = @DrinkId";
+
+                            using (SqlCommand drinkCommand = new SqlCommand(drinkQuery, connection))
+                            {
+                                drinkCommand.Parameters.AddWithValue("@DrinkId", drinkId);
+
+                                using (SqlDataReader drinkReader = drinkCommand.ExecuteReader())
+                                {
+                                    if (drinkReader.Read())
+                                    {
+                                        drinkName = drinkReader["DrinkName"].ToString();
+                                        price = (decimal)drinkReader["Price"];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return new Tuple<int, string, decimal>(quantity, drinkName, price);
+        }
+
+        public void CreateOrder(OrderDTO order)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "INSERT INTO [Order] (UserId, DateTime, PointUse, Status, Total) " +
+                               "VALUES (@UserId, @DateTime, @PointUse, @Status, @Total)";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserId", order.UserId);
+                    command.Parameters.AddWithValue("@DateTime", order.DateTime);
+                    command.Parameters.AddWithValue("@PointUse", order.PointUse);
+                    command.Parameters.AddWithValue("@Status", order.Status);
+                    command.Parameters.AddWithValue("@Total", order.Total);
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }
