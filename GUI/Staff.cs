@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DTO;
+using BLL;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -6,7 +8,8 @@ namespace GUI
 {
     public partial class staff : Form
 	{
-		public void SetDataFromUserOrder(List<int> data, Order order, int number)
+		private OrderBLL orderBLL=new OrderBLL();
+		public void SetDataFromUserOrder(List<int> data, OrderDTO order, int number)
 		{
 			if (TableUserOrder.Columns.Contains("Number") &&
 				TableUserOrder.Columns.Contains("DrinkName") &&
@@ -15,7 +18,7 @@ namespace GUI
 			{
 				foreach (int item in data)
 				{
-					Tuple<int, string, decimal> drinkDetails = GetDrinkDetailsByOrderId(item);
+					Tuple<int, string, decimal> drinkDetails = orderBLL.GetDrinkDetailsByOrderId(item);
 
 					int rowIndex = TableUserOrder.Rows.Add(); // Add a new row
 
@@ -32,7 +35,7 @@ namespace GUI
 		{
 			InitializeComponent();
 		}
-        string connectionString = "Data Source=DESKTOP-0HUV1DN\\SQLEXPRESS;Initial Catalog=Coffee;User ID=sa;Password=123;TrustServerCertificate=true;";
+        
 
         private void btnDeleteRows_Click(object sender, EventArgs e)
 		{
@@ -50,56 +53,7 @@ namespace GUI
 			}
 		}
 
-		public Tuple<int, string, decimal> GetDrinkDetailsByOrderId(int drinkOrderId)
-		{
-			int quantity = 0;
-			string drinkName = "";
-			decimal price = 0;
-
-			using (SqlConnection connection = new SqlConnection(connectionString))
-			{
-				connection.Open();
-
-				// Query to get the Quantity and DrinkId from DrinkOrder
-				string query = "SELECT Quantity, DrinkId FROM DrinkOrder WHERE DrinkOrderId = @DrinkOrderId";
-
-				using (SqlCommand command = new SqlCommand(query, connection))
-				{
-					command.Parameters.AddWithValue("@DrinkOrderId", drinkOrderId);
-
-					using (SqlDataReader reader = command.ExecuteReader())
-					{
-						if (reader.Read())
-						{
-							quantity = (int)reader["Quantity"];
-							int drinkId = (int)reader["DrinkId"];
-
-							// Close the first SqlDataReader to avoid the error
-							reader.Close();
-
-							// Query to get DrinkName and Price from Drink
-							string drinkQuery = "SELECT DrinkName, Price FROM Drink WHERE DrinkId = @DrinkId";
-
-							using (SqlCommand drinkCommand = new SqlCommand(drinkQuery, connection))
-							{
-								drinkCommand.Parameters.AddWithValue("@DrinkId", drinkId);
-
-								using (SqlDataReader drinkReader = drinkCommand.ExecuteReader())
-								{
-									if (drinkReader.Read())
-									{
-										drinkName = drinkReader["DrinkName"].ToString();
-										price = (decimal)drinkReader["Price"];
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			return new Tuple<int, string, decimal>(quantity, drinkName, price);
-		}
+		
 
 		public void DeleteRowsByDrinkOrderId(int drinkOrderId)
 		{

@@ -1,4 +1,7 @@
-﻿namespace GUI
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace GUI
 {
 	partial class staff
 	{
