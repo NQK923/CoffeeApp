@@ -31,106 +31,115 @@ namespace GUI
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(staff));
-			TableUserOrder = new DataGridView();
-			Number = new DataGridViewTextBoxColumn();
-			DrinkName = new DataGridViewTextBoxColumn();
-			Quantity = new DataGridViewTextBoxColumn();
-			Price = new DataGridViewTextBoxColumn();
-			btnDeleteRows = new Button();
-			NumberOrderComplete = new TextBox();
-			label1 = new Label();
-			((System.ComponentModel.ISupportInitialize)TableUserOrder).BeginInit();
-			SuspendLayout();
-			// 
-			// TableUserOrder
-			// 
-			TableUserOrder.BackgroundColor = Color.White;
-			TableUserOrder.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			TableUserOrder.Columns.AddRange(new DataGridViewColumn[] { Number, DrinkName, Quantity, Price });
-			TableUserOrder.Location = new Point(354, 90);
-			TableUserOrder.Name = "TableUserOrder";
-			TableUserOrder.RowHeadersWidth = 62;
-			TableUserOrder.RowTemplate.Height = 33;
-			TableUserOrder.Size = new Size(782, 364);
-			TableUserOrder.TabIndex = 0;
-			// 
-			// Number
-			// 
-			Number.DataPropertyName = "None";
-			Number.HeaderText = "Number Order";
-			Number.MinimumWidth = 8;
-			Number.Name = "Number";
-			Number.Width = 180;
-			// 
-			// DrinkName
-			// 
-			DrinkName.HeaderText = "Drink Name";
-			DrinkName.MinimumWidth = 8;
-			DrinkName.Name = "DrinkName";
-			DrinkName.Width = 180;
-			// 
-			// Quantity
-			// 
-			Quantity.HeaderText = "Quantity";
-			Quantity.MinimumWidth = 8;
-			Quantity.Name = "Quantity";
-			Quantity.Width = 180;
-			// 
-			// Price
-			// 
-			Price.HeaderText = "Price";
-			Price.MinimumWidth = 8;
-			Price.Name = "Price";
-			Price.Width = 180;
-			// 
-			// btnDeleteRows
-			// 
-			btnDeleteRows.BackColor = Color.FromArgb(255, 192, 128);
-			btnDeleteRows.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnDeleteRows.Location = new Point(777, 513);
-			btnDeleteRows.Name = "btnDeleteRows";
-			btnDeleteRows.Size = new Size(146, 39);
-			btnDeleteRows.TabIndex = 1;
-			btnDeleteRows.Text = "Complete";
-			btnDeleteRows.UseVisualStyleBackColor = false;
-			btnDeleteRows.Click += btnDeleteRows_Click;
-			// 
-			// NumberOrderComplete
-			// 
-			NumberOrderComplete.BackColor = Color.FromArgb(255, 192, 128);
-			NumberOrderComplete.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			NumberOrderComplete.Location = new Point(543, 513);
-			NumberOrderComplete.Name = "NumberOrderComplete";
-			NumberOrderComplete.Size = new Size(150, 39);
-			NumberOrderComplete.TabIndex = 2;
-			// 
-			// label1
-			// 
-			label1.AutoSize = true;
-			label1.BackColor = Color.FromArgb(255, 192, 128);
-			label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label1.Location = new Point(354, 516);
-			label1.Name = "label1";
-			label1.Size = new Size(171, 32);
-			label1.TabIndex = 3;
-			label1.Text = "Number order:";
-			// 
-			// staff
-			// 
-			AutoScaleDimensions = new SizeF(10F, 25F);
-			AutoScaleMode = AutoScaleMode.Font;
-			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-			ClientSize = new Size(1376, 802);
-			Controls.Add(label1);
-			Controls.Add(NumberOrderComplete);
-			Controls.Add(btnDeleteRows);
-			Controls.Add(TableUserOrder);
-			Name = "staff";
-			Text = "staff";
-			((System.ComponentModel.ISupportInitialize)TableUserOrder).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+            this.TableUserOrder = new System.Windows.Forms.DataGridView();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DrinkName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDeleteRows = new System.Windows.Forms.Button();
+            this.NumberOrderComplete = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.TableUserOrder)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // TableUserOrder
+            // 
+            this.TableUserOrder.BackgroundColor = System.Drawing.Color.NavajoWhite;
+            this.TableUserOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TableUserOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Number,
+            this.DrinkName,
+            this.Quantity,
+            this.Price});
+            this.TableUserOrder.Location = new System.Drawing.Point(76, 26);
+            this.TableUserOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.TableUserOrder.Name = "TableUserOrder";
+            this.TableUserOrder.RowHeadersWidth = 62;
+            this.TableUserOrder.RowTemplate.Height = 33;
+            this.TableUserOrder.Size = new System.Drawing.Size(785, 233);
+            this.TableUserOrder.TabIndex = 0;
+            // 
+            // Number
+            // 
+            this.Number.DataPropertyName = "None";
+            this.Number.HeaderText = "Number Order";
+            this.Number.MinimumWidth = 8;
+            this.Number.Name = "Number";
+            this.Number.Width = 180;
+            // 
+            // DrinkName
+            // 
+            this.DrinkName.HeaderText = "Drink Name";
+            this.DrinkName.MinimumWidth = 8;
+            this.DrinkName.Name = "DrinkName";
+            this.DrinkName.Width = 180;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 8;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 180;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 8;
+            this.Price.Name = "Price";
+            this.Price.Width = 180;
+            // 
+            // btnDeleteRows
+            // 
+            this.btnDeleteRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnDeleteRows.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDeleteRows.Location = new System.Drawing.Point(445, 277);
+            this.btnDeleteRows.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteRows.Name = "btnDeleteRows";
+            this.btnDeleteRows.Size = new System.Drawing.Size(134, 37);
+            this.btnDeleteRows.TabIndex = 1;
+            this.btnDeleteRows.Text = "Complete";
+            this.btnDeleteRows.UseVisualStyleBackColor = false;
+            this.btnDeleteRows.Click += new System.EventHandler(this.btnDeleteRows_Click);
+            // 
+            // NumberOrderComplete
+            // 
+            this.NumberOrderComplete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.NumberOrderComplete.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.NumberOrderComplete.Location = new System.Drawing.Point(269, 278);
+            this.NumberOrderComplete.Margin = new System.Windows.Forms.Padding(2);
+            this.NumberOrderComplete.Name = "NumberOrderComplete";
+            this.NumberOrderComplete.Size = new System.Drawing.Size(121, 34);
+            this.NumberOrderComplete.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label1.Location = new System.Drawing.Point(84, 281);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 28);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Number order:";
+            // 
+            // staff
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Moccasin;
+            this.ClientSize = new System.Drawing.Size(920, 373);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.NumberOrderComplete);
+            this.Controls.Add(this.btnDeleteRows);
+            this.Controls.Add(this.TableUserOrder);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "staff";
+            this.Text = "staff";
+            ((System.ComponentModel.ISupportInitialize)(this.TableUserOrder)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
 
 		#endregion

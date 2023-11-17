@@ -37,21 +37,7 @@ namespace GUI
 		}
         
 
-        private void btnDeleteRows_Click(object sender, EventArgs e)
-		{
-			int RowDelete;
-			if (int.TryParse(NumberOrderComplete.Text, out RowDelete))
-			{
 
-				DeleteRowsByDrinkOrderId(RowDelete);
-				NumberOrderComplete.Text = "";
-				MessageBox.Show("Complete Order" + RowDelete);
-			}
-			else
-			{
-				MessageBox.Show("It not a number. Plese enter a number");
-			}
-		}
 
 		
 
@@ -76,6 +62,21 @@ namespace GUI
 			}
 		}
 
-	}
+        private void btnDeleteRows_Click(object sender, EventArgs e)
+        {
+            int RowDelete;
+            if (int.TryParse(NumberOrderComplete.Text, out RowDelete))
+            {
+
+                DeleteRowsByDrinkOrderId(RowDelete);
+                NumberOrderComplete.Text = "";
+                MessageBox.Show("Complete Order" + RowDelete);
+            }
+            else
+            {
+                MessageBox.Show("It not a number. Please enter a number");
+            }
+        }
+    }
 }
 

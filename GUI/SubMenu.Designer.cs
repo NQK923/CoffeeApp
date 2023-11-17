@@ -1,17 +1,14 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-
-namespace GUI
+﻿namespace GUI
 {
     partial class SubMenu
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -26,1249 +23,950 @@ namespace GUI
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubMenu));
-            panel1 = new Panel();
-
-            Menulabel = new Label();
-            Hambutton = new PictureBox();
-            sidebar = new FlowLayoutPanel();
-            Submenu1panel = new Panel();
-            Submenu1button = new Button();
-            DashBoardpanel = new Panel();
-            Dashboardbutton = new Button();
-            Logoutpanel = new Panel();
-            Logoutbutton = new Button();
-            Password = new TextBox();
-            menuTransition = new System.Windows.Forms.Timer(components);
-            sidebarTransition = new System.Windows.Forms.Timer(components);
-            picEspresso = new PictureBox();
-            labelEspresso = new Label();
-            priceEspresso = new Label();
-            numberEspresso = new Label();
-            btnPlusEspresso = new Button();
-            btnMinusEspresso = new Button();
-            picLatte = new PictureBox();
-            labelLatte = new Label();
-            priceLatte = new Label();
-            numberLatte = new Label();
-            btnPlusLatte = new Button();
-            btnMinusLatte = new Button();
-            picCappuccino = new PictureBox();
-            labelCappuccino = new Label();
-            priceCappuccino = new Label();
-            numberCappuccino = new Label();
-            btnPlusCappuccino = new Button();
-            btnMinusCappuccino = new Button();
-            picAmericano = new PictureBox();
-            labelAmericano = new Label();
-            priceAmericano = new Label();
-            numberAmericano = new Label();
-            btnPlusAmericano = new Button();
-            btnMinusAmericano = new Button();
-            picCaramelMacchiato = new PictureBox();
-            labelCaramelMacchiato = new Label();
-            priceCaramelMacchiato = new Label();
-            numberCaramelMacchiato = new Label();
-            btnPlusCaramelMacchiato = new Button();
-            btnMinusCaramelMacchiato = new Button();
-            picBlackCoffee = new PictureBox();
-            labelBlackCoffee = new Label();
-            priceBlackCoffee = new Label();
-            numberBlackCoffee = new Label();
-            btnPlusBlackCoffee = new Button();
-            btnMinusBlackCoffee = new Button();
-            label = new Label();
-            labelTotal = new Label();
-            btnOrder = new Button();
-            picLycheeJellyTea = new PictureBox();
-            labeLycheeJellyTea = new Label();
-            priceLycheeJellyTea = new Label();
-            btnMinusLycheeJellyTea = new Button();
-            NumberLycheeJellyTea = new Label();
-            btnPlusLycheeJellyTea = new Button();
-            picGoldenLotusTea = new PictureBox();
-            labelGoldenLotusTea = new Label();
-            priceGoldenLotusTea = new Label();
-            btnMinusGoldenLotusTea = new Button();
-            numberGoldenLotusTea = new Label();
-            btnPlusGoldenLotusTea = new Button();
-            picPeachJellyTea = new PictureBox();
-            labelPeachJellyTea = new Label();
-            pricePeachJellyTea = new Label();
-            btnMinusPeachJellyTea = new Button();
-            numberPeachJellyTea = new Label();
-            btnPlusPeachJellyTea = new Button();
-            picRedBeanGreenTea = new PictureBox();
-            labelRedBeanGreenTea = new Label();
-            priceRedBeanGreenTea = new Label();
-            btnMinusRedBeanGreenTea = new Button();
-            numberRedBeanGreenTea = new Label();
-            btnPlusRedBeanGreenTea = new Button();
-            picPeachTea = new PictureBox();
-            labelPeachTea = new Label();
-            pricePeachTea = new Label();
-            btnMinusPeachTea = new Button();
-            numberPeachTea = new Label();
-            btnPlusPeachTea = new Button();
-            picLycheeTea = new PictureBox();
-            labelLycheeTea = new Label();
-            priceLycheeTea = new Label();
-            btnMinusLycheeTea = new Button();
-            numberLycheeTea = new Label();
-            btnPlusLycheeTea = new Button();
-            groupBox1 = new GroupBox();
-            label2 = new Label();
-            label1 = new Label();
-            PaymentMethods = new ComboBox();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)Hambutton).BeginInit();
-            sidebar.SuspendLayout();
-            Submenu1panel.SuspendLayout();
-            DashBoardpanel.SuspendLayout();
-            Logoutpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picEspresso).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picLatte).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picCappuccino).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picAmericano).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picCaramelMacchiato).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picBlackCoffee).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picLycheeJellyTea).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picGoldenLotusTea).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picPeachJellyTea).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picRedBeanGreenTea).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picPeachTea).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picLycheeTea).BeginInit();
-            groupBox1.SuspendLayout();
-            SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.btnManage = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.Password = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pricePeachJellyTea = new System.Windows.Forms.Label();
+            this.labelPeachJellyTea = new System.Windows.Forms.Label();
+            this.priceGoldenLotusTea = new System.Windows.Forms.Label();
+            this.labelGoldenLotusTea = new System.Windows.Forms.Label();
+            this.priceLycheeJellyTea = new System.Windows.Forms.Label();
+            this.labelLycheeJellyTea = new System.Windows.Forms.Label();
+            this.priceBlackCoffee = new System.Windows.Forms.Label();
+            this.labelBlackCoffee = new System.Windows.Forms.Label();
+            this.priceCaramelMacchiato = new System.Windows.Forms.Label();
+            this.labelCaramelMacchiato = new System.Windows.Forms.Label();
+            this.priceAmericano = new System.Windows.Forms.Label();
+            this.labelAmericano = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.priceCappuccino = new System.Windows.Forms.Label();
+            this.labelCappuccino = new System.Windows.Forms.Label();
+            this.priceLatte = new System.Windows.Forms.Label();
+            this.labelLatte = new System.Windows.Forms.Label();
+            this.priceEspresso = new System.Windows.Forms.Label();
+            this.labelEspresso = new System.Windows.Forms.Label();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.PaymentMethods = new System.Windows.Forms.ComboBox();
+            this.numberEspresso = new System.Windows.Forms.Label();
+            this.numberCappuccino = new System.Windows.Forms.Label();
+            this.numberCaramelMacchiato = new System.Windows.Forms.Label();
+            this.numberLatte = new System.Windows.Forms.Label();
+            this.numberBlackCoffee = new System.Windows.Forms.Label();
+            this.numberPeachJellyTea = new System.Windows.Forms.Label();
+            this.numberLycheeJellyTea = new System.Windows.Forms.Label();
+            this.numberGoldenLotusTea = new System.Windows.Forms.Label();
+            this.btnPlusBlackCoffee = new System.Windows.Forms.Button();
+            this.btnMinusPeachJellyTea = new System.Windows.Forms.Button();
+            this.btnPlusPeachJellyTea = new System.Windows.Forms.Button();
+            this.btnMinusGoldenLotusTea = new System.Windows.Forms.Button();
+            this.btnPlusGoldenLotusTea = new System.Windows.Forms.Button();
+            this.btnMinusLycheeJellyTea = new System.Windows.Forms.Button();
+            this.btnPlusLycheeJellyTea = new System.Windows.Forms.Button();
+            this.btnMinusBlackCoffee = new System.Windows.Forms.Button();
+            this.btnPlusLatte = new System.Windows.Forms.Button();
+            this.btnMinusLatte = new System.Windows.Forms.Button();
+            this.btnPlusCaramelMacchiato = new System.Windows.Forms.Button();
+            this.btnMinusCaramelMacchiato = new System.Windows.Forms.Button();
+            this.btnPlusCappuccino = new System.Windows.Forms.Button();
+            this.btnMinusCappuccino = new System.Windows.Forms.Button();
+            this.btnMinusEspresso = new System.Windows.Forms.Button();
+            this.btnPlusEsprosso = new System.Windows.Forms.Button();
+            this.numberAmericano = new System.Windows.Forms.Label();
+            this.btnPlusAmericano = new System.Windows.Forms.Button();
+            this.btnMinusAmericano = new System.Windows.Forms.Button();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
-            // panel1
+            // flowLayoutPanel1
             // 
-            panel1.BackColor = Color.IndianRed;
-            //panel1.Controls.Add(guna2ImageButton1);
-            
-            panel1.Controls.Add(Menulabel);
-            panel1.Controls.Add(Hambutton);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1754, 93);
-            panel1.TabIndex = 0;
+            this.flowLayoutPanel1.Controls.Add(this.btnMenu);
+            this.flowLayoutPanel1.Controls.Add(this.btnManage);
+            this.flowLayoutPanel1.Controls.Add(this.btnLogout);
+            this.flowLayoutPanel1.Controls.Add(this.Password);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 13);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(215, 798);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // Menulabel
+            // btnMenu
             // 
-            Menulabel.AutoSize = true;
-            Menulabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            Menulabel.Location = new Point(131, 34);
-            Menulabel.Name = "Menulabel";
-            Menulabel.Size = new Size(80, 31);
-            Menulabel.TabIndex = 1;
-            Menulabel.Text = "MENU";
+            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Location = new System.Drawing.Point(3, 3);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(212, 80);
+            this.btnMenu.TabIndex = 5;
+            this.btnMenu.Text = "Menu";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // Hambutton
+            // btnManage
             // 
-            Hambutton.Image = (Image)resources.GetObject("Hambutton.Image");
-            Hambutton.Location = new Point(0, 0);
-            Hambutton.Name = "Hambutton";
-            Hambutton.Size = new Size(125, 94);
-            Hambutton.SizeMode = PictureBoxSizeMode.Zoom;
-            Hambutton.TabIndex = 0;
-            Hambutton.TabStop = false;
-            Hambutton.Click += pictureBox1_Click;
+            this.btnManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManage.Location = new System.Drawing.Point(3, 89);
+            this.btnManage.Name = "btnManage";
+            this.btnManage.Size = new System.Drawing.Size(212, 80);
+            this.btnManage.TabIndex = 6;
+            this.btnManage.Text = "Quản lý";
+            this.btnManage.UseVisualStyleBackColor = true;
+            this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
             // 
-            // sidebar
+            // btnLogout
             // 
-            sidebar.BackColor = Color.IndianRed;
-            sidebar.Controls.Add(Submenu1panel);
-            sidebar.Controls.Add(DashBoardpanel);
-            sidebar.Controls.Add(Logoutpanel);
-            sidebar.Controls.Add(Password);
-            sidebar.Dock = DockStyle.Left;
-            sidebar.FlowDirection = FlowDirection.TopDown;
-            sidebar.Location = new Point(0, 93);
-            sidebar.Name = "sidebar";
-            sidebar.Size = new Size(211, 1009);
-            sidebar.TabIndex = 1;
-            // 
-            // Submenu1panel
-            // 
-            Submenu1panel.Controls.Add(Submenu1button);
-            Submenu1panel.Location = new Point(3, 3);
-            Submenu1panel.Name = "Submenu1panel";
-            Submenu1panel.Size = new Size(211, 67);
-            Submenu1panel.TabIndex = 8;
-            // 
-            // Submenu1button
-            // 
-            Submenu1button.BackColor = Color.IndianRed;
-            Submenu1button.BackgroundImageLayout = ImageLayout.Zoom;
-            Submenu1button.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            Submenu1button.ForeColor = Color.Black;
-            Submenu1button.ImageAlign = ContentAlignment.MiddleLeft;
-            Submenu1button.Location = new Point(-14, -9);
-            Submenu1button.Name = "Submenu1button";
-            Submenu1button.Padding = new Padding(25, 0, 0, 0);
-            Submenu1button.RightToLeft = RightToLeft.No;
-            Submenu1button.Size = new Size(236, 85);
-            Submenu1button.TabIndex = 3;
-            Submenu1button.Text = "            Menu";
-            Submenu1button.TextAlign = ContentAlignment.MiddleLeft;
-            Submenu1button.UseVisualStyleBackColor = false;
-            // 
-            // DashBoardpanel
-            // 
-            DashBoardpanel.Controls.Add(Dashboardbutton);
-            DashBoardpanel.Location = new Point(3, 76);
-            DashBoardpanel.Name = "DashBoardpanel";
-            DashBoardpanel.Size = new Size(211, 67);
-            DashBoardpanel.TabIndex = 2;
-            // 
-            // Dashboardbutton
-            // 
-            Dashboardbutton.BackColor = Color.IndianRed;
-            Dashboardbutton.BackgroundImageLayout = ImageLayout.Center;
-            Dashboardbutton.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            Dashboardbutton.ForeColor = Color.Black;
-            Dashboardbutton.Image = (Image)resources.GetObject("Dashboardbutton.Image");
-            Dashboardbutton.ImageAlign = ContentAlignment.MiddleLeft;
-            Dashboardbutton.Location = new Point(-14, -9);
-            Dashboardbutton.Name = "Dashboardbutton";
-            Dashboardbutton.Padding = new Padding(25, 0, 0, 0);
-            Dashboardbutton.RightToLeft = RightToLeft.No;
-            Dashboardbutton.Size = new Size(236, 85);
-            Dashboardbutton.TabIndex = 3;
-            Dashboardbutton.Text = "            Manage";
-            Dashboardbutton.TextAlign = ContentAlignment.MiddleLeft;
-            Dashboardbutton.UseVisualStyleBackColor = false;
-            Dashboardbutton.Click += Dashboardbutton_Click_1;
-            // 
-            // Logoutpanel
-            // 
-            Logoutpanel.Controls.Add(Logoutbutton);
-            Logoutpanel.Location = new Point(3, 149);
-            Logoutpanel.Name = "Logoutpanel";
-            Logoutpanel.Size = new Size(211, 67);
-            Logoutpanel.TabIndex = 6;
-            // 
-            // Logoutbutton
-            // 
-            Logoutbutton.BackColor = Color.IndianRed;
-            Logoutbutton.BackgroundImageLayout = ImageLayout.Zoom;
-            Logoutbutton.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            Logoutbutton.ForeColor = Color.Black;
-            Logoutbutton.Image = (Image)resources.GetObject("Logoutbutton.Image");
-            Logoutbutton.ImageAlign = ContentAlignment.MiddleLeft;
-            Logoutbutton.Location = new Point(-14, -9);
-            Logoutbutton.Name = "Logoutbutton";
-            Logoutbutton.Padding = new Padding(25, 0, 0, 0);
-            Logoutbutton.RightToLeft = RightToLeft.No;
-            Logoutbutton.Size = new Size(236, 85);
-            Logoutbutton.TabIndex = 3;
-            Logoutbutton.Text = "            Logout";
-            Logoutbutton.TextAlign = ContentAlignment.MiddleLeft;
-            Logoutbutton.UseVisualStyleBackColor = false;
-            Logoutbutton.Click += Logoutbutton_Click;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(3, 175);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(212, 80);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // Password
             // 
-            Password.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Password.Location = new Point(3, 222);
-            Password.Name = "Password";
-            Password.Size = new Size(202, 34);
-            Password.TabIndex = 78;
-            Password.Text = "Password";
-            Password.UseSystemPasswordChar = true;
-            // 
-            // menuTransition
-            // 
-            menuTransition.Interval = 5;
-            // 
-            // sidebarTransition
-            // 
-            sidebarTransition.Interval = 5;
-            sidebarTransition.Tick += sidebarTransition_Tick;
-            // 
-            // picEspresso
-            // 
-            picEspresso.Image = (Image)resources.GetObject("picEspresso.Image");
-            picEspresso.Location = new Point(125, 76);
-            picEspresso.Name = "picEspresso";
-            picEspresso.Size = new Size(180, 180);
-            picEspresso.SizeMode = PictureBoxSizeMode.Zoom;
-            picEspresso.TabIndex = 0;
-            picEspresso.TabStop = false;
-            // 
-            // labelEspresso
-            // 
-            labelEspresso.AutoSize = true;
-            labelEspresso.Location = new Point(174, 257);
-            labelEspresso.Name = "labelEspresso";
-            labelEspresso.Size = new Size(66, 20);
-            labelEspresso.TabIndex = 1;
-            labelEspresso.Text = "Espresso";
-            // 
-            // priceEspresso
-            // 
-            priceEspresso.AutoSize = true;
-            priceEspresso.Location = new Point(167, 282);
-            priceEspresso.Name = "priceEspresso";
-            priceEspresso.Size = new Size(87, 20);
-            priceEspresso.TabIndex = 2;
-            priceEspresso.Text = "45,000 VND";
-            // 
-            // numberEspresso
-            // 
-            numberEspresso.AutoSize = true;
-            numberEspresso.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberEspresso.Location = new Point(205, 311);
-            numberEspresso.Name = "numberEspresso";
-            numberEspresso.Size = new Size(22, 25);
-            numberEspresso.TabIndex = 3;
-            numberEspresso.Text = "0";
-            // 
-            // btnPlusEspresso
-            // 
-            btnPlusEspresso.Location = new Point(233, 308);
-            btnPlusEspresso.Name = "btnPlusEspresso";
-            btnPlusEspresso.Size = new Size(37, 29);
-            btnPlusEspresso.TabIndex = 4;
-            btnPlusEspresso.Text = "+";
-            btnPlusEspresso.UseVisualStyleBackColor = true;
-            btnPlusEspresso.Click += btnPlusEspresso_Click;
-            // 
-            // btnMinusEspresso
-            // 
-            btnMinusEspresso.Location = new Point(156, 308);
-            btnMinusEspresso.Name = "btnMinusEspresso";
-            btnMinusEspresso.Size = new Size(37, 29);
-            btnMinusEspresso.TabIndex = 5;
-            btnMinusEspresso.Text = "-";
-            btnMinusEspresso.UseVisualStyleBackColor = true;
-            btnMinusEspresso.Click += btnMinusEspresso_Click;
-            // 
-            // picLatte
-            // 
-            picLatte.Image = (Image)resources.GetObject("picLatte.Image");
-            picLatte.Location = new Point(483, 76);
-            picLatte.Name = "picLatte";
-            picLatte.Size = new Size(180, 180);
-            picLatte.SizeMode = PictureBoxSizeMode.Zoom;
-            picLatte.TabIndex = 6;
-            picLatte.TabStop = false;
-            // 
-            // labelLatte
-            // 
-            labelLatte.AutoSize = true;
-            labelLatte.Location = new Point(551, 257);
-            labelLatte.Name = "labelLatte";
-            labelLatte.Size = new Size(42, 20);
-            labelLatte.TabIndex = 7;
-            labelLatte.Text = "Latte";
-            // 
-            // priceLatte
-            // 
-            priceLatte.AutoSize = true;
-            priceLatte.Location = new Point(536, 277);
-            priceLatte.Name = "priceLatte";
-            priceLatte.Size = new Size(87, 20);
-            priceLatte.TabIndex = 8;
-            priceLatte.Text = "65,000 VND";
-            // 
-            // numberLatte
-            // 
-            numberLatte.AutoSize = true;
-            numberLatte.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberLatte.Location = new Point(560, 300);
-            numberLatte.Name = "numberLatte";
-            numberLatte.Size = new Size(22, 25);
-            numberLatte.TabIndex = 9;
-            numberLatte.Text = "0";
-            // 
-            // btnPlusLatte
-            // 
-            btnPlusLatte.Location = new Point(591, 297);
-            btnPlusLatte.Name = "btnPlusLatte";
-            btnPlusLatte.Size = new Size(37, 29);
-            btnPlusLatte.TabIndex = 10;
-            btnPlusLatte.Text = "+";
-            btnPlusLatte.UseVisualStyleBackColor = true;
-            btnPlusLatte.Click += btnPlusLatte_Click;
-            // 
-            // btnMinusLatte
-            // 
-            btnMinusLatte.Location = new Point(511, 297);
-            btnMinusLatte.Name = "btnMinusLatte";
-            btnMinusLatte.Size = new Size(37, 29);
-            btnMinusLatte.TabIndex = 11;
-            btnMinusLatte.Text = "-";
-            btnMinusLatte.UseVisualStyleBackColor = true;
-            btnMinusLatte.Click += btnMinusLatte_Click;
-            // 
-            // picCappuccino
-            // 
-            picCappuccino.Image = (Image)resources.GetObject("picCappuccino.Image");
-            picCappuccino.Location = new Point(847, 76);
-            picCappuccino.Name = "picCappuccino";
-            picCappuccino.Size = new Size(180, 180);
-            picCappuccino.SizeMode = PictureBoxSizeMode.Zoom;
-            picCappuccino.TabIndex = 12;
-            picCappuccino.TabStop = false;
-            // 
-            // labelCappuccino
-            // 
-            labelCappuccino.AutoSize = true;
-            labelCappuccino.Location = new Point(895, 257);
-            labelCappuccino.Name = "labelCappuccino";
-            labelCappuccino.Size = new Size(87, 20);
-            labelCappuccino.TabIndex = 13;
-            labelCappuccino.Text = "Cappuccino";
-            // 
-            // priceCappuccino
-            // 
-            priceCappuccino.AutoSize = true;
-            priceCappuccino.Location = new Point(892, 282);
-            priceCappuccino.Name = "priceCappuccino";
-            priceCappuccino.Size = new Size(87, 20);
-            priceCappuccino.TabIndex = 14;
-            priceCappuccino.Text = "65,000 VND";
-            // 
-            // numberCappuccino
-            // 
-            numberCappuccino.AutoSize = true;
-            numberCappuccino.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberCappuccino.Location = new Point(936, 306);
-            numberCappuccino.Name = "numberCappuccino";
-            numberCappuccino.Size = new Size(22, 25);
-            numberCappuccino.TabIndex = 15;
-            numberCappuccino.Text = "0";
-            // 
-            // btnPlusCappuccino
-            // 
-            btnPlusCappuccino.Location = new Point(964, 303);
-            btnPlusCappuccino.Name = "btnPlusCappuccino";
-            btnPlusCappuccino.Size = new Size(37, 29);
-            btnPlusCappuccino.TabIndex = 16;
-            btnPlusCappuccino.Text = "+";
-            btnPlusCappuccino.UseVisualStyleBackColor = true;
-            btnPlusCappuccino.Click += btnPlusCappuccino_Click;
-            // 
-            // btnMinusCappuccino
-            // 
-            btnMinusCappuccino.Location = new Point(887, 303);
-            btnMinusCappuccino.Name = "btnMinusCappuccino";
-            btnMinusCappuccino.Size = new Size(37, 29);
-            btnMinusCappuccino.TabIndex = 17;
-            btnMinusCappuccino.Text = "-";
-            btnMinusCappuccino.UseVisualStyleBackColor = true;
-            btnMinusCappuccino.Click += btnMinusCappuccino_Click;
-            // 
-            // picAmericano
-            // 
-            picAmericano.Image = (Image)resources.GetObject("picAmericano.Image");
-            picAmericano.Location = new Point(125, 359);
-            picAmericano.Name = "picAmericano";
-            picAmericano.Size = new Size(180, 180);
-            picAmericano.SizeMode = PictureBoxSizeMode.Zoom;
-            picAmericano.TabIndex = 18;
-            picAmericano.TabStop = false;
-            // 
-            // labelAmericano
-            // 
-            labelAmericano.AutoSize = true;
-            labelAmericano.Location = new Point(173, 542);
-            labelAmericano.Name = "labelAmericano";
-            labelAmericano.Size = new Size(81, 20);
-            labelAmericano.TabIndex = 19;
-            labelAmericano.Text = "Americano";
-            // 
-            // priceAmericano
-            // 
-            priceAmericano.AutoSize = true;
-            priceAmericano.Location = new Point(167, 567);
-            priceAmericano.Name = "priceAmericano";
-            priceAmericano.Size = new Size(87, 20);
-            priceAmericano.TabIndex = 20;
-            priceAmericano.Text = "45,000 VND";
-            // 
-            // numberAmericano
-            // 
-            numberAmericano.AutoSize = true;
-            numberAmericano.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberAmericano.Location = new Point(205, 594);
-            numberAmericano.Name = "numberAmericano";
-            numberAmericano.Size = new Size(22, 25);
-            numberAmericano.TabIndex = 21;
-            numberAmericano.Text = "0";
-            // 
-            // btnPlusAmericano
-            // 
-            btnPlusAmericano.Location = new Point(233, 591);
-            btnPlusAmericano.Name = "btnPlusAmericano";
-            btnPlusAmericano.Size = new Size(37, 29);
-            btnPlusAmericano.TabIndex = 22;
-            btnPlusAmericano.Text = "+";
-            btnPlusAmericano.UseVisualStyleBackColor = true;
-            btnPlusAmericano.Click += btnPlusAmericano_Click;
-            // 
-            // btnMinusAmericano
-            // 
-            btnMinusAmericano.Location = new Point(156, 591);
-            btnMinusAmericano.Name = "btnMinusAmericano";
-            btnMinusAmericano.Size = new Size(37, 29);
-            btnMinusAmericano.TabIndex = 23;
-            btnMinusAmericano.Text = "-";
-            btnMinusAmericano.UseVisualStyleBackColor = true;
-            btnMinusAmericano.Click += btnMinusAmericano_Click;
-            // 
-            // picCaramelMacchiato
-            // 
-            picCaramelMacchiato.Image = (Image)resources.GetObject("picCaramelMacchiato.Image");
-            picCaramelMacchiato.Location = new Point(483, 359);
-            picCaramelMacchiato.Name = "picCaramelMacchiato";
-            picCaramelMacchiato.Size = new Size(180, 180);
-            picCaramelMacchiato.SizeMode = PictureBoxSizeMode.Zoom;
-            picCaramelMacchiato.TabIndex = 24;
-            picCaramelMacchiato.TabStop = false;
-            // 
-            // labelCaramelMacchiato
-            // 
-            labelCaramelMacchiato.AutoSize = true;
-            labelCaramelMacchiato.Location = new Point(511, 542);
-            labelCaramelMacchiato.Name = "labelCaramelMacchiato";
-            labelCaramelMacchiato.Size = new Size(137, 20);
-            labelCaramelMacchiato.TabIndex = 25;
-            labelCaramelMacchiato.Text = "Caramel Macchiato";
-            // 
-            // priceCaramelMacchiato
-            // 
-            priceCaramelMacchiato.AutoSize = true;
-            priceCaramelMacchiato.Location = new Point(536, 562);
-            priceCaramelMacchiato.Name = "priceCaramelMacchiato";
-            priceCaramelMacchiato.Size = new Size(87, 20);
-            priceCaramelMacchiato.TabIndex = 26;
-            priceCaramelMacchiato.Text = "45,000 VND";
-            // 
-            // numberCaramelMacchiato
-            // 
-            numberCaramelMacchiato.AutoSize = true;
-            numberCaramelMacchiato.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberCaramelMacchiato.Location = new Point(560, 588);
-            numberCaramelMacchiato.Name = "numberCaramelMacchiato";
-            numberCaramelMacchiato.Size = new Size(22, 25);
-            numberCaramelMacchiato.TabIndex = 27;
-            numberCaramelMacchiato.Text = "0";
-            // 
-            // btnPlusCaramelMacchiato
-            // 
-            btnPlusCaramelMacchiato.Location = new Point(591, 585);
-            btnPlusCaramelMacchiato.Name = "btnPlusCaramelMacchiato";
-            btnPlusCaramelMacchiato.Size = new Size(37, 29);
-            btnPlusCaramelMacchiato.TabIndex = 28;
-            btnPlusCaramelMacchiato.Text = "+";
-            btnPlusCaramelMacchiato.UseVisualStyleBackColor = true;
-            btnPlusCaramelMacchiato.Click += btnPlusCaramelMacchiato_Click;
-            // 
-            // btnMinusCaramelMacchiato
-            // 
-            btnMinusCaramelMacchiato.Location = new Point(511, 585);
-            btnMinusCaramelMacchiato.Name = "btnMinusCaramelMacchiato";
-            btnMinusCaramelMacchiato.Size = new Size(37, 29);
-            btnMinusCaramelMacchiato.TabIndex = 29;
-            btnMinusCaramelMacchiato.Text = "-";
-            btnMinusCaramelMacchiato.UseVisualStyleBackColor = true;
-            btnMinusCaramelMacchiato.Click += btnMinusCaramelMacchiato_Click;
-            // 
-            // picBlackCoffee
-            // 
-            picBlackCoffee.Image = (Image)resources.GetObject("picBlackCoffee.Image");
-            picBlackCoffee.Location = new Point(847, 359);
-            picBlackCoffee.Name = "picBlackCoffee";
-            picBlackCoffee.Size = new Size(180, 180);
-            picBlackCoffee.SizeMode = PictureBoxSizeMode.Zoom;
-            picBlackCoffee.TabIndex = 30;
-            picBlackCoffee.TabStop = false;
-            // 
-            // labelBlackCoffee
-            // 
-            labelBlackCoffee.AutoSize = true;
-            labelBlackCoffee.Location = new Point(887, 542);
-            labelBlackCoffee.Name = "labelBlackCoffee";
-            labelBlackCoffee.Size = new Size(92, 20);
-            labelBlackCoffee.TabIndex = 31;
-            labelBlackCoffee.Text = "Black Coffee";
-            // 
-            // priceBlackCoffee
-            // 
-            priceBlackCoffee.AutoSize = true;
-            priceBlackCoffee.Location = new Point(887, 562);
-            priceBlackCoffee.Name = "priceBlackCoffee";
-            priceBlackCoffee.Size = new Size(87, 20);
-            priceBlackCoffee.TabIndex = 32;
-            priceBlackCoffee.Text = "29,000 VND";
-            // 
-            // numberBlackCoffee
-            // 
-            numberBlackCoffee.AutoSize = true;
-            numberBlackCoffee.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberBlackCoffee.Location = new Point(920, 588);
-            numberBlackCoffee.Name = "numberBlackCoffee";
-            numberBlackCoffee.Size = new Size(22, 25);
-            numberBlackCoffee.TabIndex = 33;
-            numberBlackCoffee.Text = "0";
-            // 
-            // btnPlusBlackCoffee
-            // 
-            btnPlusBlackCoffee.Location = new Point(948, 585);
-            btnPlusBlackCoffee.Name = "btnPlusBlackCoffee";
-            btnPlusBlackCoffee.Size = new Size(37, 29);
-            btnPlusBlackCoffee.TabIndex = 34;
-            btnPlusBlackCoffee.Text = "+";
-            btnPlusBlackCoffee.UseVisualStyleBackColor = true;
-            btnPlusBlackCoffee.Click += btnPlusBlackCoffee_Click;
-            // 
-            // btnMinusBlackCoffee
-            // 
-            btnMinusBlackCoffee.Location = new Point(871, 585);
-            btnMinusBlackCoffee.Name = "btnMinusBlackCoffee";
-            btnMinusBlackCoffee.Size = new Size(37, 29);
-            btnMinusBlackCoffee.TabIndex = 35;
-            btnMinusBlackCoffee.Text = "-";
-            btnMinusBlackCoffee.UseVisualStyleBackColor = true;
-            btnMinusBlackCoffee.Click += btnMinusBlackCoffee_Click;
-            // 
-            // label
-            // 
-            label.AutoSize = true;
-            label.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
-            label.Location = new Point(1174, 76);
-            label.Name = "label";
-            label.Size = new Size(71, 31);
-            label.TabIndex = 36;
-            label.Text = "Total:";
-            // 
-            // labelTotal
-            // 
-            labelTotal.AutoSize = true;
-            labelTotal.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTotal.Location = new Point(1251, 76);
-            labelTotal.Name = "labelTotal";
-            labelTotal.Size = new Size(27, 31);
-            labelTotal.TabIndex = 37;
-            labelTotal.Text = "0";
-            // 
-            // btnOrder
-            // 
-            btnOrder.BackColor = Color.IndianRed;
-            btnOrder.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnOrder.Location = new Point(1260, 191);
-            btnOrder.Name = "btnOrder";
-            btnOrder.Size = new Size(182, 48);
-            btnOrder.TabIndex = 37;
-            btnOrder.Text = "Order";
-            btnOrder.UseVisualStyleBackColor = false;
-            btnOrder.Click += btnOrder_Click;
-            // 
-            // picLycheeJellyTea
-            // 
-            picLycheeJellyTea.Image = (Image)resources.GetObject("picLycheeJellyTea.Image");
-            picLycheeJellyTea.Location = new Point(130, 710);
-            picLycheeJellyTea.Name = "picLycheeJellyTea";
-            picLycheeJellyTea.Size = new Size(180, 180);
-            picLycheeJellyTea.SizeMode = PictureBoxSizeMode.Zoom;
-            picLycheeJellyTea.TabIndex = 39;
-            picLycheeJellyTea.TabStop = false;
-            // 
-            // labeLycheeJellyTea
-            // 
-            labeLycheeJellyTea.AutoSize = true;
-            labeLycheeJellyTea.Location = new Point(161, 890);
-            labeLycheeJellyTea.Name = "labeLycheeJellyTea";
-            labeLycheeJellyTea.Size = new Size(112, 20);
-            labeLycheeJellyTea.TabIndex = 40;
-            labeLycheeJellyTea.Text = "Lychee Jelly Tea";
-            // 
-            // priceLycheeJellyTea
-            // 
-            priceLycheeJellyTea.AutoSize = true;
-            priceLycheeJellyTea.Location = new Point(172, 915);
-            priceLycheeJellyTea.Name = "priceLycheeJellyTea";
-            priceLycheeJellyTea.Size = new Size(87, 20);
-            priceLycheeJellyTea.TabIndex = 41;
-            priceLycheeJellyTea.Text = "45.000 VND";
-            // 
-            // btnMinusLycheeJellyTea
-            // 
-            btnMinusLycheeJellyTea.Location = new Point(161, 936);
-            btnMinusLycheeJellyTea.Name = "btnMinusLycheeJellyTea";
-            btnMinusLycheeJellyTea.Size = new Size(43, 35);
-            btnMinusLycheeJellyTea.TabIndex = 42;
-            btnMinusLycheeJellyTea.Text = "-";
-            btnMinusLycheeJellyTea.UseVisualStyleBackColor = true;
-            btnMinusLycheeJellyTea.Click += btnMinusLycheeJellyTea_Click_1;
-            // 
-            // NumberLycheeJellyTea
-            // 
-            NumberLycheeJellyTea.AutoSize = true;
-            NumberLycheeJellyTea.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            NumberLycheeJellyTea.Location = new Point(210, 939);
-            NumberLycheeJellyTea.Name = "NumberLycheeJellyTea";
-            NumberLycheeJellyTea.Size = new Size(22, 25);
-            NumberLycheeJellyTea.TabIndex = 43;
-            NumberLycheeJellyTea.Text = "0";
-            // 
-            // btnPlusLycheeJellyTea
-            // 
-            btnPlusLycheeJellyTea.Location = new Point(238, 936);
-            btnPlusLycheeJellyTea.Name = "btnPlusLycheeJellyTea";
-            btnPlusLycheeJellyTea.Size = new Size(43, 35);
-            btnPlusLycheeJellyTea.TabIndex = 44;
-            btnPlusLycheeJellyTea.Text = "+";
-            btnPlusLycheeJellyTea.UseVisualStyleBackColor = true;
-            btnPlusLycheeJellyTea.Click += btnPlusLycheeJellyTea_Click_1;
-            // 
-            // picGoldenLotusTea
-            // 
-            picGoldenLotusTea.Image = (Image)resources.GetObject("picGoldenLotusTea.Image");
-            picGoldenLotusTea.Location = new Point(488, 710);
-            picGoldenLotusTea.Name = "picGoldenLotusTea";
-            picGoldenLotusTea.Size = new Size(180, 180);
-            picGoldenLotusTea.SizeMode = PictureBoxSizeMode.Zoom;
-            picGoldenLotusTea.TabIndex = 45;
-            picGoldenLotusTea.TabStop = false;
-            // 
-            // labelGoldenLotusTea
-            // 
-            labelGoldenLotusTea.AutoSize = true;
-            labelGoldenLotusTea.Location = new Point(516, 891);
-            labelGoldenLotusTea.Name = "labelGoldenLotusTea";
-            labelGoldenLotusTea.Size = new Size(123, 20);
-            labelGoldenLotusTea.TabIndex = 46;
-            labelGoldenLotusTea.Text = "Golden Lotus Tea";
-            // 
-            // priceGoldenLotusTea
-            // 
-            priceGoldenLotusTea.AutoSize = true;
-            priceGoldenLotusTea.Location = new Point(541, 916);
-            priceGoldenLotusTea.Name = "priceGoldenLotusTea";
-            priceGoldenLotusTea.Size = new Size(87, 20);
-            priceGoldenLotusTea.TabIndex = 47;
-            priceGoldenLotusTea.Text = "45.000 VND";
-            // 
-            // btnMinusGoldenLotusTea
-            // 
-            btnMinusGoldenLotusTea.Location = new Point(516, 936);
-            btnMinusGoldenLotusTea.Name = "btnMinusGoldenLotusTea";
-            btnMinusGoldenLotusTea.Size = new Size(43, 35);
-            btnMinusGoldenLotusTea.TabIndex = 48;
-            btnMinusGoldenLotusTea.Text = "-";
-            btnMinusGoldenLotusTea.UseVisualStyleBackColor = true;
-            btnMinusGoldenLotusTea.Click += btnMinusGoldenLotusTea_Click_1;
-            // 
-            // numberGoldenLotusTea
-            // 
-            numberGoldenLotusTea.AutoSize = true;
-            numberGoldenLotusTea.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberGoldenLotusTea.Location = new Point(565, 939);
-            numberGoldenLotusTea.Name = "numberGoldenLotusTea";
-            numberGoldenLotusTea.Size = new Size(22, 25);
-            numberGoldenLotusTea.TabIndex = 49;
-            numberGoldenLotusTea.Text = "0";
-            // 
-            // btnPlusGoldenLotusTea
-            // 
-            btnPlusGoldenLotusTea.Location = new Point(596, 936);
-            btnPlusGoldenLotusTea.Name = "btnPlusGoldenLotusTea";
-            btnPlusGoldenLotusTea.Size = new Size(43, 35);
-            btnPlusGoldenLotusTea.TabIndex = 50;
-            btnPlusGoldenLotusTea.Text = "+";
-            btnPlusGoldenLotusTea.UseVisualStyleBackColor = true;
-            btnPlusGoldenLotusTea.Click += btnPlusGoldenLotusTea_Click_1;
-            // 
-            // picPeachJellyTea
-            // 
-            picPeachJellyTea.Image = (Image)resources.GetObject("picPeachJellyTea.Image");
-            picPeachJellyTea.Location = new Point(852, 710);
-            picPeachJellyTea.Name = "picPeachJellyTea";
-            picPeachJellyTea.Size = new Size(180, 180);
-            picPeachJellyTea.SizeMode = PictureBoxSizeMode.Zoom;
-            picPeachJellyTea.TabIndex = 51;
-            picPeachJellyTea.TabStop = false;
-            // 
-            // labelPeachJellyTea
-            // 
-            labelPeachJellyTea.AutoSize = true;
-            labelPeachJellyTea.Location = new Point(895, 891);
-            labelPeachJellyTea.Name = "labelPeachJellyTea";
-            labelPeachJellyTea.Size = new Size(106, 20);
-            labelPeachJellyTea.TabIndex = 52;
-            labelPeachJellyTea.Text = "Peach Jelly Tea";
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Location = new System.Drawing.Point(3, 261);
+            this.Password.Name = "Password";
+            this.Password.PasswordChar = '*';
+            this.Password.Size = new System.Drawing.Size(212, 30);
+            this.Password.TabIndex = 8;
+            this.Password.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pricePeachJellyTea);
+            this.panel1.Controls.Add(this.labelPeachJellyTea);
+            this.panel1.Controls.Add(this.priceGoldenLotusTea);
+            this.panel1.Controls.Add(this.labelGoldenLotusTea);
+            this.panel1.Controls.Add(this.priceLycheeJellyTea);
+            this.panel1.Controls.Add(this.labelLycheeJellyTea);
+            this.panel1.Controls.Add(this.priceBlackCoffee);
+            this.panel1.Controls.Add(this.labelBlackCoffee);
+            this.panel1.Controls.Add(this.priceCaramelMacchiato);
+            this.panel1.Controls.Add(this.labelCaramelMacchiato);
+            this.panel1.Controls.Add(this.priceAmericano);
+            this.panel1.Controls.Add(this.labelAmericano);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.priceCappuccino);
+            this.panel1.Controls.Add(this.labelCappuccino);
+            this.panel1.Controls.Add(this.priceLatte);
+            this.panel1.Controls.Add(this.labelLatte);
+            this.panel1.Controls.Add(this.priceEspresso);
+            this.panel1.Controls.Add(this.labelEspresso);
+            this.panel1.Controls.Add(this.labelTotal);
+            this.panel1.Controls.Add(this.label);
+            this.panel1.Controls.Add(this.btnOrder);
+            this.panel1.Controls.Add(this.PaymentMethods);
+            this.panel1.Controls.Add(this.numberEspresso);
+            this.panel1.Controls.Add(this.numberCappuccino);
+            this.panel1.Controls.Add(this.numberCaramelMacchiato);
+            this.panel1.Controls.Add(this.numberLatte);
+            this.panel1.Controls.Add(this.numberBlackCoffee);
+            this.panel1.Controls.Add(this.numberPeachJellyTea);
+            this.panel1.Controls.Add(this.numberLycheeJellyTea);
+            this.panel1.Controls.Add(this.numberGoldenLotusTea);
+            this.panel1.Controls.Add(this.btnPlusBlackCoffee);
+            this.panel1.Controls.Add(this.btnMinusPeachJellyTea);
+            this.panel1.Controls.Add(this.btnPlusPeachJellyTea);
+            this.panel1.Controls.Add(this.btnMinusGoldenLotusTea);
+            this.panel1.Controls.Add(this.btnPlusGoldenLotusTea);
+            this.panel1.Controls.Add(this.btnMinusLycheeJellyTea);
+            this.panel1.Controls.Add(this.btnPlusLycheeJellyTea);
+            this.panel1.Controls.Add(this.btnMinusBlackCoffee);
+            this.panel1.Controls.Add(this.btnPlusLatte);
+            this.panel1.Controls.Add(this.btnMinusLatte);
+            this.panel1.Controls.Add(this.btnPlusCaramelMacchiato);
+            this.panel1.Controls.Add(this.btnMinusCaramelMacchiato);
+            this.panel1.Controls.Add(this.btnPlusCappuccino);
+            this.panel1.Controls.Add(this.btnMinusCappuccino);
+            this.panel1.Controls.Add(this.btnMinusEspresso);
+            this.panel1.Controls.Add(this.btnPlusEsprosso);
+            this.panel1.Controls.Add(this.numberAmericano);
+            this.panel1.Controls.Add(this.btnPlusAmericano);
+            this.panel1.Controls.Add(this.btnMinusAmericano);
+            this.panel1.Controls.Add(this.pictureBox9);
+            this.panel1.Controls.Add(this.pictureBox8);
+            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(230, 13);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(913, 798);
+            this.panel1.TabIndex = 2;
             // 
             // pricePeachJellyTea
             // 
-            pricePeachJellyTea.AutoSize = true;
-            pricePeachJellyTea.Location = new Point(900, 915);
-            pricePeachJellyTea.Name = "pricePeachJellyTea";
-            pricePeachJellyTea.Size = new Size(87, 20);
-            pricePeachJellyTea.TabIndex = 53;
-            pricePeachJellyTea.Text = "45.000 VND";
+            this.pricePeachJellyTea.AutoSize = true;
+            this.pricePeachJellyTea.Location = new System.Drawing.Point(78, 731);
+            this.pricePeachJellyTea.Name = "pricePeachJellyTea";
+            this.pricePeachJellyTea.Size = new System.Drawing.Size(77, 16);
+            this.pricePeachJellyTea.TabIndex = 103;
+            this.pricePeachJellyTea.Text = "45.000 VND";
             // 
-            // btnMinusPeachJellyTea
+            // labelPeachJellyTea
             // 
-            btnMinusPeachJellyTea.Location = new Point(895, 936);
-            btnMinusPeachJellyTea.Name = "btnMinusPeachJellyTea";
-            btnMinusPeachJellyTea.Size = new Size(43, 35);
-            btnMinusPeachJellyTea.TabIndex = 54;
-            btnMinusPeachJellyTea.Text = "-";
-            btnMinusPeachJellyTea.UseVisualStyleBackColor = true;
-            btnMinusPeachJellyTea.Click += btnMinusPeachJellyTea_Click_1;
+            this.labelPeachJellyTea.AutoSize = true;
+            this.labelPeachJellyTea.Location = new System.Drawing.Point(67, 705);
+            this.labelPeachJellyTea.Name = "labelPeachJellyTea";
+            this.labelPeachJellyTea.Size = new System.Drawing.Size(105, 16);
+            this.labelPeachJellyTea.TabIndex = 102;
+            this.labelPeachJellyTea.Text = "Peach Jelly Tea";
             // 
-            // numberPeachJellyTea
+            // priceGoldenLotusTea
             // 
-            numberPeachJellyTea.AutoSize = true;
-            numberPeachJellyTea.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberPeachJellyTea.Location = new Point(944, 939);
-            numberPeachJellyTea.Name = "numberPeachJellyTea";
-            numberPeachJellyTea.Size = new Size(22, 25);
-            numberPeachJellyTea.TabIndex = 55;
-            numberPeachJellyTea.Text = "0";
+            this.priceGoldenLotusTea.AutoSize = true;
+            this.priceGoldenLotusTea.Location = new System.Drawing.Point(315, 731);
+            this.priceGoldenLotusTea.Name = "priceGoldenLotusTea";
+            this.priceGoldenLotusTea.Size = new System.Drawing.Size(77, 16);
+            this.priceGoldenLotusTea.TabIndex = 101;
+            this.priceGoldenLotusTea.Text = "45.000 VND";
             // 
-            // btnPlusPeachJellyTea
+            // labelGoldenLotusTea
             // 
-            btnPlusPeachJellyTea.Location = new Point(972, 936);
-            btnPlusPeachJellyTea.Name = "btnPlusPeachJellyTea";
-            btnPlusPeachJellyTea.Size = new Size(43, 35);
-            btnPlusPeachJellyTea.TabIndex = 56;
-            btnPlusPeachJellyTea.Text = "+";
-            btnPlusPeachJellyTea.UseVisualStyleBackColor = true;
-            btnPlusPeachJellyTea.Click += btnPlusPeachJellyTea_Click_1;
+            this.labelGoldenLotusTea.AutoSize = true;
+            this.labelGoldenLotusTea.Location = new System.Drawing.Point(290, 705);
+            this.labelGoldenLotusTea.Name = "labelGoldenLotusTea";
+            this.labelGoldenLotusTea.Size = new System.Drawing.Size(114, 16);
+            this.labelGoldenLotusTea.TabIndex = 100;
+            this.labelGoldenLotusTea.Text = "Golden Lotus Tea";
             // 
-            // picRedBeanGreenTea
+            // priceLycheeJellyTea
             // 
-            picRedBeanGreenTea.Image = (Image)resources.GetObject("picRedBeanGreenTea.Image");
-            picRedBeanGreenTea.Location = new Point(130, 993);
-            picRedBeanGreenTea.Name = "picRedBeanGreenTea";
-            picRedBeanGreenTea.Size = new Size(180, 180);
-            picRedBeanGreenTea.SizeMode = PictureBoxSizeMode.Zoom;
-            picRedBeanGreenTea.TabIndex = 57;
-            picRedBeanGreenTea.TabStop = false;
+            this.priceLycheeJellyTea.AutoSize = true;
+            this.priceLycheeJellyTea.Location = new System.Drawing.Point(549, 731);
+            this.priceLycheeJellyTea.Name = "priceLycheeJellyTea";
+            this.priceLycheeJellyTea.Size = new System.Drawing.Size(77, 16);
+            this.priceLycheeJellyTea.TabIndex = 99;
+            this.priceLycheeJellyTea.Text = "45.000 VND";
             // 
-            // labelRedBeanGreenTea
+            // labelLycheeJellyTea
             // 
-            labelRedBeanGreenTea.AutoSize = true;
-            labelRedBeanGreenTea.Location = new Point(161, 1176);
-            labelRedBeanGreenTea.Name = "labelRedBeanGreenTea";
-            labelRedBeanGreenTea.Size = new Size(142, 20);
-            labelRedBeanGreenTea.TabIndex = 58;
-            labelRedBeanGreenTea.Text = "Red Bean Green Tea";
+            this.labelLycheeJellyTea.AutoSize = true;
+            this.labelLycheeJellyTea.Location = new System.Drawing.Point(538, 705);
+            this.labelLycheeJellyTea.Name = "labelLycheeJellyTea";
+            this.labelLycheeJellyTea.Size = new System.Drawing.Size(110, 16);
+            this.labelLycheeJellyTea.TabIndex = 98;
+            this.labelLycheeJellyTea.Text = "Lychee Jelly Tea";
             // 
-            // priceRedBeanGreenTea
+            // priceBlackCoffee
             // 
-            priceRedBeanGreenTea.AutoSize = true;
-            priceRedBeanGreenTea.Location = new Point(172, 1196);
-            priceRedBeanGreenTea.Name = "priceRedBeanGreenTea";
-            priceRedBeanGreenTea.Size = new Size(87, 20);
-            priceRedBeanGreenTea.TabIndex = 59;
-            priceRedBeanGreenTea.Text = "45.000 VND";
+            this.priceBlackCoffee.AutoSize = true;
+            this.priceBlackCoffee.Location = new System.Drawing.Point(553, 483);
+            this.priceBlackCoffee.Name = "priceBlackCoffee";
+            this.priceBlackCoffee.Size = new System.Drawing.Size(77, 16);
+            this.priceBlackCoffee.TabIndex = 97;
+            this.priceBlackCoffee.Text = "29,000 VND";
             // 
-            // btnMinusRedBeanGreenTea
+            // labelBlackCoffee
             // 
-            btnMinusRedBeanGreenTea.Location = new Point(161, 1219);
-            btnMinusRedBeanGreenTea.Name = "btnMinusRedBeanGreenTea";
-            btnMinusRedBeanGreenTea.Size = new Size(43, 35);
-            btnMinusRedBeanGreenTea.TabIndex = 60;
-            btnMinusRedBeanGreenTea.Text = "-";
-            btnMinusRedBeanGreenTea.UseVisualStyleBackColor = true;
-            btnMinusRedBeanGreenTea.Click += btnMinusRedBeanGreenTea_Click_1;
+            this.labelBlackCoffee.AutoSize = true;
+            this.labelBlackCoffee.Location = new System.Drawing.Point(549, 458);
+            this.labelBlackCoffee.Name = "labelBlackCoffee";
+            this.labelBlackCoffee.Size = new System.Drawing.Size(83, 16);
+            this.labelBlackCoffee.TabIndex = 96;
+            this.labelBlackCoffee.Text = "Black Coffee";
             // 
-            // numberRedBeanGreenTea
+            // priceCaramelMacchiato
             // 
-            numberRedBeanGreenTea.AutoSize = true;
-            numberRedBeanGreenTea.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberRedBeanGreenTea.Location = new Point(210, 1222);
-            numberRedBeanGreenTea.Name = "numberRedBeanGreenTea";
-            numberRedBeanGreenTea.Size = new Size(22, 25);
-            numberRedBeanGreenTea.TabIndex = 61;
-            numberRedBeanGreenTea.Text = "0";
+            this.priceCaramelMacchiato.AutoSize = true;
+            this.priceCaramelMacchiato.Location = new System.Drawing.Point(78, 483);
+            this.priceCaramelMacchiato.Name = "priceCaramelMacchiato";
+            this.priceCaramelMacchiato.Size = new System.Drawing.Size(77, 16);
+            this.priceCaramelMacchiato.TabIndex = 95;
+            this.priceCaramelMacchiato.Text = "45,000 VND";
             // 
-            // btnPlusRedBeanGreenTea
+            // labelCaramelMacchiato
             // 
-            btnPlusRedBeanGreenTea.Location = new Point(238, 1219);
-            btnPlusRedBeanGreenTea.Name = "btnPlusRedBeanGreenTea";
-            btnPlusRedBeanGreenTea.Size = new Size(43, 35);
-            btnPlusRedBeanGreenTea.TabIndex = 62;
-            btnPlusRedBeanGreenTea.Text = "+";
-            btnPlusRedBeanGreenTea.UseVisualStyleBackColor = true;
-            btnPlusRedBeanGreenTea.Click += btnPlusRedBeanGreenTea_Click_1;
+            this.labelCaramelMacchiato.AutoSize = true;
+            this.labelCaramelMacchiato.Location = new System.Drawing.Point(53, 458);
+            this.labelCaramelMacchiato.Name = "labelCaramelMacchiato";
+            this.labelCaramelMacchiato.Size = new System.Drawing.Size(123, 16);
+            this.labelCaramelMacchiato.TabIndex = 94;
+            this.labelCaramelMacchiato.Text = "Caramel Macchiato";
             // 
-            // picPeachTea
+            // priceAmericano
             // 
-            picPeachTea.Image = (Image)resources.GetObject("picPeachTea.Image");
-            picPeachTea.Location = new Point(488, 993);
-            picPeachTea.Name = "picPeachTea";
-            picPeachTea.Size = new Size(180, 180);
-            picPeachTea.SizeMode = PictureBoxSizeMode.Zoom;
-            picPeachTea.TabIndex = 63;
-            picPeachTea.TabStop = false;
+            this.priceAmericano.AutoSize = true;
+            this.priceAmericano.Location = new System.Drawing.Point(73, 233);
+            this.priceAmericano.Name = "priceAmericano";
+            this.priceAmericano.Size = new System.Drawing.Size(77, 16);
+            this.priceAmericano.TabIndex = 93;
+            this.priceAmericano.Text = "45,000 VND";
             // 
-            // labelPeachTea
+            // labelAmericano
             // 
-            labelPeachTea.AutoSize = true;
-            labelPeachTea.Location = new Point(541, 1176);
-            labelPeachTea.Name = "labelPeachTea";
-            labelPeachTea.Size = new Size(74, 20);
-            labelPeachTea.TabIndex = 64;
-            labelPeachTea.Text = "Peach Tea";
+            this.labelAmericano.AutoSize = true;
+            this.labelAmericano.Location = new System.Drawing.Point(78, 211);
+            this.labelAmericano.Name = "labelAmericano";
+            this.labelAmericano.Size = new System.Drawing.Size(72, 16);
+            this.labelAmericano.TabIndex = 92;
+            this.labelAmericano.Text = "Americano";
             // 
-            // pricePeachTea
+            // label11
             // 
-            pricePeachTea.AutoSize = true;
-            pricePeachTea.Location = new Point(541, 1196);
-            pricePeachTea.Name = "pricePeachTea";
-            pricePeachTea.Size = new Size(87, 20);
-            pricePeachTea.TabIndex = 65;
-            pricePeachTea.Text = "45.000 VND";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(591, -37);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 16);
+            this.label11.TabIndex = 91;
+            this.label11.Text = "65,000 VND";
             // 
-            // btnMinusPeachTea
+            // label12
             // 
-            btnMinusPeachTea.Location = new Point(516, 1219);
-            btnMinusPeachTea.Name = "btnMinusPeachTea";
-            btnMinusPeachTea.Size = new Size(43, 35);
-            btnMinusPeachTea.TabIndex = 66;
-            btnMinusPeachTea.Text = "-";
-            btnMinusPeachTea.UseVisualStyleBackColor = true;
-            btnMinusPeachTea.Click += btnMinusPeachTea_Click_1;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(589, -54);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 16);
+            this.label12.TabIndex = 90;
+            this.label12.Text = "Cappuccino";
             // 
-            // numberPeachTea
+            // label13
             // 
-            numberPeachTea.AutoSize = true;
-            numberPeachTea.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberPeachTea.Location = new Point(565, 1222);
-            numberPeachTea.Name = "numberPeachTea";
-            numberPeachTea.Size = new Size(22, 25);
-            numberPeachTea.TabIndex = 67;
-            numberPeachTea.Text = "0";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(340, -37);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 16);
+            this.label13.TabIndex = 89;
+            this.label13.Text = "65,000 VND";
             // 
-            // btnPlusPeachTea
+            // label14
             // 
-            btnPlusPeachTea.Location = new Point(596, 1219);
-            btnPlusPeachTea.Name = "btnPlusPeachTea";
-            btnPlusPeachTea.Size = new Size(43, 35);
-            btnPlusPeachTea.TabIndex = 68;
-            btnPlusPeachTea.Text = "+";
-            btnPlusPeachTea.UseVisualStyleBackColor = true;
-            btnPlusPeachTea.Click += btnPlusPeachTea_Click_1;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(357, -59);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 16);
+            this.label14.TabIndex = 88;
+            this.label14.Text = "Latte";
             // 
-            // picLycheeTea
+            // label15
             // 
-            picLycheeTea.Image = (Image)resources.GetObject("picLycheeTea.Image");
-            picLycheeTea.Location = new Point(852, 993);
-            picLycheeTea.Name = "picLycheeTea";
-            picLycheeTea.Size = new Size(180, 180);
-            picLycheeTea.SizeMode = PictureBoxSizeMode.Zoom;
-            picLycheeTea.TabIndex = 69;
-            picLycheeTea.TabStop = false;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(76, -37);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(77, 16);
+            this.label15.TabIndex = 87;
+            this.label15.Text = "45,000 VND";
             // 
-            // labelLycheeTea
+            // label16
             // 
-            labelLycheeTea.AutoSize = true;
-            labelLycheeTea.Location = new Point(914, 1176);
-            labelLycheeTea.Name = "labelLycheeTea";
-            labelLycheeTea.Size = new Size(80, 20);
-            labelLycheeTea.TabIndex = 70;
-            labelLycheeTea.Text = "Lychee Tea";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(80, -59);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 16);
+            this.label16.TabIndex = 86;
+            this.label16.Text = "Espresso";
             // 
-            // priceLycheeTea
+            // priceCappuccino
             // 
-            priceLycheeTea.AutoSize = true;
-            priceLycheeTea.Location = new Point(911, 1196);
-            priceLycheeTea.Name = "priceLycheeTea";
-            priceLycheeTea.Size = new Size(87, 20);
-            priceLycheeTea.TabIndex = 71;
-            priceLycheeTea.Text = "45.000 VND";
+            this.priceCappuccino.AutoSize = true;
+            this.priceCappuccino.Location = new System.Drawing.Point(555, 233);
+            this.priceCappuccino.Name = "priceCappuccino";
+            this.priceCappuccino.Size = new System.Drawing.Size(77, 16);
+            this.priceCappuccino.TabIndex = 85;
+            this.priceCappuccino.Text = "65,000 VND";
             // 
-            // btnMinusLycheeTea
+            // labelCappuccino
             // 
-            btnMinusLycheeTea.Location = new Point(895, 1219);
-            btnMinusLycheeTea.Name = "btnMinusLycheeTea";
-            btnMinusLycheeTea.Size = new Size(43, 35);
-            btnMinusLycheeTea.TabIndex = 72;
-            btnMinusLycheeTea.Text = "-";
-            btnMinusLycheeTea.UseVisualStyleBackColor = true;
-            btnMinusLycheeTea.Click += btnMinusLycheeTea_Click_1;
+            this.labelCappuccino.AutoSize = true;
+            this.labelCappuccino.Location = new System.Drawing.Point(553, 211);
+            this.labelCappuccino.Name = "labelCappuccino";
+            this.labelCappuccino.Size = new System.Drawing.Size(79, 16);
+            this.labelCappuccino.TabIndex = 84;
+            this.labelCappuccino.Text = "Cappuccino";
             // 
-            // numberLycheeTea
+            // priceLatte
             // 
-            numberLycheeTea.AutoSize = true;
-            numberLycheeTea.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            numberLycheeTea.Location = new Point(944, 1222);
-            numberLycheeTea.Name = "numberLycheeTea";
-            numberLycheeTea.Size = new Size(22, 25);
-            numberLycheeTea.TabIndex = 73;
-            numberLycheeTea.Text = "0";
+            this.priceLatte.AutoSize = true;
+            this.priceLatte.Location = new System.Drawing.Point(319, 483);
+            this.priceLatte.Name = "priceLatte";
+            this.priceLatte.Size = new System.Drawing.Size(77, 16);
+            this.priceLatte.TabIndex = 83;
+            this.priceLatte.Text = "65,000 VND";
             // 
-            // btnPlusLycheeTea
+            // labelLatte
             // 
-            btnPlusLycheeTea.Location = new Point(972, 1219);
-            btnPlusLycheeTea.Name = "btnPlusLycheeTea";
-            btnPlusLycheeTea.Size = new Size(43, 35);
-            btnPlusLycheeTea.TabIndex = 74;
-            btnPlusLycheeTea.Text = "+";
-            btnPlusLycheeTea.UseVisualStyleBackColor = true;
-            btnPlusLycheeTea.Click += btnPlusLycheeTea_Click;
+            this.labelLatte.AutoSize = true;
+            this.labelLatte.Location = new System.Drawing.Point(334, 458);
+            this.labelLatte.Name = "labelLatte";
+            this.labelLatte.Size = new System.Drawing.Size(36, 16);
+            this.labelLatte.TabIndex = 82;
+            this.labelLatte.Text = "Latte";
             // 
-            // groupBox1
+            // priceEspresso
             // 
-            groupBox1.BackColor = Color.White;
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(PaymentMethods);
-            groupBox1.Controls.Add(btnPlusLycheeTea);
-            groupBox1.Controls.Add(numberLycheeTea);
-            groupBox1.Controls.Add(btnMinusLycheeTea);
-            groupBox1.Controls.Add(priceLycheeTea);
-            groupBox1.Controls.Add(labelLycheeTea);
-            groupBox1.Controls.Add(picLycheeTea);
-            groupBox1.Controls.Add(btnPlusPeachTea);
-            groupBox1.Controls.Add(numberPeachTea);
-            groupBox1.Controls.Add(btnMinusPeachTea);
-            groupBox1.Controls.Add(pricePeachTea);
-            groupBox1.Controls.Add(labelPeachTea);
-            groupBox1.Controls.Add(picPeachTea);
-            groupBox1.Controls.Add(btnPlusRedBeanGreenTea);
-            groupBox1.Controls.Add(numberRedBeanGreenTea);
-            groupBox1.Controls.Add(btnMinusRedBeanGreenTea);
-            groupBox1.Controls.Add(priceRedBeanGreenTea);
-            groupBox1.Controls.Add(labelRedBeanGreenTea);
-            groupBox1.Controls.Add(picRedBeanGreenTea);
-            groupBox1.Controls.Add(btnPlusPeachJellyTea);
-            groupBox1.Controls.Add(numberPeachJellyTea);
-            groupBox1.Controls.Add(btnMinusPeachJellyTea);
-            groupBox1.Controls.Add(pricePeachJellyTea);
-            groupBox1.Controls.Add(labelPeachJellyTea);
-            groupBox1.Controls.Add(picPeachJellyTea);
-            groupBox1.Controls.Add(btnPlusGoldenLotusTea);
-            groupBox1.Controls.Add(numberGoldenLotusTea);
-            groupBox1.Controls.Add(btnMinusGoldenLotusTea);
-            groupBox1.Controls.Add(priceGoldenLotusTea);
-            groupBox1.Controls.Add(labelGoldenLotusTea);
-            groupBox1.Controls.Add(picGoldenLotusTea);
-            groupBox1.Controls.Add(btnPlusLycheeJellyTea);
-            groupBox1.Controls.Add(NumberLycheeJellyTea);
-            groupBox1.Controls.Add(btnMinusLycheeJellyTea);
-            groupBox1.Controls.Add(priceLycheeJellyTea);
-            groupBox1.Controls.Add(labeLycheeJellyTea);
-            groupBox1.Controls.Add(picLycheeJellyTea);
-            groupBox1.Controls.Add(btnOrder);
-            groupBox1.Controls.Add(labelTotal);
-            groupBox1.Controls.Add(label);
-            groupBox1.Controls.Add(btnMinusBlackCoffee);
-            groupBox1.Controls.Add(btnPlusBlackCoffee);
-            groupBox1.Controls.Add(numberBlackCoffee);
-            groupBox1.Controls.Add(priceBlackCoffee);
-            groupBox1.Controls.Add(labelBlackCoffee);
-            groupBox1.Controls.Add(picBlackCoffee);
-            groupBox1.Controls.Add(btnMinusCaramelMacchiato);
-            groupBox1.Controls.Add(btnPlusCaramelMacchiato);
-            groupBox1.Controls.Add(numberCaramelMacchiato);
-            groupBox1.Controls.Add(priceCaramelMacchiato);
-            groupBox1.Controls.Add(labelCaramelMacchiato);
-            groupBox1.Controls.Add(picCaramelMacchiato);
-            groupBox1.Controls.Add(btnMinusAmericano);
-            groupBox1.Controls.Add(btnPlusAmericano);
-            groupBox1.Controls.Add(numberAmericano);
-            groupBox1.Controls.Add(priceAmericano);
-            groupBox1.Controls.Add(labelAmericano);
-            groupBox1.Controls.Add(picAmericano);
-            groupBox1.Controls.Add(btnMinusCappuccino);
-            groupBox1.Controls.Add(btnPlusCappuccino);
-            groupBox1.Controls.Add(numberCappuccino);
-            groupBox1.Controls.Add(priceCappuccino);
-            groupBox1.Controls.Add(labelCappuccino);
-            groupBox1.Controls.Add(picCappuccino);
-            groupBox1.Controls.Add(btnMinusLatte);
-            groupBox1.Controls.Add(btnPlusLatte);
-            groupBox1.Controls.Add(numberLatte);
-            groupBox1.Controls.Add(priceLatte);
-            groupBox1.Controls.Add(labelLatte);
-            groupBox1.Controls.Add(picLatte);
-            groupBox1.Controls.Add(btnMinusEspresso);
-            groupBox1.Controls.Add(btnPlusEspresso);
-            groupBox1.Controls.Add(numberEspresso);
-            groupBox1.Controls.Add(priceEspresso);
-            groupBox1.Controls.Add(labelEspresso);
-            groupBox1.Controls.Add(picEspresso);
-            groupBox1.Dock = DockStyle.Left;
-            groupBox1.Location = new Point(211, 93);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1543, 1009);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
+            this.priceEspresso.AutoSize = true;
+            this.priceEspresso.Location = new System.Drawing.Point(315, 233);
+            this.priceEspresso.Name = "priceEspresso";
+            this.priceEspresso.Size = new System.Drawing.Size(77, 16);
+            this.priceEspresso.TabIndex = 81;
+            this.priceEspresso.Text = "45,000 VND";
             // 
-            // label2
+            // labelEspresso
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(79, 16);
-            label2.Name = "label2";
-            label2.Size = new Size(93, 31);
-            label2.TabIndex = 77;
-            label2.Text = "COFFEE";
+            this.labelEspresso.AutoSize = true;
+            this.labelEspresso.Location = new System.Drawing.Point(319, 211);
+            this.labelEspresso.Name = "labelEspresso";
+            this.labelEspresso.Size = new System.Drawing.Size(65, 16);
+            this.labelEspresso.TabIndex = 80;
+            this.labelEspresso.Text = "Espresso";
             // 
-            // label1
+            // labelTotal
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(96, 645);
-            label1.Name = "label1";
-            label1.Size = new Size(316, 31);
-            label1.TabIndex = 76;
-            label1.Text = "GRENFIELD TROPICAL SUSET";
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold);
+            this.labelTotal.Location = new System.Drawing.Point(767, 286);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(25, 30);
+            this.labelTotal.TabIndex = 79;
+            this.labelTotal.Text = "0";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold);
+            this.label.Location = new System.Drawing.Point(695, 286);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(66, 30);
+            this.label.TabIndex = 78;
+            this.label.Text = "Total:";
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.IndianRed;
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnOrder.Location = new System.Drawing.Point(700, 398);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(182, 48);
+            this.btnOrder.TabIndex = 77;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // PaymentMethods
             // 
-            PaymentMethods.FormattingEnabled = true;
-            PaymentMethods.Location = new Point(1260, 129);
-            PaymentMethods.Name = "PaymentMethods";
-            PaymentMethods.Size = new Size(182, 28);
-            PaymentMethods.TabIndex = 75;
-            PaymentMethods.Text = "Payment methods";
+            this.PaymentMethods.FormattingEnabled = true;
+            this.PaymentMethods.Location = new System.Drawing.Point(700, 353);
+            this.PaymentMethods.Name = "PaymentMethods";
+            this.PaymentMethods.Size = new System.Drawing.Size(182, 24);
+            this.PaymentMethods.TabIndex = 76;
+            this.PaymentMethods.Text = "Payment methods";
             // 
-            // SubMenu1
+            // numberEspresso
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1754, 1102);
-            Controls.Add(groupBox1);
-            Controls.Add(sidebar);
-            Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            IsMdiContainer = true;
-            Name = "SubMenu1";
-            Text = "Form1";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)Hambutton).EndInit();
-            sidebar.ResumeLayout(false);
-            sidebar.PerformLayout();
-            Submenu1panel.ResumeLayout(false);
-            DashBoardpanel.ResumeLayout(false);
-            Logoutpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)picEspresso).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picLatte).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picCappuccino).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picAmericano).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picCaramelMacchiato).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picBlackCoffee).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picLycheeJellyTea).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picGoldenLotusTea).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picPeachJellyTea).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picRedBeanGreenTea).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picPeachTea).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picLycheeTea).EndInit();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ResumeLayout(false);
+            this.numberEspresso.AutoSize = true;
+            this.numberEspresso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberEspresso.Location = new System.Drawing.Point(345, 269);
+            this.numberEspresso.Name = "numberEspresso";
+            this.numberEspresso.Size = new System.Drawing.Size(16, 18);
+            this.numberEspresso.TabIndex = 35;
+            this.numberEspresso.Text = "0";
+            // 
+            // numberCappuccino
+            // 
+            this.numberCappuccino.AutoSize = true;
+            this.numberCappuccino.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberCappuccino.Location = new System.Drawing.Point(579, 269);
+            this.numberCappuccino.Name = "numberCappuccino";
+            this.numberCappuccino.Size = new System.Drawing.Size(16, 18);
+            this.numberCappuccino.TabIndex = 34;
+            this.numberCappuccino.Text = "0";
+            // 
+            // numberCaramelMacchiato
+            // 
+            this.numberCaramelMacchiato.AutoSize = true;
+            this.numberCaramelMacchiato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberCaramelMacchiato.Location = new System.Drawing.Point(106, 517);
+            this.numberCaramelMacchiato.Name = "numberCaramelMacchiato";
+            this.numberCaramelMacchiato.Size = new System.Drawing.Size(16, 18);
+            this.numberCaramelMacchiato.TabIndex = 33;
+            this.numberCaramelMacchiato.Text = "0";
+            // 
+            // numberLatte
+            // 
+            this.numberLatte.AutoSize = true;
+            this.numberLatte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberLatte.Location = new System.Drawing.Point(345, 518);
+            this.numberLatte.Name = "numberLatte";
+            this.numberLatte.Size = new System.Drawing.Size(16, 18);
+            this.numberLatte.TabIndex = 32;
+            this.numberLatte.Text = "0";
+            // 
+            // numberBlackCoffee
+            // 
+            this.numberBlackCoffee.AutoSize = true;
+            this.numberBlackCoffee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberBlackCoffee.Location = new System.Drawing.Point(579, 521);
+            this.numberBlackCoffee.Name = "numberBlackCoffee";
+            this.numberBlackCoffee.Size = new System.Drawing.Size(16, 18);
+            this.numberBlackCoffee.TabIndex = 31;
+            this.numberBlackCoffee.Text = "0";
+            // 
+            // numberPeachJellyTea
+            // 
+            this.numberPeachJellyTea.AutoSize = true;
+            this.numberPeachJellyTea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberPeachJellyTea.Location = new System.Drawing.Point(106, 758);
+            this.numberPeachJellyTea.Name = "numberPeachJellyTea";
+            this.numberPeachJellyTea.Size = new System.Drawing.Size(16, 18);
+            this.numberPeachJellyTea.TabIndex = 30;
+            this.numberPeachJellyTea.Text = "0";
+            // 
+            // numberLycheeJellyTea
+            // 
+            this.numberLycheeJellyTea.AutoSize = true;
+            this.numberLycheeJellyTea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberLycheeJellyTea.Location = new System.Drawing.Point(579, 758);
+            this.numberLycheeJellyTea.Name = "numberLycheeJellyTea";
+            this.numberLycheeJellyTea.Size = new System.Drawing.Size(16, 18);
+            this.numberLycheeJellyTea.TabIndex = 29;
+            this.numberLycheeJellyTea.Text = "0";
+            // 
+            // numberGoldenLotusTea
+            // 
+            this.numberGoldenLotusTea.AutoSize = true;
+            this.numberGoldenLotusTea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberGoldenLotusTea.Location = new System.Drawing.Point(345, 758);
+            this.numberGoldenLotusTea.Name = "numberGoldenLotusTea";
+            this.numberGoldenLotusTea.Size = new System.Drawing.Size(16, 18);
+            this.numberGoldenLotusTea.TabIndex = 28;
+            this.numberGoldenLotusTea.Text = "0";
+            // 
+            // btnPlusBlackCoffee
+            // 
+            this.btnPlusBlackCoffee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusBlackCoffee.Location = new System.Drawing.Point(613, 514);
+            this.btnPlusBlackCoffee.Name = "btnPlusBlackCoffee";
+            this.btnPlusBlackCoffee.Size = new System.Drawing.Size(35, 26);
+            this.btnPlusBlackCoffee.TabIndex = 27;
+            this.btnPlusBlackCoffee.Text = "+";
+            this.btnPlusBlackCoffee.UseVisualStyleBackColor = true;
+            this.btnPlusBlackCoffee.Click += new System.EventHandler(this.btnPlusBlackCoffee_Click);
+            // 
+            // btnMinusPeachJellyTea
+            // 
+            this.btnMinusPeachJellyTea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinusPeachJellyTea.Location = new System.Drawing.Point(56, 754);
+            this.btnMinusPeachJellyTea.Name = "btnMinusPeachJellyTea";
+            this.btnMinusPeachJellyTea.Size = new System.Drawing.Size(35, 26);
+            this.btnMinusPeachJellyTea.TabIndex = 26;
+            this.btnMinusPeachJellyTea.Text = "-";
+            this.btnMinusPeachJellyTea.UseVisualStyleBackColor = true;
+            this.btnMinusPeachJellyTea.Click += new System.EventHandler(this.btnMinusPeachJellyTea_Click);
+            // 
+            // btnPlusPeachJellyTea
+            // 
+            this.btnPlusPeachJellyTea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusPeachJellyTea.Location = new System.Drawing.Point(137, 754);
+            this.btnPlusPeachJellyTea.Name = "btnPlusPeachJellyTea";
+            this.btnPlusPeachJellyTea.Size = new System.Drawing.Size(35, 26);
+            this.btnPlusPeachJellyTea.TabIndex = 25;
+            this.btnPlusPeachJellyTea.Text = "+";
+            this.btnPlusPeachJellyTea.UseVisualStyleBackColor = true;
+            this.btnPlusPeachJellyTea.Click += new System.EventHandler(this.btnPlusPeachJellyTea_Click);
+            // 
+            // btnMinusGoldenLotusTea
+            // 
+            this.btnMinusGoldenLotusTea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinusGoldenLotusTea.Location = new System.Drawing.Point(293, 754);
+            this.btnMinusGoldenLotusTea.Name = "btnMinusGoldenLotusTea";
+            this.btnMinusGoldenLotusTea.Size = new System.Drawing.Size(35, 26);
+            this.btnMinusGoldenLotusTea.TabIndex = 24;
+            this.btnMinusGoldenLotusTea.Text = "-";
+            this.btnMinusGoldenLotusTea.UseVisualStyleBackColor = true;
+            this.btnMinusGoldenLotusTea.Click += new System.EventHandler(this.btnMinusGoldenLotusTea_Click);
+            // 
+            // btnPlusGoldenLotusTea
+            // 
+            this.btnPlusGoldenLotusTea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusGoldenLotusTea.Location = new System.Drawing.Point(376, 754);
+            this.btnPlusGoldenLotusTea.Name = "btnPlusGoldenLotusTea";
+            this.btnPlusGoldenLotusTea.Size = new System.Drawing.Size(35, 26);
+            this.btnPlusGoldenLotusTea.TabIndex = 23;
+            this.btnPlusGoldenLotusTea.Text = "+";
+            this.btnPlusGoldenLotusTea.UseVisualStyleBackColor = true;
+            this.btnPlusGoldenLotusTea.Click += new System.EventHandler(this.btnPlusGoldenLotusTea_Click);
+            // 
+            // btnMinusLycheeJellyTea
+            // 
+            this.btnMinusLycheeJellyTea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinusLycheeJellyTea.Location = new System.Drawing.Point(528, 754);
+            this.btnMinusLycheeJellyTea.Name = "btnMinusLycheeJellyTea";
+            this.btnMinusLycheeJellyTea.Size = new System.Drawing.Size(35, 26);
+            this.btnMinusLycheeJellyTea.TabIndex = 22;
+            this.btnMinusLycheeJellyTea.Text = "-";
+            this.btnMinusLycheeJellyTea.UseVisualStyleBackColor = true;
+            this.btnMinusLycheeJellyTea.Click += new System.EventHandler(this.btnMinusLycheeJellyTea_Click);
+            // 
+            // btnPlusLycheeJellyTea
+            // 
+            this.btnPlusLycheeJellyTea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusLycheeJellyTea.Location = new System.Drawing.Point(613, 754);
+            this.btnPlusLycheeJellyTea.Name = "btnPlusLycheeJellyTea";
+            this.btnPlusLycheeJellyTea.Size = new System.Drawing.Size(35, 26);
+            this.btnPlusLycheeJellyTea.TabIndex = 21;
+            this.btnPlusLycheeJellyTea.Text = "+";
+            this.btnPlusLycheeJellyTea.UseVisualStyleBackColor = true;
+            this.btnPlusLycheeJellyTea.Click += new System.EventHandler(this.btnPlusLycheeJellyTea_Click);
+            // 
+            // btnMinusBlackCoffee
+            // 
+            this.btnMinusBlackCoffee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinusBlackCoffee.Location = new System.Drawing.Point(528, 513);
+            this.btnMinusBlackCoffee.Name = "btnMinusBlackCoffee";
+            this.btnMinusBlackCoffee.Size = new System.Drawing.Size(35, 26);
+            this.btnMinusBlackCoffee.TabIndex = 20;
+            this.btnMinusBlackCoffee.Text = "-";
+            this.btnMinusBlackCoffee.UseVisualStyleBackColor = true;
+            this.btnMinusBlackCoffee.Click += new System.EventHandler(this.btnMinusBlackCoffee_Click);
+            // 
+            // btnPlusLatte
+            // 
+            this.btnPlusLatte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusLatte.Location = new System.Drawing.Point(376, 513);
+            this.btnPlusLatte.Name = "btnPlusLatte";
+            this.btnPlusLatte.Size = new System.Drawing.Size(35, 26);
+            this.btnPlusLatte.TabIndex = 19;
+            this.btnPlusLatte.Text = "+";
+            this.btnPlusLatte.UseVisualStyleBackColor = true;
+            this.btnPlusLatte.Click += new System.EventHandler(this.btnPlusLatte_Click);
+            // 
+            // btnMinusLatte
+            // 
+            this.btnMinusLatte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinusLatte.Location = new System.Drawing.Point(293, 513);
+            this.btnMinusLatte.Name = "btnMinusLatte";
+            this.btnMinusLatte.Size = new System.Drawing.Size(35, 26);
+            this.btnMinusLatte.TabIndex = 18;
+            this.btnMinusLatte.Text = "-";
+            this.btnMinusLatte.UseVisualStyleBackColor = true;
+            this.btnMinusLatte.Click += new System.EventHandler(this.btnMinusLatte_Click);
+            // 
+            // btnPlusCaramelMacchiato
+            // 
+            this.btnPlusCaramelMacchiato.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusCaramelMacchiato.Location = new System.Drawing.Point(137, 513);
+            this.btnPlusCaramelMacchiato.Name = "btnPlusCaramelMacchiato";
+            this.btnPlusCaramelMacchiato.Size = new System.Drawing.Size(35, 26);
+            this.btnPlusCaramelMacchiato.TabIndex = 17;
+            this.btnPlusCaramelMacchiato.Text = "+";
+            this.btnPlusCaramelMacchiato.UseVisualStyleBackColor = true;
+            this.btnPlusCaramelMacchiato.Click += new System.EventHandler(this.btnPlusCaramelMacchiato_Click);
+            // 
+            // btnMinusCaramelMacchiato
+            // 
+            this.btnMinusCaramelMacchiato.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinusCaramelMacchiato.Location = new System.Drawing.Point(56, 513);
+            this.btnMinusCaramelMacchiato.Name = "btnMinusCaramelMacchiato";
+            this.btnMinusCaramelMacchiato.Size = new System.Drawing.Size(35, 26);
+            this.btnMinusCaramelMacchiato.TabIndex = 16;
+            this.btnMinusCaramelMacchiato.Text = "-";
+            this.btnMinusCaramelMacchiato.UseVisualStyleBackColor = true;
+            this.btnMinusCaramelMacchiato.Click += new System.EventHandler(this.btnMinusCaramelMacchiato_Click);
+            // 
+            // btnPlusCappuccino
+            // 
+            this.btnPlusCappuccino.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusCappuccino.Location = new System.Drawing.Point(613, 265);
+            this.btnPlusCappuccino.Name = "btnPlusCappuccino";
+            this.btnPlusCappuccino.Size = new System.Drawing.Size(35, 26);
+            this.btnPlusCappuccino.TabIndex = 15;
+            this.btnPlusCappuccino.Text = "+";
+            this.btnPlusCappuccino.UseVisualStyleBackColor = true;
+            this.btnPlusCappuccino.Click += new System.EventHandler(this.btnPlusCappuccino_Click);
+            // 
+            // btnMinusCappuccino
+            // 
+            this.btnMinusCappuccino.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinusCappuccino.Location = new System.Drawing.Point(528, 265);
+            this.btnMinusCappuccino.Name = "btnMinusCappuccino";
+            this.btnMinusCappuccino.Size = new System.Drawing.Size(35, 26);
+            this.btnMinusCappuccino.TabIndex = 14;
+            this.btnMinusCappuccino.Text = "-";
+            this.btnMinusCappuccino.UseVisualStyleBackColor = true;
+            this.btnMinusCappuccino.Click += new System.EventHandler(this.btnMinusCappuccino_Click);
+            // 
+            // btnMinusEspresso
+            // 
+            this.btnMinusEspresso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinusEspresso.Location = new System.Drawing.Point(293, 265);
+            this.btnMinusEspresso.Name = "btnMinusEspresso";
+            this.btnMinusEspresso.Size = new System.Drawing.Size(35, 26);
+            this.btnMinusEspresso.TabIndex = 13;
+            this.btnMinusEspresso.Text = "-";
+            this.btnMinusEspresso.UseVisualStyleBackColor = true;
+            this.btnMinusEspresso.Click += new System.EventHandler(this.btnMinusEspresso_Click);
+            // 
+            // btnPlusEsprosso
+            // 
+            this.btnPlusEsprosso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusEsprosso.Location = new System.Drawing.Point(376, 265);
+            this.btnPlusEsprosso.Name = "btnPlusEsprosso";
+            this.btnPlusEsprosso.Size = new System.Drawing.Size(35, 26);
+            this.btnPlusEsprosso.TabIndex = 12;
+            this.btnPlusEsprosso.Text = "+";
+            this.btnPlusEsprosso.UseVisualStyleBackColor = true;
+            this.btnPlusEsprosso.Click += new System.EventHandler(this.btnPlusEsprosso_Click);
+            // 
+            // numberAmericano
+            // 
+            this.numberAmericano.AutoSize = true;
+            this.numberAmericano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberAmericano.Location = new System.Drawing.Point(106, 265);
+            this.numberAmericano.Name = "numberAmericano";
+            this.numberAmericano.Size = new System.Drawing.Size(16, 18);
+            this.numberAmericano.TabIndex = 11;
+            this.numberAmericano.Text = "0";
+            // 
+            // btnPlusAmericano
+            // 
+            this.btnPlusAmericano.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlusAmericano.Location = new System.Drawing.Point(137, 261);
+            this.btnPlusAmericano.Name = "btnPlusAmericano";
+            this.btnPlusAmericano.Size = new System.Drawing.Size(35, 26);
+            this.btnPlusAmericano.TabIndex = 10;
+            this.btnPlusAmericano.Text = "+";
+            this.btnPlusAmericano.UseVisualStyleBackColor = true;
+            this.btnPlusAmericano.Click += new System.EventHandler(this.btnPlusAmericano_Click);
+            // 
+            // btnMinusAmericano
+            // 
+            this.btnMinusAmericano.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinusAmericano.Location = new System.Drawing.Point(56, 261);
+            this.btnMinusAmericano.Name = "btnMinusAmericano";
+            this.btnMinusAmericano.Size = new System.Drawing.Size(35, 26);
+            this.btnMinusAmericano.TabIndex = 9;
+            this.btnMinusAmericano.Text = "-";
+            this.btnMinusAmericano.UseVisualStyleBackColor = true;
+            this.btnMinusAmericano.Click += new System.EventHandler(this.btnMinusAmericano_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::GUI.Properties.Resources.picPeachJellyTea_Image;
+            this.pictureBox9.Location = new System.Drawing.Point(46, 556);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 8;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::GUI.Properties.Resources.picLycheeJellyTea_Image;
+            this.pictureBox8.Location = new System.Drawing.Point(519, 556);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 7;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::GUI.Properties.Resources.picCaramelMacchiato_Image;
+            this.pictureBox7.Location = new System.Drawing.Point(46, 306);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::GUI.Properties.Resources.picEspresso_Image;
+            this.pictureBox6.Location = new System.Drawing.Point(281, 65);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::GUI.Properties.Resources.picLatte_Image;
+            this.pictureBox5.Location = new System.Drawing.Point(281, 306);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::GUI.Properties.Resources.picGoldenLotusTea_Image;
+            this.pictureBox4.Location = new System.Drawing.Point(281, 556);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::GUI.Properties.Resources.picBlackCoffee_Image;
+            this.pictureBox3.Location = new System.Drawing.Point(519, 306);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GUI.Properties.Resources.picCappuccino_Image;
+            this.pictureBox2.Location = new System.Drawing.Point(519, 65);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.picAmericano_Image;
+            this.pictureBox1.Location = new System.Drawing.Point(46, 65);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // SubMenu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1155, 831);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Name = "SubMenu";
+            this.Text = "Menu";
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
-
-        private Panel panel1;
-        private Label Menulabel;
-        private FlowLayoutPanel sidebar;
-        private Panel DashBoardpanel;
-        private Button Dashboardbutton;
-        private Panel Aboutpanel;
-        private Button Aboutbutton;
-        private Panel Logoutpanel;
-        private Button Logoutbutton;
-        private Panel Submenu1panel;
-        private Button Submenu1button;
-        private System.Windows.Forms.Timer menuTransition;
-        private System.Windows.Forms.Timer sidebarTransition;
-        private PictureBox picEspresso;
-        private Label labelEspresso;
-        private Label priceEspresso;
-        private Label numberEspresso;
-        private Button btnPlusEspresso;
-        private Button btnMinusEspresso;
-        private PictureBox picLatte;
-        private Label labelLatte;
-        private Label priceLatte;
-        private Label numberLatte;
-        private Button btnPlusLatte;
-        private Button btnMinusLatte;
-        private PictureBox picCappuccino;
-        private Label labelCappuccino;
-        private Label priceCappuccino;
-        private Label numberCappuccino;
-        private Button btnPlusCappuccino;
-        private Button btnMinusCappuccino;
-        private PictureBox picAmericano;
-        private Label labelAmericano;
-        private Label priceAmericano;
-        private Label numberAmericano;
-        private Button btnPlusAmericano;
-        private Button btnMinusAmericano;
-        private PictureBox picCaramelMacchiato;
-        private Label labelCaramelMacchiato;
-        private Label priceCaramelMacchiato;
-        private Label numberCaramelMacchiato;
-        private Button btnPlusCaramelMacchiato;
-        private Button btnMinusCaramelMacchiato;
-        private PictureBox picBlackCoffee;
-        private Label labelBlackCoffee;
-        private Label priceBlackCoffee;
-        private Label numberBlackCoffee;
-        private Button btnPlusBlackCoffee;
-        private Button btnMinusBlackCoffee;
-        private Label label;
-        private Label labelTotal;
-        private Button btnOrder;
-        private PictureBox picLycheeJellyTea;
-        private Label labeLycheeJellyTea;
-        private Label priceLycheeJellyTea;
-        private Button btnMinusLycheeJellyTea;
-        private Label NumberLycheeJellyTea;
-        private Button btnPlusLycheeJellyTea;
-        private PictureBox picGoldenLotusTea;
-        private Label labelGoldenLotusTea;
-        private Label priceGoldenLotusTea;
-        private Button btnMinusGoldenLotusTea;
-        private Label numberGoldenLotusTea;
-        private Button btnPlusGoldenLotusTea;
-        private PictureBox picPeachJellyTea;
-        private Label labelPeachJellyTea;
-        private Label pricePeachJellyTea;
-        private Button btnMinusPeachJellyTea;
-        private Label numberPeachJellyTea;
-        private Button btnPlusPeachJellyTea;
-        private PictureBox picRedBeanGreenTea;
-        private Label labelRedBeanGreenTea;
-        private Label priceRedBeanGreenTea;
-        private Button btnMinusRedBeanGreenTea;
-        private Label numberRedBeanGreenTea;
-        private Button btnPlusRedBeanGreenTea;
-        private PictureBox picPeachTea;
-        private Label labelPeachTea;
-        private Label pricePeachTea;
-        private Button btnMinusPeachTea;
-        private Label numberPeachTea;
-        private Button btnPlusPeachTea;
-        private PictureBox picLycheeTea;
-        private Label labelLycheeTea;
-        private Label priceLycheeTea;
-        private Button btnMinusLycheeTea;
-        private Label numberLycheeTea;
-        private Button btnPlusLycheeTea;
-        private GroupBox groupBox1;
-        private PictureBox Hambutton;
-        private ComboBox PaymentMethods;
-        private Label label2;
-        private Label label1;
-        private TextBox Password;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Button btnManage;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.TextBox Password;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label numberAmericano;
+        private System.Windows.Forms.Button btnPlusAmericano;
+        private System.Windows.Forms.Button btnMinusAmericano;
+        private System.Windows.Forms.Button btnPlusBlackCoffee;
+        private System.Windows.Forms.Button btnMinusPeachJellyTea;
+        private System.Windows.Forms.Button btnPlusPeachJellyTea;
+        private System.Windows.Forms.Button btnMinusGoldenLotusTea;
+        private System.Windows.Forms.Button btnPlusGoldenLotusTea;
+        private System.Windows.Forms.Button btnMinusLycheeJellyTea;
+        private System.Windows.Forms.Button btnPlusLycheeJellyTea;
+        private System.Windows.Forms.Button btnMinusBlackCoffee;
+        private System.Windows.Forms.Button btnPlusLatte;
+        private System.Windows.Forms.Button btnMinusLatte;
+        private System.Windows.Forms.Button btnPlusCaramelMacchiato;
+        private System.Windows.Forms.Button btnMinusCaramelMacchiato;
+        private System.Windows.Forms.Button btnPlusCappuccino;
+        private System.Windows.Forms.Button btnMinusCappuccino;
+        private System.Windows.Forms.Button btnMinusEspresso;
+        private System.Windows.Forms.Button btnPlusEsprosso;
+        private System.Windows.Forms.Label numberEspresso;
+        private System.Windows.Forms.Label numberCappuccino;
+        private System.Windows.Forms.Label numberCaramelMacchiato;
+        private System.Windows.Forms.Label numberLatte;
+        private System.Windows.Forms.Label numberBlackCoffee;
+        private System.Windows.Forms.Label numberPeachJellyTea;
+        private System.Windows.Forms.Label numberLycheeJellyTea;
+        private System.Windows.Forms.Label numberGoldenLotusTea;
+        private System.Windows.Forms.ComboBox PaymentMethods;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label priceCappuccino;
+        private System.Windows.Forms.Label labelCappuccino;
+        private System.Windows.Forms.Label priceLatte;
+        private System.Windows.Forms.Label labelLatte;
+        private System.Windows.Forms.Label priceEspresso;
+        private System.Windows.Forms.Label labelEspresso;
+        private System.Windows.Forms.Label pricePeachJellyTea;
+        private System.Windows.Forms.Label labelPeachJellyTea;
+        private System.Windows.Forms.Label priceGoldenLotusTea;
+        private System.Windows.Forms.Label labelGoldenLotusTea;
+        private System.Windows.Forms.Label priceLycheeJellyTea;
+        private System.Windows.Forms.Label labelLycheeJellyTea;
+        private System.Windows.Forms.Label priceBlackCoffee;
+        private System.Windows.Forms.Label labelBlackCoffee;
+        private System.Windows.Forms.Label priceCaramelMacchiato;
+        private System.Windows.Forms.Label labelCaramelMacchiato;
+        private System.Windows.Forms.Label priceAmericano;
+        private System.Windows.Forms.Label labelAmericano;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
     }
 }
