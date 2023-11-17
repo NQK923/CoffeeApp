@@ -31,325 +31,358 @@ namespace GUI
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Management));
-			TableShowOrder = new DataGridView();
-			btnShowOrder = new Button();
-			btnCalculateRevenue = new Button();
-			labelRevenue = new Label();
-			TableShowStaff = new DataGridView();
-			btnShowStaff = new Button();
-			inputStatus = new ComboBox();
-			inputStaffId = new TextBox();
-			btnAddAtendance = new Button();
-			inputDateTime = new DateTimePicker();
-			labelProfit = new Label();
-			btnCalculateProfit = new Button();
-			StaffID = new Label();
-			Status = new Label();
-			Date = new Label();
-			groupBox1 = new GroupBox();
-			inputTimeShowAttendance = new DateTimePicker();
-			optionShowAttendance = new ComboBox();
-			inputTimeShowOrder = new DateTimePicker();
-			optionShowOrder = new ComboBox();
-			groupBox2 = new GroupBox();
-			btnShowAttendance = new Button();
-			groupBox3 = new GroupBox();
-			((System.ComponentModel.ISupportInitialize)TableShowOrder).BeginInit();
-			((System.ComponentModel.ISupportInitialize)TableShowStaff).BeginInit();
-			groupBox3.SuspendLayout();
-			SuspendLayout();
-			// 
-			// TableShowOrder
-			// 
-			TableShowOrder.BackgroundColor = SystemColors.ControlLightLight;
-			TableShowOrder.ColumnHeadersHeight = 34;
-			TableShowOrder.Location = new Point(617, 68);
-			TableShowOrder.Name = "TableShowOrder";
-			TableShowOrder.RowHeadersWidth = 62;
-			TableShowOrder.RowTemplate.Height = 33;
-			TableShowOrder.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-			TableShowOrder.Size = new Size(782, 303);
-			TableShowOrder.TabIndex = 0;
-			// 
-			// btnShowOrder
-			// 
-			btnShowOrder.BackColor = Color.FromArgb(255, 192, 128);
-			btnShowOrder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnShowOrder.Location = new Point(93, 100);
-			btnShowOrder.Name = "btnShowOrder";
-			btnShowOrder.Size = new Size(177, 44);
-			btnShowOrder.TabIndex = 1;
-			btnShowOrder.Text = "Show Order";
-			btnShowOrder.UseVisualStyleBackColor = false;
-			btnShowOrder.Click += btnShowOrder_Click;
-			// 
-			// btnCalculateRevenue
-			// 
-			btnCalculateRevenue.BackColor = Color.FromArgb(255, 192, 128);
-			btnCalculateRevenue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnCalculateRevenue.Location = new Point(621, 392);
-			btnCalculateRevenue.Name = "btnCalculateRevenue";
-			btnCalculateRevenue.Size = new Size(149, 44);
-			btnCalculateRevenue.TabIndex = 2;
-			btnCalculateRevenue.Text = "Revenue";
-			btnCalculateRevenue.UseVisualStyleBackColor = false;
-			btnCalculateRevenue.Click += btnCalculateRevenue_Click;
-			// 
-			// labelRevenue
-			// 
-			labelRevenue.AutoSize = true;
-			labelRevenue.Location = new Point(776, 407);
-			labelRevenue.Name = "labelRevenue";
-			labelRevenue.Size = new Size(0, 25);
-			labelRevenue.TabIndex = 3;
-			// 
-			// TableShowStaff
-			// 
-			TableShowStaff.BackgroundColor = Color.White;
-			TableShowStaff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			TableShowStaff.Location = new Point(617, 471);
-			TableShowStaff.Name = "TableShowStaff";
-			TableShowStaff.RowHeadersWidth = 62;
-			TableShowStaff.RowTemplate.Height = 33;
-			TableShowStaff.Size = new Size(782, 237);
-			TableShowStaff.TabIndex = 4;
-			TableShowStaff.RowHeaderMouseClick += ShowStaff_RowHeaderMouseClick;
-			// 
-			// btnShowStaff
-			// 
-			btnShowStaff.BackColor = Color.FromArgb(255, 192, 128);
-			btnShowStaff.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnShowStaff.Location = new Point(617, 737);
-			btnShowStaff.Name = "btnShowStaff";
-			btnShowStaff.Size = new Size(151, 49);
-			btnShowStaff.TabIndex = 5;
-			btnShowStaff.Text = "Show Staff";
-			btnShowStaff.UseVisualStyleBackColor = false;
-			btnShowStaff.Click += btnShowStaff_Click;
-			// 
-			// inputStatus
-			// 
-			inputStatus.BackColor = Color.White;
-			inputStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			inputStatus.FormattingEnabled = true;
-			inputStatus.Location = new Point(253, 571);
-			inputStatus.Name = "inputStatus";
-			inputStatus.Size = new Size(182, 40);
-			inputStatus.TabIndex = 15;
-			// 
-			// inputStaffId
-			// 
-			inputStaffId.BackColor = Color.White;
-			inputStaffId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			inputStaffId.Location = new Point(253, 508);
-			inputStaffId.Name = "inputStaffId";
-			inputStaffId.ReadOnly = true;
-			inputStaffId.Size = new Size(150, 39);
-			inputStaffId.TabIndex = 13;
-			// 
-			// btnAddAtendance
-			// 
-			btnAddAtendance.BackColor = Color.FromArgb(255, 192, 128);
-			btnAddAtendance.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnAddAtendance.Location = new Point(126, 737);
-			btnAddAtendance.Name = "btnAddAtendance";
-			btnAddAtendance.Size = new Size(177, 49);
-			btnAddAtendance.TabIndex = 12;
-			btnAddAtendance.Text = "Add Atendance";
-			btnAddAtendance.UseVisualStyleBackColor = false;
-			btnAddAtendance.Click += btnAddAtendance_Click;
-			// 
-			// inputDateTime
-			// 
-			inputDateTime.CalendarForeColor = Color.FromArgb(255, 192, 128);
-			inputDateTime.CalendarMonthBackground = Color.FromArgb(255, 192, 128);
-			inputDateTime.CalendarTitleBackColor = Color.FromArgb(255, 192, 128);
-			inputDateTime.CalendarTitleForeColor = Color.FromArgb(255, 192, 128);
-			inputDateTime.CalendarTrailingForeColor = Color.FromArgb(255, 192, 128);
-			inputDateTime.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-			inputDateTime.Location = new Point(253, 639);
-			inputDateTime.Name = "inputDateTime";
-			inputDateTime.Size = new Size(294, 31);
-			inputDateTime.TabIndex = 16;
-			// 
-			// labelProfit
-			// 
-			labelProfit.AutoSize = true;
-			labelProfit.Location = new Point(1007, 411);
-			labelProfit.Name = "labelProfit";
-			labelProfit.Size = new Size(0, 25);
-			labelProfit.TabIndex = 18;
-			// 
-			// btnCalculateProfit
-			// 
-			btnCalculateProfit.BackColor = Color.FromArgb(255, 192, 128);
-			btnCalculateProfit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnCalculateProfit.Location = new Point(895, 392);
-			btnCalculateProfit.Name = "btnCalculateProfit";
-			btnCalculateProfit.Size = new Size(112, 44);
-			btnCalculateProfit.TabIndex = 17;
-			btnCalculateProfit.Text = "Profit";
-			btnCalculateProfit.UseVisualStyleBackColor = false;
-			btnCalculateProfit.Click += btnCalculateProfit_Click;
-			// 
-			// StaffID
-			// 
-			StaffID.AutoSize = true;
-			StaffID.BackColor = Color.FromArgb(255, 192, 128);
-			StaffID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			StaffID.Location = new Point(146, 511);
-			StaffID.Name = "StaffID";
-			StaffID.Size = new Size(97, 32);
-			StaffID.TabIndex = 19;
-			StaffID.Text = "Staff ID:";
-			// 
-			// Status
-			// 
-			Status.AutoSize = true;
-			Status.BackColor = Color.FromArgb(255, 192, 128);
-			Status.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			Status.Location = new Point(157, 571);
-			Status.Name = "Status";
-			Status.Size = new Size(83, 32);
-			Status.TabIndex = 20;
-			Status.Text = "Status:";
-			// 
-			// Date
-			// 
-			Date.AutoSize = true;
-			Date.BackColor = Color.FromArgb(255, 192, 128);
-			Date.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			Date.Location = new Point(168, 639);
-			Date.Name = "Date";
-			Date.Size = new Size(69, 32);
-			Date.TabIndex = 21;
-			Date.Text = "Date:";
-			// 
-			// groupBox1
-			// 
-			groupBox1.BackColor = Color.FromArgb(255, 224, 192);
-			groupBox1.Location = new Point(117, 471);
-			groupBox1.Name = "groupBox1";
-			groupBox1.Size = new Size(457, 237);
-			groupBox1.TabIndex = 22;
-			groupBox1.TabStop = false;
-			groupBox1.Text = "Attendance";
-			// 
-			// inputTimeShowAttendance
-			// 
-			inputTimeShowAttendance.CalendarForeColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowAttendance.CalendarMonthBackground = Color.FromArgb(255, 192, 128);
-			inputTimeShowAttendance.CalendarTitleBackColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowAttendance.CalendarTitleForeColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowAttendance.CalendarTrailingForeColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowAttendance.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			inputTimeShowAttendance.Location = new Point(6, 101);
-			inputTimeShowAttendance.Name = "inputTimeShowAttendance";
-			inputTimeShowAttendance.Size = new Size(404, 39);
-			inputTimeShowAttendance.TabIndex = 23;
-			// 
-			// optionShowAttendance
-			// 
-			optionShowAttendance.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			optionShowAttendance.FormattingEnabled = true;
-			optionShowAttendance.Location = new Point(228, 45);
-			optionShowAttendance.Name = "optionShowAttendance";
-			optionShowAttendance.Size = new Size(182, 40);
-			optionShowAttendance.TabIndex = 24;
-			optionShowAttendance.Text = "option";
-			// 
-			// inputTimeShowOrder
-			// 
-			inputTimeShowOrder.CalendarForeColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowOrder.CalendarMonthBackground = Color.FromArgb(255, 192, 128);
-			inputTimeShowOrder.CalendarTitleBackColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowOrder.CalendarTitleForeColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowOrder.CalendarTrailingForeColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowOrder.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-			inputTimeShowOrder.Location = new Point(276, 107);
-			inputTimeShowOrder.Name = "inputTimeShowOrder";
-			inputTimeShowOrder.Size = new Size(292, 31);
-			inputTimeShowOrder.TabIndex = 25;
-			// 
-			// optionShowOrder
-			// 
-			optionShowOrder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			optionShowOrder.FormattingEnabled = true;
-			optionShowOrder.Location = new Point(276, 156);
-			optionShowOrder.Name = "optionShowOrder";
-			optionShowOrder.Size = new Size(182, 40);
-			optionShowOrder.TabIndex = 26;
-			optionShowOrder.Text = "option";
-			// 
-			// groupBox2
-			// 
-			groupBox2.BackColor = Color.FromArgb(255, 224, 192);
-			groupBox2.Location = new Point(86, 68);
-			groupBox2.Name = "groupBox2";
-			groupBox2.Size = new Size(488, 165);
-			groupBox2.TabIndex = 27;
-			groupBox2.TabStop = false;
-			// 
-			// btnShowAttendance
-			// 
-			btnShowAttendance.BackColor = Color.FromArgb(255, 192, 128);
-			btnShowAttendance.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnShowAttendance.Location = new Point(6, 40);
-			btnShowAttendance.Name = "btnShowAttendance";
-			btnShowAttendance.Size = new Size(216, 49);
-			btnShowAttendance.TabIndex = 28;
-			btnShowAttendance.Text = "Show Attendance";
-			btnShowAttendance.UseVisualStyleBackColor = false;
-			btnShowAttendance.Click += btnShowAttendance_Click;
-			// 
-			// groupBox3
-			// 
-			groupBox3.BackColor = Color.FromArgb(255, 224, 192);
-			groupBox3.Controls.Add(btnShowAttendance);
-			groupBox3.Controls.Add(optionShowAttendance);
-			groupBox3.Controls.Add(inputTimeShowAttendance);
-			groupBox3.Location = new Point(1419, 471);
-			groupBox3.Name = "groupBox3";
-			groupBox3.Size = new Size(417, 237);
-			groupBox3.TabIndex = 29;
-			groupBox3.TabStop = false;
-			groupBox3.Text = "Attendance";
-			// 
-			// Management
-			// 
-			AutoScaleDimensions = new SizeF(10F, 25F);
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = SystemColors.Control;
-			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-			ClientSize = new Size(1859, 862);
-			Controls.Add(groupBox3);
-			Controls.Add(optionShowOrder);
-			Controls.Add(inputTimeShowOrder);
-			Controls.Add(Date);
-			Controls.Add(Status);
-			Controls.Add(StaffID);
-			Controls.Add(labelProfit);
-			Controls.Add(btnCalculateProfit);
-			Controls.Add(inputDateTime);
-			Controls.Add(inputStatus);
-			Controls.Add(inputStaffId);
-			Controls.Add(btnAddAtendance);
-			Controls.Add(btnShowStaff);
-			Controls.Add(TableShowStaff);
-			Controls.Add(labelRevenue);
-			Controls.Add(btnCalculateRevenue);
-			Controls.Add(btnShowOrder);
-			Controls.Add(TableShowOrder);
-			Controls.Add(groupBox1);
-			Controls.Add(groupBox2);
-			Name = "Management";
-			Text = "Management";
-			((System.ComponentModel.ISupportInitialize)TableShowOrder).EndInit();
-			((System.ComponentModel.ISupportInitialize)TableShowStaff).EndInit();
-			groupBox3.ResumeLayout(false);
-			ResumeLayout(false);
-			PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Management));
+            this.TableShowOrder = new System.Windows.Forms.DataGridView();
+            this.btnShowOrder = new System.Windows.Forms.Button();
+            this.btnCalculateRevenue = new System.Windows.Forms.Button();
+            this.labelRevenue = new System.Windows.Forms.Label();
+            this.TableShowStaff = new System.Windows.Forms.DataGridView();
+            this.btnShowStaff = new System.Windows.Forms.Button();
+            this.inputStatus = new System.Windows.Forms.ComboBox();
+            this.inputStaffId = new System.Windows.Forms.TextBox();
+            this.btnAddAtendance = new System.Windows.Forms.Button();
+            this.inputDateTime = new System.Windows.Forms.DateTimePicker();
+            this.labelProfit = new System.Windows.Forms.Label();
+            this.btnCalculateProfit = new System.Windows.Forms.Button();
+            this.StaffID = new System.Windows.Forms.Label();
+            this.Status = new System.Windows.Forms.Label();
+            this.Date = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.inputTimeShowAttendance = new System.Windows.Forms.DateTimePicker();
+            this.optionShowAttendance = new System.Windows.Forms.ComboBox();
+            this.inputTimeShowOrder = new System.Windows.Forms.DateTimePicker();
+            this.optionShowOrder = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnShowAttendance = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.TableShowOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TableShowStaff)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // TableShowOrder
+            // 
+            this.TableShowOrder.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TableShowOrder.ColumnHeadersHeight = 34;
+            this.TableShowOrder.Location = new System.Drawing.Point(494, 44);
+            this.TableShowOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.TableShowOrder.Name = "TableShowOrder";
+            this.TableShowOrder.RowHeadersWidth = 62;
+            this.TableShowOrder.RowTemplate.Height = 33;
+            this.TableShowOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TableShowOrder.Size = new System.Drawing.Size(626, 194);
+            this.TableShowOrder.TabIndex = 0;
+            // 
+            // btnShowOrder
+            // 
+            this.btnShowOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnShowOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnShowOrder.Location = new System.Drawing.Point(13, 19);
+            this.btnShowOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowOrder.Name = "btnShowOrder";
+            this.btnShowOrder.Size = new System.Drawing.Size(124, 43);
+            this.btnShowOrder.TabIndex = 1;
+            this.btnShowOrder.Text = "Show Order";
+            this.btnShowOrder.UseVisualStyleBackColor = false;
+            this.btnShowOrder.Click += new System.EventHandler(this.btnShowOrder_Click);
+            // 
+            // btnCalculateRevenue
+            // 
+            this.btnCalculateRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnCalculateRevenue.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnCalculateRevenue.Location = new System.Drawing.Point(497, 251);
+            this.btnCalculateRevenue.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCalculateRevenue.Name = "btnCalculateRevenue";
+            this.btnCalculateRevenue.Size = new System.Drawing.Size(124, 42);
+            this.btnCalculateRevenue.TabIndex = 2;
+            this.btnCalculateRevenue.Text = "Revenue";
+            this.btnCalculateRevenue.UseVisualStyleBackColor = false;
+            this.btnCalculateRevenue.Click += new System.EventHandler(this.btnCalculateRevenue_Click);
+            // 
+            // labelRevenue
+            // 
+            this.labelRevenue.AutoSize = true;
+            this.labelRevenue.Location = new System.Drawing.Point(621, 260);
+            this.labelRevenue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelRevenue.Name = "labelRevenue";
+            this.labelRevenue.Size = new System.Drawing.Size(0, 16);
+            this.labelRevenue.TabIndex = 3;
+            // 
+            // TableShowStaff
+            // 
+            this.TableShowStaff.BackgroundColor = System.Drawing.Color.White;
+            this.TableShowStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TableShowStaff.Location = new System.Drawing.Point(494, 301);
+            this.TableShowStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.TableShowStaff.Name = "TableShowStaff";
+            this.TableShowStaff.RowHeadersWidth = 62;
+            this.TableShowStaff.RowTemplate.Height = 33;
+            this.TableShowStaff.Size = new System.Drawing.Size(626, 152);
+            this.TableShowStaff.TabIndex = 4;
+            TableShowStaff.RowHeaderMouseClick += ShowStaff_RowHeaderMouseClick;
+            // 
+            // btnShowStaff
+            // 
+            this.btnShowStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnShowStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnShowStaff.Location = new System.Drawing.Point(494, 472);
+            this.btnShowStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowStaff.Name = "btnShowStaff";
+            this.btnShowStaff.Size = new System.Drawing.Size(127, 44);
+            this.btnShowStaff.TabIndex = 5;
+            this.btnShowStaff.Text = "Show Staff";
+            this.btnShowStaff.UseVisualStyleBackColor = false;
+            this.btnShowStaff.Click += new System.EventHandler(this.btnShowStaff_Click);
+            // 
+            // inputStatus
+            // 
+            this.inputStatus.BackColor = System.Drawing.Color.White;
+            this.inputStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inputStatus.FormattingEnabled = true;
+            this.inputStatus.Location = new System.Drawing.Point(128, 63);
+            this.inputStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.inputStatus.Name = "inputStatus";
+            this.inputStatus.Size = new System.Drawing.Size(146, 36);
+            this.inputStatus.TabIndex = 15;
+            // 
+            // inputStaffId
+            // 
+            this.inputStaffId.BackColor = System.Drawing.Color.White;
+            this.inputStaffId.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inputStaffId.Location = new System.Drawing.Point(128, 24);
+            this.inputStaffId.Margin = new System.Windows.Forms.Padding(2);
+            this.inputStaffId.Name = "inputStaffId";
+            this.inputStaffId.ReadOnly = true;
+            this.inputStaffId.Size = new System.Drawing.Size(121, 34);
+            this.inputStaffId.TabIndex = 13;
+            // 
+            // btnAddAtendance
+            // 
+            this.btnAddAtendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnAddAtendance.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAddAtendance.Location = new System.Drawing.Point(156, 144);
+            this.btnAddAtendance.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddAtendance.Name = "btnAddAtendance";
+            this.btnAddAtendance.Size = new System.Drawing.Size(142, 31);
+            this.btnAddAtendance.TabIndex = 12;
+            this.btnAddAtendance.Text = "Add Atendance";
+            this.btnAddAtendance.UseVisualStyleBackColor = false;
+            this.btnAddAtendance.Click += new System.EventHandler(this.btnAddAtendance_Click);
+            // 
+            // inputDateTime
+            // 
+            this.inputDateTime.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputDateTime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputDateTime.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputDateTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputDateTime.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputDateTime.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.inputDateTime.Location = new System.Drawing.Point(126, 109);
+            this.inputDateTime.Margin = new System.Windows.Forms.Padding(2);
+            this.inputDateTime.Name = "inputDateTime";
+            this.inputDateTime.Size = new System.Drawing.Size(270, 27);
+            this.inputDateTime.TabIndex = 16;
+            // 
+            // labelProfit
+            // 
+            this.labelProfit.AutoSize = true;
+            this.labelProfit.Location = new System.Drawing.Point(806, 263);
+            this.labelProfit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelProfit.Name = "labelProfit";
+            this.labelProfit.Size = new System.Drawing.Size(0, 16);
+            this.labelProfit.TabIndex = 18;
+            // 
+            // btnCalculateProfit
+            // 
+            this.btnCalculateProfit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnCalculateProfit.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnCalculateProfit.Location = new System.Drawing.Point(716, 251);
+            this.btnCalculateProfit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCalculateProfit.Name = "btnCalculateProfit";
+            this.btnCalculateProfit.Size = new System.Drawing.Size(103, 42);
+            this.btnCalculateProfit.TabIndex = 17;
+            this.btnCalculateProfit.Text = "Profit";
+            this.btnCalculateProfit.UseVisualStyleBackColor = false;
+            this.btnCalculateProfit.Click += new System.EventHandler(this.btnCalculateProfit_Click);
+            // 
+            // StaffID
+            // 
+            this.StaffID.AutoSize = true;
+            this.StaffID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.StaffID.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.StaffID.Location = new System.Drawing.Point(8, 27);
+            this.StaffID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.StaffID.Name = "StaffID";
+            this.StaffID.Size = new System.Drawing.Size(79, 28);
+            this.StaffID.TabIndex = 19;
+            this.StaffID.Text = "Staff ID:";
+            // 
+            // Status
+            // 
+            this.Status.AutoSize = true;
+            this.Status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.Status.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Status.Location = new System.Drawing.Point(8, 66);
+            this.Status.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(69, 28);
+            this.Status.TabIndex = 20;
+            this.Status.Text = "Status:";
+            // 
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.Date.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Date.Location = new System.Drawing.Point(8, 107);
+            this.Date.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(57, 28);
+            this.Date.TabIndex = 21;
+            this.Date.Text = "Date:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.StaffID);
+            this.groupBox1.Controls.Add(this.Date);
+            this.groupBox1.Controls.Add(this.inputStaffId);
+            this.groupBox1.Controls.Add(this.btnAddAtendance);
+            this.groupBox1.Controls.Add(this.inputDateTime);
+            this.groupBox1.Controls.Add(this.Status);
+            this.groupBox1.Controls.Add(this.inputStatus);
+            this.groupBox1.Location = new System.Drawing.Point(23, 194);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(437, 179);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Attendance";
+            // 
+            // inputTimeShowAttendance
+            // 
+            this.inputTimeShowAttendance.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowAttendance.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowAttendance.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowAttendance.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowAttendance.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowAttendance.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inputTimeShowAttendance.Location = new System.Drawing.Point(5, 93);
+            this.inputTimeShowAttendance.Margin = new System.Windows.Forms.Padding(2);
+            this.inputTimeShowAttendance.Name = "inputTimeShowAttendance";
+            this.inputTimeShowAttendance.Size = new System.Drawing.Size(324, 34);
+            this.inputTimeShowAttendance.TabIndex = 23;
+            // 
+            // optionShowAttendance
+            // 
+            this.optionShowAttendance.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.optionShowAttendance.FormattingEnabled = true;
+            this.optionShowAttendance.Location = new System.Drawing.Point(182, 29);
+            this.optionShowAttendance.Margin = new System.Windows.Forms.Padding(2);
+            this.optionShowAttendance.Name = "optionShowAttendance";
+            this.optionShowAttendance.Size = new System.Drawing.Size(146, 36);
+            this.optionShowAttendance.TabIndex = 24;
+            this.optionShowAttendance.Text = "option";
+            // 
+            // inputTimeShowOrder
+            // 
+            this.inputTimeShowOrder.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowOrder.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowOrder.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowOrder.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowOrder.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.inputTimeShowOrder.Location = new System.Drawing.Point(156, 21);
+            this.inputTimeShowOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.inputTimeShowOrder.Name = "inputTimeShowOrder";
+            this.inputTimeShowOrder.Size = new System.Drawing.Size(259, 27);
+            this.inputTimeShowOrder.TabIndex = 25;
+            // 
+            // optionShowOrder
+            // 
+            this.optionShowOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.optionShowOrder.FormattingEnabled = true;
+            this.optionShowOrder.Location = new System.Drawing.Point(156, 66);
+            this.optionShowOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.optionShowOrder.Name = "optionShowOrder";
+            this.optionShowOrder.Size = new System.Drawing.Size(155, 36);
+            this.optionShowOrder.TabIndex = 26;
+            this.optionShowOrder.Text = "option";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox2.Controls.Add(this.btnShowOrder);
+            this.groupBox2.Controls.Add(this.optionShowOrder);
+            this.groupBox2.Controls.Add(this.inputTimeShowOrder);
+            this.groupBox2.Location = new System.Drawing.Point(23, 11);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(437, 129);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            // 
+            // btnShowAttendance
+            // 
+            this.btnShowAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnShowAttendance.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnShowAttendance.Location = new System.Drawing.Point(5, 26);
+            this.btnShowAttendance.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowAttendance.Name = "btnShowAttendance";
+            this.btnShowAttendance.Size = new System.Drawing.Size(173, 39);
+            this.btnShowAttendance.TabIndex = 28;
+            this.btnShowAttendance.Text = "Show Attendance";
+            this.btnShowAttendance.UseVisualStyleBackColor = false;
+            this.btnShowAttendance.Click += new System.EventHandler(this.btnShowAttendance_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox3.Controls.Add(this.btnShowAttendance);
+            this.groupBox3.Controls.Add(this.optionShowAttendance);
+            this.groupBox3.Controls.Add(this.inputTimeShowAttendance);
+            this.groupBox3.Location = new System.Drawing.Point(23, 389);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(437, 138);
+            this.groupBox3.TabIndex = 29;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Attendance";
+            // 
+            // Management
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1154, 552);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.labelProfit);
+            this.Controls.Add(this.btnCalculateProfit);
+            this.Controls.Add(this.btnShowStaff);
+            this.Controls.Add(this.TableShowStaff);
+            this.Controls.Add(this.labelRevenue);
+            this.Controls.Add(this.btnCalculateRevenue);
+            this.Controls.Add(this.TableShowOrder);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Management";
+            this.Text = "Management";
+            ((System.ComponentModel.ISupportInitialize)(this.TableShowOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TableShowStaff)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
 
 		#endregion

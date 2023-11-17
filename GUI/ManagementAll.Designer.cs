@@ -31,510 +31,555 @@ namespace GUI
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagementAll));
-			TableShowOrder = new DataGridView();
-			btnShowOrder = new Button();
-			btnCalculateRevenue = new Button();
-			labelRevenue = new Label();
-			TableShowStaff = new DataGridView();
-			btnAddStaff = new Button();
-			inputName = new TextBox();
-			inputSalary = new TextBox();
-			inputShift = new ComboBox();
-			inputUserId = new ComboBox();
-			labelProfit = new Label();
-			btnCalculateProfit = new Button();
-			label1 = new Label();
-			label2 = new Label();
-			label3 = new Label();
-			StoreId = new Label();
-			groupBox1 = new GroupBox();
-			inputStaffId = new TextBox();
-			label4 = new Label();
-			btnUpdateStaff = new Button();
-			btnDeleteStaff = new Button();
-			optionShowOrder = new ComboBox();
-			inputTimeShowOrder = new DateTimePicker();
-			groupBox2 = new GroupBox();
-			btnClearAll = new Button();
-			btnUpdateProduct = new Button();
-			groupBox4 = new GroupBox();
-			inputProductQuantity = new TextBox();
-			inputProductCost = new TextBox();
-			inputProductPrice = new TextBox();
-			inputProductName = new TextBox();
-			inputProductId = new TextBox();
-			label5 = new Label();
-			label6 = new Label();
-			label7 = new Label();
-			label8 = new Label();
-			label9 = new Label();
-			btnShowProduct = new Button();
-			((System.ComponentModel.ISupportInitialize)TableShowOrder).BeginInit();
-			((System.ComponentModel.ISupportInitialize)TableShowStaff).BeginInit();
-			groupBox1.SuspendLayout();
-			groupBox4.SuspendLayout();
-			SuspendLayout();
-			// 
-			// TableShowOrder
-			// 
-			TableShowOrder.BackgroundColor = Color.White;
-			TableShowOrder.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			TableShowOrder.Location = new Point(577, 42);
-			TableShowOrder.Name = "TableShowOrder";
-			TableShowOrder.RowHeadersWidth = 62;
-			TableShowOrder.RowTemplate.Height = 33;
-			TableShowOrder.Size = new Size(724, 295);
-			TableShowOrder.TabIndex = 0;
-			TableShowOrder.RowHeaderMouseClick += TableShowOrder_RowHeaderMouseClick;
-			// 
-			// btnShowOrder
-			// 
-			btnShowOrder.BackColor = Color.FromArgb(255, 192, 128);
-			btnShowOrder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnShowOrder.Location = new Point(74, 72);
-			btnShowOrder.Name = "btnShowOrder";
-			btnShowOrder.Size = new Size(154, 50);
-			btnShowOrder.TabIndex = 1;
-			btnShowOrder.Text = "Show Order";
-			btnShowOrder.UseVisualStyleBackColor = false;
-			btnShowOrder.Click += btnShowOrder_Click_1;
-			// 
-			// btnCalculateRevenue
-			// 
-			btnCalculateRevenue.BackColor = Color.FromArgb(255, 192, 128);
-			btnCalculateRevenue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnCalculateRevenue.Location = new Point(577, 352);
-			btnCalculateRevenue.Name = "btnCalculateRevenue";
-			btnCalculateRevenue.Size = new Size(118, 45);
-			btnCalculateRevenue.TabIndex = 2;
-			btnCalculateRevenue.Text = "Revenue";
-			btnCalculateRevenue.UseVisualStyleBackColor = false;
-			btnCalculateRevenue.Click += btnCalculateRevenue_Click;
-			// 
-			// labelRevenue
-			// 
-			labelRevenue.AutoSize = true;
-			labelRevenue.BackColor = Color.FromArgb(255, 192, 128);
-			labelRevenue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			labelRevenue.Location = new Point(701, 359);
-			labelRevenue.Name = "labelRevenue";
-			labelRevenue.Size = new Size(0, 32);
-			labelRevenue.TabIndex = 3;
-			// 
-			// TableShowStaff
-			// 
-			TableShowStaff.BackgroundColor = Color.White;
-			TableShowStaff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			TableShowStaff.Location = new Point(577, 454);
-			TableShowStaff.Name = "TableShowStaff";
-			TableShowStaff.RowHeadersWidth = 62;
-			TableShowStaff.RowTemplate.Height = 33;
-			TableShowStaff.Size = new Size(724, 312);
-			TableShowStaff.TabIndex = 4;
-			TableShowStaff.RowHeaderMouseClick += TableShowStaff_RowHeaderMouseClick;
-			// 
-			// btnAddStaff
-			// 
-			btnAddStaff.BackColor = Color.FromArgb(255, 192, 128);
-			btnAddStaff.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnAddStaff.Location = new Point(577, 787);
-			btnAddStaff.Name = "btnAddStaff";
-			btnAddStaff.Size = new Size(124, 46);
-			btnAddStaff.TabIndex = 5;
-			btnAddStaff.Text = "Add Staff";
-			btnAddStaff.UseVisualStyleBackColor = false;
-			btnAddStaff.Click += btnAddStaff_Click;
-			// 
-			// inputName
-			// 
-			inputName.BackColor = Color.White;
-			inputName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			inputName.Location = new Point(167, 89);
-			inputName.Name = "inputName";
-			inputName.Size = new Size(150, 39);
-			inputName.TabIndex = 6;
-			// 
-			// inputSalary
-			// 
-			inputSalary.BackColor = Color.White;
-			inputSalary.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			inputSalary.Location = new Point(167, 204);
-			inputSalary.Name = "inputSalary";
-			inputSalary.Size = new Size(150, 39);
-			inputSalary.TabIndex = 8;
-			// 
-			// inputShift
-			// 
-			inputShift.BackColor = Color.White;
-			inputShift.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			inputShift.FormattingEnabled = true;
-			inputShift.Location = new Point(167, 147);
-			inputShift.Name = "inputShift";
-			inputShift.Size = new Size(182, 40);
-			inputShift.TabIndex = 10;
-			// 
-			// inputUserId
-			// 
-			inputUserId.BackColor = Color.White;
-			inputUserId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			inputUserId.FormattingEnabled = true;
-			inputUserId.Location = new Point(167, 265);
-			inputUserId.Name = "inputUserId";
-			inputUserId.Size = new Size(182, 40);
-			inputUserId.TabIndex = 11;
-			// 
-			// labelProfit
-			// 
-			labelProfit.AutoSize = true;
-			labelProfit.BackColor = Color.FromArgb(255, 192, 128);
-			labelProfit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			labelProfit.Location = new Point(984, 364);
-			labelProfit.Name = "labelProfit";
-			labelProfit.Size = new Size(0, 32);
-			labelProfit.TabIndex = 13;
-			// 
-			// btnCalculateProfit
-			// 
-			btnCalculateProfit.BackColor = Color.FromArgb(255, 192, 128);
-			btnCalculateProfit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnCalculateProfit.Location = new Point(866, 352);
-			btnCalculateProfit.Name = "btnCalculateProfit";
-			btnCalculateProfit.Size = new Size(112, 45);
-			btnCalculateProfit.TabIndex = 12;
-			btnCalculateProfit.Text = "Profit";
-			btnCalculateProfit.UseVisualStyleBackColor = false;
-			btnCalculateProfit.Click += btnCalculateProfit_Click;
-			// 
-			// label1
-			// 
-			label1.AutoSize = true;
-			label1.BackColor = Color.FromArgb(255, 192, 128);
-			label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label1.Location = new Point(77, 89);
-			label1.Name = "label1";
-			label1.Size = new Size(83, 32);
-			label1.TabIndex = 14;
-			label1.Text = "Name:";
-			// 
-			// label2
-			// 
-			label2.AutoSize = true;
-			label2.BackColor = Color.FromArgb(255, 192, 128);
-			label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label2.Location = new Point(83, 147);
-			label2.Name = "label2";
-			label2.Size = new Size(78, 32);
-			label2.TabIndex = 15;
-			label2.Text = "Shifts:";
-			// 
-			// label3
-			// 
-			label3.AutoSize = true;
-			label3.BackColor = Color.FromArgb(255, 192, 128);
-			label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label3.Location = new Point(78, 211);
-			label3.Name = "label3";
-			label3.Size = new Size(82, 32);
-			label3.TabIndex = 16;
-			label3.Text = "Salary:";
-			// 
-			// StoreId
-			// 
-			StoreId.AutoSize = true;
-			StoreId.BackColor = Color.FromArgb(255, 192, 128);
-			StoreId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			StoreId.Location = new Point(67, 268);
-			StoreId.Name = "StoreId";
-			StoreId.Size = new Size(94, 32);
-			StoreId.TabIndex = 17;
-			StoreId.Text = "StoreId:";
-			// 
-			// groupBox1
-			// 
-			groupBox1.BackColor = Color.FromArgb(255, 224, 192);
-			groupBox1.Controls.Add(inputStaffId);
-			groupBox1.Controls.Add(label4);
-			groupBox1.Controls.Add(StoreId);
-			groupBox1.Controls.Add(inputUserId);
-			groupBox1.Controls.Add(label3);
-			groupBox1.Controls.Add(inputSalary);
-			groupBox1.Controls.Add(label1);
-			groupBox1.Controls.Add(label2);
-			groupBox1.Controls.Add(inputName);
-			groupBox1.Controls.Add(inputShift);
-			groupBox1.Location = new Point(157, 454);
-			groupBox1.Name = "groupBox1";
-			groupBox1.Size = new Size(393, 312);
-			groupBox1.TabIndex = 18;
-			groupBox1.TabStop = false;
-			groupBox1.Text = "Staff Information";
-			// 
-			// inputStaffId
-			// 
-			inputStaffId.BackColor = Color.White;
-			inputStaffId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			inputStaffId.Location = new Point(166, 30);
-			inputStaffId.Name = "inputStaffId";
-			inputStaffId.ReadOnly = true;
-			inputStaffId.Size = new Size(150, 39);
-			inputStaffId.TabIndex = 19;
-			// 
-			// label4
-			// 
-			label4.AutoSize = true;
-			label4.BackColor = Color.FromArgb(255, 192, 128);
-			label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label4.Location = new Point(73, 36);
-			label4.Name = "label4";
-			label4.Size = new Size(87, 32);
-			label4.TabIndex = 18;
-			label4.Text = "StaffId:";
-			// 
-			// btnUpdateStaff
-			// 
-			btnUpdateStaff.BackColor = Color.FromArgb(255, 192, 128);
-			btnUpdateStaff.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnUpdateStaff.Location = new Point(850, 787);
-			btnUpdateStaff.Name = "btnUpdateStaff";
-			btnUpdateStaff.Size = new Size(171, 46);
-			btnUpdateStaff.TabIndex = 19;
-			btnUpdateStaff.Text = "Update Staff";
-			btnUpdateStaff.UseVisualStyleBackColor = false;
-			btnUpdateStaff.Click += btnUpdateStaff_Click;
-			// 
-			// btnDeleteStaff
-			// 
-			btnDeleteStaff.BackColor = Color.FromArgb(255, 192, 128);
-			btnDeleteStaff.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnDeleteStaff.Location = new Point(1129, 787);
-			btnDeleteStaff.Name = "btnDeleteStaff";
-			btnDeleteStaff.Size = new Size(124, 46);
-			btnDeleteStaff.TabIndex = 20;
-			btnDeleteStaff.Text = "Delete Staff";
-			btnDeleteStaff.UseVisualStyleBackColor = false;
-			btnDeleteStaff.Click += btnDeleteStaff_Click;
-			// 
-			// optionShowOrder
-			// 
-			optionShowOrder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			optionShowOrder.FormattingEnabled = true;
-			optionShowOrder.Location = new Point(245, 128);
-			optionShowOrder.Name = "optionShowOrder";
-			optionShowOrder.Size = new Size(182, 40);
-			optionShowOrder.TabIndex = 28;
-			optionShowOrder.Text = "option";
-			// 
-			// inputTimeShowOrder
-			// 
-			inputTimeShowOrder.CalendarForeColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowOrder.CalendarMonthBackground = Color.FromArgb(255, 192, 128);
-			inputTimeShowOrder.CalendarTitleBackColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowOrder.CalendarTitleForeColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowOrder.CalendarTrailingForeColor = Color.FromArgb(255, 192, 128);
-			inputTimeShowOrder.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-			inputTimeShowOrder.Location = new Point(245, 79);
-			inputTimeShowOrder.Name = "inputTimeShowOrder";
-			inputTimeShowOrder.Size = new Size(292, 31);
-			inputTimeShowOrder.TabIndex = 27;
-			// 
-			// groupBox2
-			// 
-			groupBox2.BackColor = Color.FromArgb(255, 224, 192);
-			groupBox2.Location = new Point(48, 42);
-			groupBox2.Name = "groupBox2";
-			groupBox2.Size = new Size(502, 164);
-			groupBox2.TabIndex = 29;
-			groupBox2.TabStop = false;
-			groupBox2.Text = "Option Show Table";
-			// 
-			// btnClearAll
-			// 
-			btnClearAll.BackColor = Color.FromArgb(255, 192, 128);
-			btnClearAll.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnClearAll.Location = new Point(323, 787);
-			btnClearAll.Name = "btnClearAll";
-			btnClearAll.Size = new Size(124, 46);
-			btnClearAll.TabIndex = 30;
-			btnClearAll.Text = "Clear All";
-			btnClearAll.UseVisualStyleBackColor = false;
-			btnClearAll.Click += btnClearAll_Click;
-			// 
-			// btnUpdateProduct
-			// 
-			btnUpdateProduct.BackColor = Color.FromArgb(255, 192, 128);
-			btnUpdateProduct.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnUpdateProduct.Location = new Point(1463, 352);
-			btnUpdateProduct.Name = "btnUpdateProduct";
-			btnUpdateProduct.Size = new Size(208, 44);
-			btnUpdateProduct.TabIndex = 34;
-			btnUpdateProduct.Text = "Update Product";
-			btnUpdateProduct.UseVisualStyleBackColor = false;
-			btnUpdateProduct.Click += btnUpdateProduct_Click;
-			// 
-			// groupBox4
-			// 
-			groupBox4.BackColor = Color.FromArgb(255, 224, 192);
-			groupBox4.Controls.Add(inputProductQuantity);
-			groupBox4.Controls.Add(inputProductCost);
-			groupBox4.Controls.Add(inputProductPrice);
-			groupBox4.Controls.Add(inputProductName);
-			groupBox4.Controls.Add(inputProductId);
-			groupBox4.Controls.Add(label5);
-			groupBox4.Controls.Add(label6);
-			groupBox4.Controls.Add(label7);
-			groupBox4.Controls.Add(label8);
-			groupBox4.Controls.Add(label9);
-			groupBox4.Location = new Point(1361, 42);
-			groupBox4.Name = "groupBox4";
-			groupBox4.Size = new Size(410, 295);
-			groupBox4.TabIndex = 33;
-			groupBox4.TabStop = false;
-			groupBox4.Text = "Product Infomation";
-			// 
-			// inputProductQuantity
-			// 
-			inputProductQuantity.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-			inputProductQuantity.Location = new Point(142, 219);
-			inputProductQuantity.Name = "inputProductQuantity";
-			inputProductQuantity.Size = new Size(208, 37);
-			inputProductQuantity.TabIndex = 29;
-			// 
-			// inputProductCost
-			// 
-			inputProductCost.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-			inputProductCost.Location = new Point(142, 177);
-			inputProductCost.Name = "inputProductCost";
-			inputProductCost.Size = new Size(208, 37);
-			inputProductCost.TabIndex = 28;
-			// 
-			// inputProductPrice
-			// 
-			inputProductPrice.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-			inputProductPrice.Location = new Point(142, 134);
-			inputProductPrice.Name = "inputProductPrice";
-			inputProductPrice.Size = new Size(208, 37);
-			inputProductPrice.TabIndex = 27;
-			// 
-			// inputProductName
-			// 
-			inputProductName.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-			inputProductName.Location = new Point(142, 91);
-			inputProductName.Name = "inputProductName";
-			inputProductName.Size = new Size(208, 37);
-			inputProductName.TabIndex = 26;
-			// 
-			// inputProductId
-			// 
-			inputProductId.BackColor = Color.White;
-			inputProductId.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-			inputProductId.Location = new Point(142, 39);
-			inputProductId.Name = "inputProductId";
-			inputProductId.ReadOnly = true;
-			inputProductId.Size = new Size(208, 37);
-			inputProductId.TabIndex = 25;
-			// 
-			// label5
-			// 
-			label5.AutoSize = true;
-			label5.BackColor = Color.FromArgb(255, 192, 128);
-			label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label5.Location = new Point(14, 224);
-			label5.Name = "label5";
-			label5.Size = new Size(111, 32);
-			label5.TabIndex = 24;
-			label5.Text = "Quantity:";
-			// 
-			// label6
-			// 
-			label6.AutoSize = true;
-			label6.BackColor = Color.FromArgb(255, 192, 128);
-			label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label6.Location = new Point(59, 176);
-			label6.Name = "label6";
-			label6.Size = new Size(66, 32);
-			label6.TabIndex = 23;
-			label6.Text = "Cost:";
-			// 
-			// label7
-			// 
-			label7.AutoSize = true;
-			label7.BackColor = Color.FromArgb(255, 192, 128);
-			label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label7.Location = new Point(55, 133);
-			label7.Name = "label7";
-			label7.Size = new Size(70, 32);
-			label7.TabIndex = 22;
-			label7.Text = "Price:";
-			// 
-			// label8
-			// 
-			label8.AutoSize = true;
-			label8.BackColor = Color.FromArgb(255, 192, 128);
-			label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label8.Location = new Point(42, 91);
-			label8.Name = "label8";
-			label8.Size = new Size(83, 32);
-			label8.TabIndex = 21;
-			label8.Text = "Name:";
-			// 
-			// label9
-			// 
-			label9.AutoSize = true;
-			label9.BackColor = Color.FromArgb(255, 192, 128);
-			label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			label9.Location = new Point(76, 44);
-			label9.Name = "label9";
-			label9.Size = new Size(49, 32);
-			label9.TabIndex = 20;
-			label9.Text = " ID:";
-			// 
-			// btnShowProduct
-			// 
-			btnShowProduct.BackColor = Color.FromArgb(255, 192, 128);
-			btnShowProduct.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnShowProduct.Location = new Point(1124, 353);
-			btnShowProduct.Name = "btnShowProduct";
-			btnShowProduct.Size = new Size(177, 44);
-			btnShowProduct.TabIndex = 35;
-			btnShowProduct.Text = "Show Product";
-			btnShowProduct.UseVisualStyleBackColor = false;
-			btnShowProduct.Click += btnShowProduct_Click;
-			// 
-			// ManagementAll
-			// 
-			AutoScaleDimensions = new SizeF(10F, 25F);
-			AutoScaleMode = AutoScaleMode.Font;
-			BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-			ClientSize = new Size(1836, 887);
-			Controls.Add(btnShowProduct);
-			Controls.Add(btnUpdateProduct);
-			Controls.Add(groupBox4);
-			Controls.Add(btnClearAll);
-			Controls.Add(optionShowOrder);
-			Controls.Add(inputTimeShowOrder);
-			Controls.Add(btnDeleteStaff);
-			Controls.Add(btnUpdateStaff);
-			Controls.Add(labelProfit);
-			Controls.Add(btnCalculateProfit);
-			Controls.Add(btnAddStaff);
-			Controls.Add(TableShowStaff);
-			Controls.Add(labelRevenue);
-			Controls.Add(btnCalculateRevenue);
-			Controls.Add(btnShowOrder);
-			Controls.Add(TableShowOrder);
-			Controls.Add(groupBox1);
-			Controls.Add(groupBox2);
-			Name = "ManagementAll";
-			Text = "ManagementAll";
-			((System.ComponentModel.ISupportInitialize)TableShowOrder).EndInit();
-			((System.ComponentModel.ISupportInitialize)TableShowStaff).EndInit();
-			groupBox1.ResumeLayout(false);
-			groupBox1.PerformLayout();
-			groupBox4.ResumeLayout(false);
-			groupBox4.PerformLayout();
-			ResumeLayout(false);
-			PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagementAll));
+            this.TableShowOrder = new System.Windows.Forms.DataGridView();
+            this.btnShowOrder = new System.Windows.Forms.Button();
+            this.btnCalculateRevenue = new System.Windows.Forms.Button();
+            this.labelRevenue = new System.Windows.Forms.Label();
+            this.TableShowStaff = new System.Windows.Forms.DataGridView();
+            this.btnAddStaff = new System.Windows.Forms.Button();
+            this.inputName = new System.Windows.Forms.TextBox();
+            this.inputSalary = new System.Windows.Forms.TextBox();
+            this.inputShift = new System.Windows.Forms.ComboBox();
+            this.inputUserId = new System.Windows.Forms.ComboBox();
+            this.labelProfit = new System.Windows.Forms.Label();
+            this.btnCalculateProfit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.StoreId = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.inputStaffId = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnClearAll = new System.Windows.Forms.Button();
+            this.btnUpdateStaff = new System.Windows.Forms.Button();
+            this.btnDeleteStaff = new System.Windows.Forms.Button();
+            this.optionShowOrder = new System.Windows.Forms.ComboBox();
+            this.inputTimeShowOrder = new System.Windows.Forms.DateTimePicker();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnUpdateProduct = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.inputProductQuantity = new System.Windows.Forms.TextBox();
+            this.inputProductCost = new System.Windows.Forms.TextBox();
+            this.inputProductPrice = new System.Windows.Forms.TextBox();
+            this.inputProductName = new System.Windows.Forms.TextBox();
+            this.inputProductId = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnShowProduct = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.TableShowOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TableShowStaff)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // TableShowOrder
+            // 
+            this.TableShowOrder.BackgroundColor = System.Drawing.Color.White;
+            this.TableShowOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TableShowOrder.Location = new System.Drawing.Point(360, 12);
+            this.TableShowOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.TableShowOrder.Name = "TableShowOrder";
+            this.TableShowOrder.RowHeadersWidth = 62;
+            this.TableShowOrder.RowTemplate.Height = 33;
+            this.TableShowOrder.Size = new System.Drawing.Size(579, 189);
+            this.TableShowOrder.TabIndex = 0;
+            this.TableShowOrder.RowHeaderMouseClick += TableShowOrder_RowHeaderMouseClick;
+            // 
+            // btnShowOrder
+            // 
+            this.btnShowOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnShowOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnShowOrder.Location = new System.Drawing.Point(29, 111);
+            this.btnShowOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowOrder.Name = "btnShowOrder";
+            this.btnShowOrder.Size = new System.Drawing.Size(146, 34);
+            this.btnShowOrder.TabIndex = 1;
+            this.btnShowOrder.Text = "Show Order";
+            this.btnShowOrder.UseVisualStyleBackColor = false;
+            this.btnShowOrder.Click += new System.EventHandler(this.btnShowOrder_Click);
+            // 
+            // btnCalculateRevenue
+            // 
+            this.btnCalculateRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnCalculateRevenue.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnCalculateRevenue.Location = new System.Drawing.Point(380, 204);
+            this.btnCalculateRevenue.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCalculateRevenue.Name = "btnCalculateRevenue";
+            this.btnCalculateRevenue.Size = new System.Drawing.Size(108, 36);
+            this.btnCalculateRevenue.TabIndex = 2;
+            this.btnCalculateRevenue.Text = "Revenue";
+            this.btnCalculateRevenue.UseVisualStyleBackColor = false;
+            this.btnCalculateRevenue.Click += new System.EventHandler(this.btnCalculateRevenue_Click);
+            // 
+            // labelRevenue
+            // 
+            this.labelRevenue.AutoSize = true;
+            this.labelRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.labelRevenue.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelRevenue.Location = new System.Drawing.Point(561, 230);
+            this.labelRevenue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelRevenue.Name = "labelRevenue";
+            this.labelRevenue.Size = new System.Drawing.Size(0, 28);
+            this.labelRevenue.TabIndex = 3;
+            // 
+            // TableShowStaff
+            // 
+            this.TableShowStaff.BackgroundColor = System.Drawing.Color.White;
+            this.TableShowStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TableShowStaff.Location = new System.Drawing.Point(360, 249);
+            this.TableShowStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.TableShowStaff.Name = "TableShowStaff";
+            this.TableShowStaff.RowHeadersWidth = 62;
+            this.TableShowStaff.RowTemplate.Height = 33;
+            this.TableShowStaff.Size = new System.Drawing.Size(579, 200);
+            this.TableShowStaff.TabIndex = 4;
+            this.TableShowStaff.RowHeaderMouseClick += TableShowStaff_RowHeaderMouseClick;
+            // 
+            // btnAddStaff
+            // 
+            this.btnAddStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnAddStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAddStaff.Location = new System.Drawing.Point(380, 466);
+            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(112, 36);
+            this.btnAddStaff.TabIndex = 5;
+            this.btnAddStaff.Text = "Add Staff";
+            this.btnAddStaff.UseVisualStyleBackColor = false;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
+            // 
+            // inputName
+            // 
+            this.inputName.BackColor = System.Drawing.Color.White;
+            this.inputName.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inputName.Location = new System.Drawing.Point(111, 60);
+            this.inputName.Margin = new System.Windows.Forms.Padding(2);
+            this.inputName.Name = "inputName";
+            this.inputName.Size = new System.Drawing.Size(121, 34);
+            this.inputName.TabIndex = 6;
+            // 
+            // inputSalary
+            // 
+            this.inputSalary.BackColor = System.Drawing.Color.White;
+            this.inputSalary.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inputSalary.Location = new System.Drawing.Point(112, 128);
+            this.inputSalary.Margin = new System.Windows.Forms.Padding(2);
+            this.inputSalary.Name = "inputSalary";
+            this.inputSalary.Size = new System.Drawing.Size(121, 34);
+            this.inputSalary.TabIndex = 8;
+            // 
+            // inputShift
+            // 
+            this.inputShift.BackColor = System.Drawing.Color.White;
+            this.inputShift.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inputShift.FormattingEnabled = true;
+            this.inputShift.Location = new System.Drawing.Point(112, 94);
+            this.inputShift.Margin = new System.Windows.Forms.Padding(2);
+            this.inputShift.Name = "inputShift";
+            this.inputShift.Size = new System.Drawing.Size(146, 36);
+            this.inputShift.TabIndex = 10;
+            // 
+            // inputUserId
+            // 
+            this.inputUserId.BackColor = System.Drawing.Color.White;
+            this.inputUserId.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inputUserId.FormattingEnabled = true;
+            this.inputUserId.Location = new System.Drawing.Point(112, 162);
+            this.inputUserId.Margin = new System.Windows.Forms.Padding(2);
+            this.inputUserId.Name = "inputUserId";
+            this.inputUserId.Size = new System.Drawing.Size(146, 36);
+            this.inputUserId.TabIndex = 11;
+            // 
+            // labelProfit
+            // 
+            this.labelProfit.AutoSize = true;
+            this.labelProfit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.labelProfit.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelProfit.Location = new System.Drawing.Point(787, 233);
+            this.labelProfit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelProfit.Name = "labelProfit";
+            this.labelProfit.Size = new System.Drawing.Size(0, 28);
+            this.labelProfit.TabIndex = 13;
+            // 
+            // btnCalculateProfit
+            // 
+            this.btnCalculateProfit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnCalculateProfit.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnCalculateProfit.Location = new System.Drawing.Point(603, 204);
+            this.btnCalculateProfit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCalculateProfit.Name = "btnCalculateProfit";
+            this.btnCalculateProfit.Size = new System.Drawing.Size(90, 36);
+            this.btnCalculateProfit.TabIndex = 12;
+            this.btnCalculateProfit.Text = "Profit";
+            this.btnCalculateProfit.UseVisualStyleBackColor = false;
+            this.btnCalculateProfit.Click += new System.EventHandler(this.btnCalculateProfit_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label1.Location = new System.Drawing.Point(19, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 28);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Name:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label2.Location = new System.Drawing.Point(19, 97);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 28);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Shifts:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label3.Location = new System.Drawing.Point(19, 134);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 28);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Salary:";
+            // 
+            // StoreId
+            // 
+            this.StoreId.AutoSize = true;
+            this.StoreId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.StoreId.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.StoreId.Location = new System.Drawing.Point(19, 170);
+            this.StoreId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.StoreId.Name = "StoreId";
+            this.StoreId.Size = new System.Drawing.Size(79, 28);
+            this.StoreId.TabIndex = 17;
+            this.StoreId.Text = "StoreId:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.inputStaffId);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.StoreId);
+            this.groupBox1.Controls.Add(this.btnClearAll);
+            this.groupBox1.Controls.Add(this.inputUserId);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.inputSalary);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.inputName);
+            this.groupBox1.Controls.Add(this.inputShift);
+            this.groupBox1.Location = new System.Drawing.Point(43, 249);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(280, 253);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Staff Information";
+            // 
+            // inputStaffId
+            // 
+            this.inputStaffId.BackColor = System.Drawing.Color.White;
+            this.inputStaffId.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.inputStaffId.Location = new System.Drawing.Point(111, 22);
+            this.inputStaffId.Margin = new System.Windows.Forms.Padding(2);
+            this.inputStaffId.Name = "inputStaffId";
+            this.inputStaffId.ReadOnly = true;
+            this.inputStaffId.Size = new System.Drawing.Size(121, 34);
+            this.inputStaffId.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label4.Location = new System.Drawing.Point(19, 25);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 28);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "StaffId:";
+            // 
+            // btnClearAll
+            // 
+            this.btnClearAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnClearAll.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnClearAll.Location = new System.Drawing.Point(111, 209);
+            this.btnClearAll.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(122, 40);
+            this.btnClearAll.TabIndex = 30;
+            this.btnClearAll.Text = "Clear All";
+            this.btnClearAll.UseVisualStyleBackColor = false;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
+            // btnUpdateStaff
+            // 
+            this.btnUpdateStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnUpdateStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnUpdateStaff.Location = new System.Drawing.Point(603, 466);
+            this.btnUpdateStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateStaff.Name = "btnUpdateStaff";
+            this.btnUpdateStaff.Size = new System.Drawing.Size(136, 36);
+            this.btnUpdateStaff.TabIndex = 19;
+            this.btnUpdateStaff.Text = "Update Staff";
+            this.btnUpdateStaff.UseVisualStyleBackColor = false;
+            this.btnUpdateStaff.Click += new System.EventHandler(this.btnUpdateStaff_Click);
+            // 
+            // btnDeleteStaff
+            // 
+            this.btnDeleteStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnDeleteStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDeleteStaff.Location = new System.Drawing.Point(813, 466);
+            this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteStaff.Name = "btnDeleteStaff";
+            this.btnDeleteStaff.Size = new System.Drawing.Size(109, 36);
+            this.btnDeleteStaff.TabIndex = 20;
+            this.btnDeleteStaff.Text = "Delete Staff";
+            this.btnDeleteStaff.UseVisualStyleBackColor = false;
+            this.btnDeleteStaff.Click += new System.EventHandler(this.btnDeleteStaff_Click);
+            // 
+            // optionShowOrder
+            // 
+            this.optionShowOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.optionShowOrder.FormattingEnabled = true;
+            this.optionShowOrder.Location = new System.Drawing.Point(29, 58);
+            this.optionShowOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.optionShowOrder.Name = "optionShowOrder";
+            this.optionShowOrder.Size = new System.Drawing.Size(146, 36);
+            this.optionShowOrder.TabIndex = 28;
+            this.optionShowOrder.Text = "option";
+            // 
+            // inputTimeShowOrder
+            // 
+            this.inputTimeShowOrder.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowOrder.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowOrder.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowOrder.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowOrder.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.inputTimeShowOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.inputTimeShowOrder.Location = new System.Drawing.Point(29, 24);
+            this.inputTimeShowOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.inputTimeShowOrder.Name = "inputTimeShowOrder";
+            this.inputTimeShowOrder.Size = new System.Drawing.Size(252, 27);
+            this.inputTimeShowOrder.TabIndex = 27;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox2.Controls.Add(this.btnShowOrder);
+            this.groupBox2.Controls.Add(this.inputTimeShowOrder);
+            this.groupBox2.Controls.Add(this.optionShowOrder);
+            this.groupBox2.Location = new System.Drawing.Point(38, 11);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(285, 171);
+            this.groupBox2.TabIndex = 29;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Option Show Table";
+            // 
+            // btnUpdateProduct
+            // 
+            this.btnUpdateProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnUpdateProduct.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(114, 185);
+            this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateProduct.Name = "btnUpdateProduct";
+            this.btnUpdateProduct.Size = new System.Drawing.Size(167, 39);
+            this.btnUpdateProduct.TabIndex = 34;
+            this.btnUpdateProduct.Text = "Update Product";
+            this.btnUpdateProduct.UseVisualStyleBackColor = false;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox4.Controls.Add(this.inputProductQuantity);
+            this.groupBox4.Controls.Add(this.btnUpdateProduct);
+            this.groupBox4.Controls.Add(this.inputProductCost);
+            this.groupBox4.Controls.Add(this.inputProductPrice);
+            this.groupBox4.Controls.Add(this.inputProductName);
+            this.groupBox4.Controls.Add(this.inputProductId);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Location = new System.Drawing.Point(965, 12);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Size = new System.Drawing.Size(302, 234);
+            this.groupBox4.TabIndex = 33;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Product Infomation";
+            // 
+            // inputProductQuantity
+            // 
+            this.inputProductQuantity.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.inputProductQuantity.Location = new System.Drawing.Point(114, 140);
+            this.inputProductQuantity.Margin = new System.Windows.Forms.Padding(2);
+            this.inputProductQuantity.Name = "inputProductQuantity";
+            this.inputProductQuantity.Size = new System.Drawing.Size(167, 32);
+            this.inputProductQuantity.TabIndex = 29;
+            // 
+            // inputProductCost
+            // 
+            this.inputProductCost.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.inputProductCost.Location = new System.Drawing.Point(114, 113);
+            this.inputProductCost.Margin = new System.Windows.Forms.Padding(2);
+            this.inputProductCost.Name = "inputProductCost";
+            this.inputProductCost.Size = new System.Drawing.Size(167, 32);
+            this.inputProductCost.TabIndex = 28;
+            // 
+            // inputProductPrice
+            // 
+            this.inputProductPrice.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.inputProductPrice.Location = new System.Drawing.Point(114, 86);
+            this.inputProductPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.inputProductPrice.Name = "inputProductPrice";
+            this.inputProductPrice.Size = new System.Drawing.Size(167, 32);
+            this.inputProductPrice.TabIndex = 27;
+            // 
+            // inputProductName
+            // 
+            this.inputProductName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.inputProductName.Location = new System.Drawing.Point(114, 58);
+            this.inputProductName.Margin = new System.Windows.Forms.Padding(2);
+            this.inputProductName.Name = "inputProductName";
+            this.inputProductName.Size = new System.Drawing.Size(167, 32);
+            this.inputProductName.TabIndex = 26;
+            // 
+            // inputProductId
+            // 
+            this.inputProductId.BackColor = System.Drawing.Color.White;
+            this.inputProductId.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.inputProductId.Location = new System.Drawing.Point(114, 25);
+            this.inputProductId.Margin = new System.Windows.Forms.Padding(2);
+            this.inputProductId.Name = "inputProductId";
+            this.inputProductId.ReadOnly = true;
+            this.inputProductId.Size = new System.Drawing.Size(167, 32);
+            this.inputProductId.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label5.Location = new System.Drawing.Point(11, 143);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 28);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Quantity:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label6.Location = new System.Drawing.Point(47, 113);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 28);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Cost:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label7.Location = new System.Drawing.Point(44, 85);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 28);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Price:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label8.Location = new System.Drawing.Point(34, 58);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 28);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Name:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label9.Location = new System.Drawing.Point(61, 28);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 28);
+            this.label9.TabIndex = 20;
+            this.label9.Text = " ID:";
+            // 
+            // btnShowProduct
+            // 
+            this.btnShowProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnShowProduct.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnShowProduct.Location = new System.Drawing.Point(768, 205);
+            this.btnShowProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowProduct.Name = "btnShowProduct";
+            this.btnShowProduct.Size = new System.Drawing.Size(154, 35);
+            this.btnShowProduct.TabIndex = 35;
+            this.btnShowProduct.Text = "Show Product";
+            this.btnShowProduct.UseVisualStyleBackColor = false;
+            this.btnShowProduct.Click += new System.EventHandler(this.btnShowProduct_Click);
+            // 
+            // ManagementAll
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1287, 551);
+            this.Controls.Add(this.btnShowProduct);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.btnDeleteStaff);
+            this.Controls.Add(this.btnUpdateStaff);
+            this.Controls.Add(this.labelProfit);
+            this.Controls.Add(this.btnCalculateProfit);
+            this.Controls.Add(this.btnAddStaff);
+            this.Controls.Add(this.TableShowStaff);
+            this.Controls.Add(this.labelRevenue);
+            this.Controls.Add(this.btnCalculateRevenue);
+            this.Controls.Add(this.TableShowOrder);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "ManagementAll";
+            this.Text = "ManagementAll";
+            ((System.ComponentModel.ISupportInitialize)(this.TableShowOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TableShowStaff)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
 
 		#endregion

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SubMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubMenu.Designer.cs">
+      <DependentUpon>SubMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,12 +78,9 @@
     <Compile Include="staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubMenu.Designer.cs">
+    <EmbeddedResource Include="SubMenu.resx">
       <DependentUpon>SubMenu.cs</DependentUpon>
-    </Compile>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,12 +98,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="staff.resx">
+    <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubMenu.resx">
-      <DependentUpon>SubMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
