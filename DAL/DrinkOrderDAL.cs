@@ -28,9 +28,105 @@ namespace DAL
                         int quantity = (int)reader["Quantity"];
                         decimal price = (decimal)reader["Price"];
                         decimal cost = (decimal)reader["Cost"];
-
                         decimal profit = (price - cost) * quantity;
                         totalProfit += profit;
+                    }
+                }
+            }
+            return totalProfit;
+        }
+
+        public decimal CalculateDailyProfit(DateTime date)
+        {
+            decimal totalProfit = 0;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT DO.DrinkOrderId, DO.DrinkId, DO.Quantity, D.Price, D.Cost FROM DrinkOrder DO " +
+                               "INNER JOIN Drink D ON DO.DrinkId = D.DrinkId WHERE CAST(DO.Time AS DATE) = @date";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@date", date);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int drinkOrderId = (int)reader["DrinkOrderId"];
+                            int drinkId = (int)reader["DrinkId"];
+                            int quantity = (int)reader["Quantity"];
+                            decimal price = (decimal)reader["Price"];
+                            decimal cost = (decimal)reader["Cost"];
+                            decimal profit = (price - cost) * quantity;
+                            totalProfit += profit;
+                        }
+                    }
+                }
+            }
+            return totalProfit;
+        }
+
+        public decimal CalculateMonthlyProfit(int month, int year)
+        {
+            decimal totalProfit = 0;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT DO.DrinkOrderId, DO.DrinkId, DO.Quantity, D.Price, D.Cost FROM DrinkOrder DO " +
+                               "INNER JOIN Drink D ON DO.DrinkId = D.DrinkId WHERE MONTH(DO.Time) = @month AND YEAR(DO.Time) = @year";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@month", month);
+                    command.Parameters.AddWithValue("@year", year);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int drinkOrderId = (int)reader["DrinkOrderId"];
+                            int drinkId = (int)reader["DrinkId"];
+                            int quantity = (int)reader["Quantity"];
+                            decimal price = (decimal)reader["Price"];
+                            decimal cost = (decimal)reader["Cost"];
+                            decimal profit = (price - cost) * quantity;
+                            totalProfit += profit;
+                        }
+                    }
+                }
+            }
+            return totalProfit;
+        }
+
+        public decimal CalculateYearlyProfit(int year)
+        {
+            decimal totalProfit = 0;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT DO.DrinkOrderId, DO.DrinkId, DO.Quantity, D.Price, D.Cost FROM DrinkOrder DO " +
+                               "INNER JOIN Drink D ON DO.DrinkId = D.DrinkId WHERE YEAR(DO.Time) = @year";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@year", year);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int drinkOrderId = (int)reader["DrinkOrderId"];
+                            int drinkId = (int)reader["DrinkId"];
+                            int quantity = (int)reader["Quantity"];
+                            decimal price = (decimal)reader["Price"];
+                            decimal cost = (decimal)reader["Cost"];
+                            decimal profit = (price - cost) * quantity;
+                            totalProfit += profit;
+                        }
                     }
                 }
             }

@@ -31,10 +31,14 @@ namespace GUI
                 {
                     setVisible();
                 }
+                else
+                {
+                    MessageBox.Show("Wrong Username!!!");
+                }
             }
             else
             {
-                MessageBox.Show("Enter user name!!!");
+                MessageBox.Show("Enter Username!!!");
             }
         }
 
@@ -111,6 +115,7 @@ namespace GUI
                 SmtpServer.Send(mail);
 
                 MessageBox.Show("Email has been sent successfully!!!");
+                btnConfirm.Visible = true;
                 return otp;
             }
             catch (Exception ex)
@@ -124,7 +129,28 @@ namespace GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrEmpty(txtOTP.Text))
+            {
+                MessageBox.Show("Enter OTP!!!");
+            }
+            else if(txtOTP.Text != otp.ToString())
+            {
+                MessageBox.Show("Wrong OTP!!!");
+            }
+            else
+            {
+                this.Hide();
+                ChangePasswordForm changePasswordForm = new ChangePasswordForm(txtUserName.Text);
+                changePasswordForm.Show();
+
+            }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChangePasswordForm changePasswordForm = new ChangePasswordForm(txtUserName.Text);
+            changePasswordForm.Show();
         }
     }
 }

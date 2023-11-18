@@ -14,6 +14,7 @@ namespace GUI
 		public OrderBLL OrderBLL = new OrderBLL();
 		public StaffBLL staffBLL = new StaffBLL();
 		public AttendanceBLL AttendanceBLL = new AttendanceBLL();
+        public DrinkOrderBLL DrinkOrderBLL = new DrinkOrderBLL();
 
 		public void SetDataFromLogin(UserDTO data)
 		{
@@ -92,15 +93,22 @@ namespace GUI
 
         private void btnCalculateRevenue_Click(object sender, EventArgs e)
         {
-            List<OrderDTO> orders = new List<OrderDTO>();
-            orders = OrderBLL.GetOrdersByUserId(user.UserId);
-
-            int totalRevenue = 0;
-            foreach (OrderDTO order in orders)
+            string option = optionShowOrder.Text.ToString();
+            if (option != "option")
             {
-                totalRevenue += order.Total;
+                List<OrderDTO> filteredOrders = new List<OrderDTO>();
+                filteredOrders = filtedOders(option);
+                int totalRevenue = 0;
+                foreach (OrderDTO order in filteredOrders)
+                {
+                    totalRevenue += order.Total;
+                }
+                labelRevenue.Text = totalRevenue.ToString() + " VND";
             }
-            labelRevenue.Text = totalRevenue.ToString() + " VND";
+            else
+            {
+                MessageBox.Show("Please choose an option to show Revenue.");
+            }
         }
 
         private void btnShowStaff_Click(object sender, EventArgs e)
@@ -145,9 +153,36 @@ namespace GUI
 
         private void btnCalculateProfit_Click(object sender, EventArgs e)
         {
-            decimal profit = userBLL.CalculateProfitForUser(user.UserId);
-            int intprofit = Convert.ToInt32(profit);
-            labelProfit.Text = intprofit.ToString() + " VND";
+            DateTime time = inputTimeShowOrder.Value;
+            string option = optionShowOrder.Text.ToString();
+
+            if (option != "option")
+            {
+                decimal profit = 0;
+                if (option == "Date")
+                {
+                    profit = DrinkOrderBLL.CalculateDailyProfit(time.Date);
+                }
+                else if (option == "Month")
+                {
+                    profit = DrinkOrderBLL.CalculateMonthlyProfit(time.Month, time.Year);
+                }
+                else if (option == "Year")
+                {
+                    profit = DrinkOrderBLL.CalculateYearlyProfit(time.Year);
+                }
+                else if (option == "All Order")
+                {
+                    profit = DrinkOrderBLL.CalculateProfit();
+                }
+
+                int intprofit = Convert.ToInt32(profit);
+                labelProfit.Text = intprofit.ToString() + " VND";
+            }
+            else
+            {
+                MessageBox.Show("Please choose an option to show Profit.");
+            }
         }
 
         private void btnShowAttendance_Click(object sender, EventArgs e)
@@ -189,6 +224,34 @@ namespace GUI
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private List<OrderDTO> filtedOders(string option)
+        {
+            DateTime time = inputTimeShowOrder.Value;
+            List<OrderDTO> orders = OrderBLL.GetOrders();
+            List<OrderDTO> filteredOrders = new List<OrderDTO>();
+
+            if (option == "Date")
+            {
+                filteredOrders = orders.FindAll(order => order.DateTime.Date == time.Date
+                    && order.DateTime.Month == time.Month && order.DateTime.Year == time.Year);
+            }
+            else if (option == "Month")
+            {
+                filteredOrders = orders.FindAll(order => order.DateTime.Month == time.Month
+                    && order.DateTime.Year == time.Year);
+            }
+            else if (option == "Year")
+            {
+                filteredOrders = orders.FindAll(order => order.DateTime.Year == time.Year);
+            }
+            else if (option == "All Order")
+            {
+                filteredOrders = orders;
+            }
+
+            return filteredOrders;
         }
     }
 }

@@ -39,6 +39,7 @@
             this.txtOTP = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.labelOTP = new System.Windows.Forms.Label();
+            this.labelFW = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,12 +117,13 @@
             // 
             this.btnLogout.BackgroundImage = global::GUI.Properties.Resources.logout_logo;
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogout.Location = new System.Drawing.Point(710, 12);
+            this.btnLogout.Location = new System.Drawing.Point(776, 12);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(40, 40);
             this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnLogout.TabIndex = 107;
             this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // labelMess
             // 
@@ -170,6 +172,18 @@
             this.labelOTP.Text = "OTP:";
             this.labelOTP.Visible = false;
             // 
+            // labelFW
+            // 
+            this.labelFW.AutoSize = true;
+            this.labelFW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.labelFW.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFW.ForeColor = System.Drawing.Color.Black;
+            this.labelFW.Location = new System.Drawing.Point(454, 12);
+            this.labelFW.Name = "labelFW";
+            this.labelFW.Size = new System.Drawing.Size(283, 38);
+            this.labelFW.TabIndex = 0;
+            this.labelFW.Text = "Forgot Password";
+            // 
             // ForgotPwrdForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,6 +191,7 @@
             this.BackgroundImage = global::GUI.Properties.Resources.BackgroundImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(845, 450);
+            this.Controls.Add(this.labelFW);
             this.Controls.Add(this.labelOTP);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtOTP);
@@ -209,5 +224,6 @@
         private System.Windows.Forms.TextBox txtOTP;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label labelOTP;
+        private System.Windows.Forms.Label labelFW;
     }
 }

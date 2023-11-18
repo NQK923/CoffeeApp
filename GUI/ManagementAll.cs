@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace GUI
 {
@@ -20,25 +22,6 @@ namespace GUI
 			ShowStaffs();
 		}
 
-		private void TableShowStaff_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-		{
-			if (e.RowIndex >= 0)
-			{
-				DataGridViewRow selectedRow = TableShowStaff.Rows[e.RowIndex];
-				int staffId = (int)selectedRow.Cells["StaffId"].Value;
-				string name = (string)selectedRow.Cells["Name"].Value;
-				string shift = (string)selectedRow.Cells["Shift"].Value;
-				int storeId = (int)selectedRow.Cells["UserId"].Value;
-				int salary = (int)selectedRow.Cells["Salary"].Value;
-
-				inputName.Text = name.ToString();
-				inputSalary.Text = salary.ToString();
-				inputShift.Text = shift.ToString();
-				inputUserId.Text = storeId.ToString();
-				inputStaffId.Text = staffId.ToString();
-			}
-		}
-
 		public void ShowStaffs()
 		{
 			List<StaffDTO> staff = new List<StaffDTO>();
@@ -50,24 +33,7 @@ namespace GUI
 
 
 
-		private void TableShowOrder_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-		{
-			if (e.RowIndex >= 0)
-			{
-				DataGridViewRow selectedRow = TableShowOrder.Rows[e.RowIndex];
-				decimal Cost = (decimal)selectedRow.Cells["Cost"].Value;
-				string DrinkName = (string)selectedRow.Cells["DrinkName"].Value;
-				decimal Price = (decimal)selectedRow.Cells["Price"].Value;
-				string Provider = (string)selectedRow.Cells["Provider"].Value;
-				int ProductId = (int)selectedRow.Cells["DrinkId"].Value;
 
-				inputProductCost.Text = Cost.ToString();
-				inputProductName.Text = DrinkName.ToString();
-				inputProductPrice.Text = Price.ToString();
-				inputProductQuantity.Text = Provider.ToString();
-				inputProductId.Text = ProductId.ToString();
-			}
-		}
 		public void AdditemtoComboBox()
 		{
 			inputShift.Items.Add("9h-12h");
@@ -90,27 +56,9 @@ namespace GUI
             string option = optionShowOrder.Text.ToString();
             if (option != "option")
             {
-                List<OrderDTO> orders = orderBLL.GetOrders();
                 List<OrderDTO> filteredOrders = new List<OrderDTO>(); // Create a new list for filtered orders
 
-                if (option == "Date")
-                {
-                    filteredOrders = orders.FindAll(order => order.DateTime.Date == time.Date
-                        && order.DateTime.Month == time.Month && order.DateTime.Year == time.Year);
-                }
-                else if (option == "Month")
-                {
-                    filteredOrders = orders.FindAll(order => order.DateTime.Month == time.Month
-                        && order.DateTime.Year == time.Year);
-                }
-                else if (option == "Year")
-                {
-                    filteredOrders = orders.FindAll(order => order.DateTime.Year == time.Year);
-                }
-                else if (option == "All table")
-                {
-                    filteredOrders = orderBLL.GetOrders();
-                }
+                filteredOrders = filtedOders(option);
                 TableShowOrder.DataSource = filteredOrders;
                 TableShowOrder.Columns.Remove("PointUse");
                 TableShowOrder.Columns.Remove("Status");
@@ -123,16 +71,24 @@ namespace GUI
             }
         }
 
-        private void btnCalculateRevenue_Click(object sender, EventArgs e)
+        private void btnCalculateRevenue_Click(object sender, EventArgs e) 
         {
-            List<OrderDTO> orders = new List<OrderDTO>();
-            orders = orderBLL.GetOrders();
-            int totalRevenue = 0;
-            foreach (OrderDTO order in orders)
+            string option = optionShowOrder.Text.ToString();
+            if (option != "option")
             {
-                totalRevenue += order.Total;
+                List<OrderDTO> filteredOrders = new List<OrderDTO>();
+                filteredOrders = filtedOders(option);
+                int totalRevenue = 0;
+                foreach (OrderDTO order in filteredOrders)
+                {
+                    totalRevenue += order.Total;
+                }
+                labelRevenue.Text = totalRevenue.ToString() + " VND";
             }
-            labelRevenue.Text = totalRevenue.ToString() + " VND";
+            else
+            {
+                MessageBox.Show("Please choose an option to show Revenue.");
+            }
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)
@@ -164,9 +120,37 @@ namespace GUI
 
         private void btnCalculateProfit_Click(object sender, EventArgs e)
         {
-            decimal profit = DrinkOrderBLL.CalculateProfit();
-            int intprofit = Convert.ToInt32(profit);
-            labelProfit.Text = intprofit.ToString() + " VND";
+            DateTime time = inputTimeShowOrder.Value;
+            string option = optionShowOrder.Text.ToString();
+            
+            if (option != "option")
+            {
+                decimal profit =0;
+                if (option == "Date")
+                {
+                    profit = DrinkOrderBLL.CalculateDailyProfit(time.Date);
+                }
+                else if (option == "Month")
+                {
+                    profit = DrinkOrderBLL.CalculateMonthlyProfit(time.Month,time.Year);
+                }
+                else if (option == "Year")
+                {
+                    profit = DrinkOrderBLL.CalculateYearlyProfit(time.Year);
+                }
+                else if (option == "All Order")
+                {
+                    profit = DrinkOrderBLL.CalculateProfit();
+                }
+
+                int intprofit = Convert.ToInt32(profit);
+                labelProfit.Text = intprofit.ToString() + " VND";
+            }
+            else
+            {
+                MessageBox.Show("Please choose an option to show Profit.");
+            }
+
         }
 
         private void btnUpdateStaff_Click(object sender, EventArgs e)
@@ -242,6 +226,75 @@ namespace GUI
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private void TableShowOrder_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if(TableShowOrder.Columns.Count > 4)
+                {
+                    DataGridViewRow selectedRow = TableShowOrder.Rows[e.RowIndex];
+                    decimal Cost = (decimal)selectedRow.Cells["Cost"].Value;
+                    string DrinkName = (string)selectedRow.Cells["DrinkName"].Value;
+                    decimal Price = (decimal)selectedRow.Cells["Price"].Value;
+                    string Provider = (string)selectedRow.Cells["Provider"].Value;
+                    int ProductId = (int)selectedRow.Cells["DrinkId"].Value;
+
+                    inputProductCost.Text = Cost.ToString();
+                    inputProductName.Text = DrinkName.ToString();
+                    inputProductPrice.Text = Price.ToString();
+                    inputProductQuantity.Text = Provider.ToString();
+                    inputProductId.Text = ProductId.ToString();
+                }
+            }
+        }
+
+        private void TableShowStaff_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = TableShowStaff.Rows[e.RowIndex];
+                int staffId = (int)selectedRow.Cells["StaffId"].Value;
+                string name = (string)selectedRow.Cells["Name"].Value;
+                string shift = (string)selectedRow.Cells["Shift"].Value;
+                int storeId = (int)selectedRow.Cells["UserId"].Value;
+                int salary = (int)selectedRow.Cells["Salary"].Value;
+
+                inputName.Text = name.ToString();
+                inputSalary.Text = salary.ToString();
+                inputShift.Text = shift.ToString();
+                inputUserId.Text = storeId.ToString();
+                inputStaffId.Text = staffId.ToString();
+            }
+        }
+
+        private List<OrderDTO> filtedOders(string option)
+        {
+            DateTime time = inputTimeShowOrder.Value;
+            List<OrderDTO> orders = orderBLL.GetOrders();
+            List<OrderDTO> filteredOrders = new List<OrderDTO>();
+
+            if (option == "Date")
+            {
+                filteredOrders = orders.FindAll(order => order.DateTime.Date == time.Date
+                    && order.DateTime.Month == time.Month && order.DateTime.Year == time.Year);
+            }
+            else if (option == "Month")
+            {
+                filteredOrders = orders.FindAll(order => order.DateTime.Month == time.Month
+                    && order.DateTime.Year == time.Year);
+            }
+            else if (option == "Year")
+            {
+                filteredOrders = orders.FindAll(order => order.DateTime.Year == time.Year);
+            }
+            else if (option == "All Order")
+            {
+                filteredOrders = orders;
+            }
+
+            return filteredOrders;
         }
     }
 }

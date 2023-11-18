@@ -162,5 +162,40 @@ namespace DAL
                 }
             }
         }
+
+        public string GetPasswordFromUserName(string username)
+        {
+            string query = "SELECT password FROM [User] WHERE username = @username";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+
+                    connection.Open();
+                    string password = command.ExecuteScalar().ToString();
+
+                    return password;
+                }
+            }
+        }
+
+        public void ChangePassword(string username, string newPassword)
+        {
+            string query = "UPDATE [User] SET password = @newPassword WHERE username = @username";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@newPassword", newPassword);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

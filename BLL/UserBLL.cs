@@ -36,5 +36,14 @@ namespace BLL
         {
             return userDAL.GetEmailFromUserName(username);
         }
+
+        public void ChangePassword(string username, string newPassword)
+        {
+            userDAL.ChangePassword(username, newPassword);
+        }
+        public string GetPasswordFromUserName(string username)
+        {
+            return userDAL.GetPasswordFromUserName(username);
+        }
     }
 }

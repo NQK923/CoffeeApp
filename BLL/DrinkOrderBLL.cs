@@ -19,5 +19,20 @@ namespace BLL
         {
             DrinkOderDAL.CreateDrinkOrder(DrinkId, Quantity, Time, UserId);
         }
+
+        public decimal CalculateDailyProfit(DateTime date)
+        {
+            return DrinkOderDAL.CalculateDailyProfit(date);
+        }
+
+        public decimal CalculateMonthlyProfit(int month, int year)
+        {
+            return DrinkOderDAL.CalculateMonthlyProfit((int)month, (int)year);
+        }
+
+        public decimal CalculateYearlyProfit(int year)
+        { 
+            return DrinkOderDAL.CalculateYearlyProfit((int)year);
+        }
     }
 }
