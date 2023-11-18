@@ -16,7 +16,8 @@ namespace GUI
 		public ManagementAll()
 		{
 			InitializeComponent();
-			AdditemtoComboBox();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            AdditemtoComboBox();
 			ShowStaffs();
 		}
 
@@ -39,9 +40,6 @@ namespace GUI
 				inputStaffId.Text = staffId.ToString();
 			}
 		}
-
-
-
 
 		public void ShowStaffs()
 		{
@@ -201,7 +199,7 @@ namespace GUI
             }
             else
             {
-                staffBLL.DeleteStaff(int.Parse(inputStaffId.Text));
+                staffBLL.UpdateStaffStatus(int.Parse(inputStaffId.Text));
                 ShowStaffs();
 
             }

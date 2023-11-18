@@ -25,8 +25,13 @@ namespace BLL
         }
 
         public void DeleteStaff(int staffId)
-        { 
+        {
             StaffDAL.DeleteStaff(staffId);
+        }
+
+        public void UpdateStaffStatus(int staffId)
+        {
+            StaffDAL.UpdateStaffStatus(staffId);
         }
     }
 }

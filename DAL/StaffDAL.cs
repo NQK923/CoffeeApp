@@ -51,7 +51,7 @@ namespace DAL
                 connection.Open();
 
                 // Define your SQL query to insert a new Staff record
-                string query = "INSERT INTO Staff (Name, Shift, Salary, UserId) VALUES (@Name, @Shift, @Salary, @UserId)";
+                string query = "INSERT INTO Staff (Name, Shift, Salary, UserId, Status) VALUES (@Name, @Shift, @Salary, @UserId, 1)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -73,7 +73,7 @@ namespace DAL
                 connection.Open();
 
                 // Define your SQL query to select all staff
-                string query = "SELECT StaffId, Name, Shift, Salary, UserId FROM Staff";
+                string query = "SELECT StaffId, Name, Shift, Salary, UserId FROM Staff WHERE Status = 1";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -131,6 +131,21 @@ namespace DAL
                 {
                     command.Parameters.AddWithValue("@StaffId", staffId);
 
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void UpdateStaffStatus(int staffId)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "UPDATE Staff SET Status = 0 WHERE StaffId = @StaffId";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@StaffId", staffId);
                     command.ExecuteNonQuery();
                 }
             }
