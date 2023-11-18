@@ -27,5 +27,14 @@ namespace BLL
         {
             return userDAL.CalculateProfitForUser(userId);
         }
+        public bool CheckUsernameExists(string username)
+        {
+            return userDAL.CheckUsernameExists(username);
+        }
+
+        public string GetEmailFromUserName(string username)
+        {
+            return userDAL.GetEmailFromUserName(username);
+        }
     }
 }

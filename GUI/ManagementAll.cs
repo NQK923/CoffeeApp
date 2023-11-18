@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using DTO;
 using BLL;
@@ -20,7 +19,6 @@ namespace GUI
             AdditemtoComboBox();
 			ShowStaffs();
 		}
-
 
 		private void TableShowStaff_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
@@ -70,7 +68,6 @@ namespace GUI
 				inputProductId.Text = ProductId.ToString();
 			}
 		}
-		
 		public void AdditemtoComboBox()
 		{
 			inputShift.Items.Add("9h-12h");
@@ -135,7 +132,7 @@ namespace GUI
             {
                 totalRevenue += order.Total;
             }
-            labelRevenue.Text = totalRevenue.ToString() + "VND";
+            labelRevenue.Text = totalRevenue.ToString() + " VND";
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)
@@ -168,7 +165,8 @@ namespace GUI
         private void btnCalculateProfit_Click(object sender, EventArgs e)
         {
             decimal profit = DrinkOrderBLL.CalculateProfit();
-            labelProfit.Text = profit.ToString() + "VND";
+            int intprofit = Convert.ToInt32(profit);
+            labelProfit.Text = intprofit.ToString() + " VND";
         }
 
         private void btnUpdateStaff_Click(object sender, EventArgs e)

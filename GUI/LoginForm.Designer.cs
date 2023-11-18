@@ -40,6 +40,7 @@ namespace GUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnForgotPwrd = new System.Windows.Forms.Button();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,14 +122,27 @@ namespace GUI
             // 
             this.btnForgotPwrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnForgotPwrd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForgotPwrd.Location = new System.Drawing.Point(571, 304);
+            this.btnForgotPwrd.Location = new System.Drawing.Point(628, 306);
             this.btnForgotPwrd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnForgotPwrd.Name = "btnForgotPwrd";
             this.btnForgotPwrd.Size = new System.Drawing.Size(133, 40);
             this.btnForgotPwrd.TabIndex = 6;
-            this.btnForgotPwrd.Text = "Forgot Password";
+            this.btnForgotPwrd.Text = "Forgot PW";
             this.btnForgotPwrd.UseVisualStyleBackColor = false;
             this.btnForgotPwrd.Click += new System.EventHandler(this.btnForgotPwrd_Click);
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.Location = new System.Drawing.Point(469, 306);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(133, 40);
+            this.btnChangePassword.TabIndex = 7;
+            this.btnChangePassword.Text = "Change PW";
+            this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // LoginForm
             // 
@@ -137,6 +151,7 @@ namespace GUI
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(809, 478);
+            this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.btnForgotPwrd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogin);
@@ -164,5 +179,6 @@ namespace GUI
         private Panel panel1;
         private Label label1;
         private Button btnForgotPwrd;
+        private Button btnChangePassword;
     }
 }

@@ -88,7 +88,7 @@ namespace GUI
             this.TableShowOrder.Name = "TableShowOrder";
             this.TableShowOrder.RowHeadersWidth = 62;
             this.TableShowOrder.RowTemplate.Height = 33;
-            this.TableShowOrder.Size = new System.Drawing.Size(579, 189);
+            this.TableShowOrder.Size = new System.Drawing.Size(579, 172);
             this.TableShowOrder.TabIndex = 0;
             // 
             // btnShowOrder
@@ -108,7 +108,7 @@ namespace GUI
             // 
             this.btnCalculateRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCalculateRevenue.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnCalculateRevenue.Location = new System.Drawing.Point(380, 204);
+            this.btnCalculateRevenue.Location = new System.Drawing.Point(380, 188);
             this.btnCalculateRevenue.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculateRevenue.Name = "btnCalculateRevenue";
             this.btnCalculateRevenue.Size = new System.Drawing.Size(108, 36);
@@ -122,7 +122,7 @@ namespace GUI
             this.labelRevenue.AutoSize = true;
             this.labelRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.labelRevenue.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.labelRevenue.Location = new System.Drawing.Point(561, 230);
+            this.labelRevenue.Location = new System.Drawing.Point(380, 232);
             this.labelRevenue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRevenue.Name = "labelRevenue";
             this.labelRevenue.Size = new System.Drawing.Size(0, 28);
@@ -132,19 +132,19 @@ namespace GUI
             // 
             this.TableShowStaff.BackgroundColor = System.Drawing.Color.White;
             this.TableShowStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TableShowStaff.Location = new System.Drawing.Point(360, 249);
+            this.TableShowStaff.Location = new System.Drawing.Point(360, 308);
             this.TableShowStaff.Margin = new System.Windows.Forms.Padding(2);
             this.TableShowStaff.Name = "TableShowStaff";
             this.TableShowStaff.RowHeadersWidth = 62;
             this.TableShowStaff.RowTemplate.Height = 33;
-            this.TableShowStaff.Size = new System.Drawing.Size(579, 200);
+            this.TableShowStaff.Size = new System.Drawing.Size(579, 182);
             this.TableShowStaff.TabIndex = 4;
             // 
             // btnAddStaff
             // 
             this.btnAddStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAddStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAddStaff.Location = new System.Drawing.Point(380, 466);
+            this.btnAddStaff.Location = new System.Drawing.Point(376, 494);
             this.btnAddStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddStaff.Name = "btnAddStaff";
             this.btnAddStaff.Size = new System.Drawing.Size(112, 36);
@@ -160,17 +160,17 @@ namespace GUI
             this.inputName.Location = new System.Drawing.Point(111, 60);
             this.inputName.Margin = new System.Windows.Forms.Padding(2);
             this.inputName.Name = "inputName";
-            this.inputName.Size = new System.Drawing.Size(121, 34);
+            this.inputName.Size = new System.Drawing.Size(146, 34);
             this.inputName.TabIndex = 6;
             // 
             // inputSalary
             // 
             this.inputSalary.BackColor = System.Drawing.Color.White;
             this.inputSalary.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.inputSalary.Location = new System.Drawing.Point(112, 128);
+            this.inputSalary.Location = new System.Drawing.Point(111, 138);
             this.inputSalary.Margin = new System.Windows.Forms.Padding(2);
             this.inputSalary.Name = "inputSalary";
-            this.inputSalary.Size = new System.Drawing.Size(121, 34);
+            this.inputSalary.Size = new System.Drawing.Size(146, 34);
             this.inputSalary.TabIndex = 8;
             // 
             // inputShift
@@ -178,7 +178,7 @@ namespace GUI
             this.inputShift.BackColor = System.Drawing.Color.White;
             this.inputShift.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.inputShift.FormattingEnabled = true;
-            this.inputShift.Location = new System.Drawing.Point(112, 94);
+            this.inputShift.Location = new System.Drawing.Point(111, 98);
             this.inputShift.Margin = new System.Windows.Forms.Padding(2);
             this.inputShift.Name = "inputShift";
             this.inputShift.Size = new System.Drawing.Size(146, 36);
@@ -189,7 +189,7 @@ namespace GUI
             this.inputUserId.BackColor = System.Drawing.Color.White;
             this.inputUserId.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.inputUserId.FormattingEnabled = true;
-            this.inputUserId.Location = new System.Drawing.Point(112, 162);
+            this.inputUserId.Location = new System.Drawing.Point(111, 176);
             this.inputUserId.Margin = new System.Windows.Forms.Padding(2);
             this.inputUserId.Name = "inputUserId";
             this.inputUserId.Size = new System.Drawing.Size(146, 36);
@@ -200,7 +200,7 @@ namespace GUI
             this.labelProfit.AutoSize = true;
             this.labelProfit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.labelProfit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.labelProfit.Location = new System.Drawing.Point(787, 233);
+            this.labelProfit.Location = new System.Drawing.Point(589, 232);
             this.labelProfit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProfit.Name = "labelProfit";
             this.labelProfit.Size = new System.Drawing.Size(0, 28);
@@ -210,7 +210,7 @@ namespace GUI
             // 
             this.btnCalculateProfit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCalculateProfit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnCalculateProfit.Location = new System.Drawing.Point(603, 204);
+            this.btnCalculateProfit.Location = new System.Drawing.Point(589, 188);
             this.btnCalculateProfit.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculateProfit.Name = "btnCalculateProfit";
             this.btnCalculateProfit.Size = new System.Drawing.Size(90, 36);
@@ -236,7 +236,7 @@ namespace GUI
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.Location = new System.Drawing.Point(19, 97);
+            this.label2.Location = new System.Drawing.Point(19, 101);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 28);
@@ -248,7 +248,7 @@ namespace GUI
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label3.Location = new System.Drawing.Point(19, 134);
+            this.label3.Location = new System.Drawing.Point(19, 141);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 28);
@@ -260,7 +260,7 @@ namespace GUI
             this.StoreId.AutoSize = true;
             this.StoreId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.StoreId.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.StoreId.Location = new System.Drawing.Point(19, 170);
+            this.StoreId.Location = new System.Drawing.Point(19, 179);
             this.StoreId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StoreId.Name = "StoreId";
             this.StoreId.Size = new System.Drawing.Size(79, 28);
@@ -285,7 +285,7 @@ namespace GUI
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(280, 253);
+            this.groupBox1.Size = new System.Drawing.Size(280, 281);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Staff Information";
@@ -298,7 +298,7 @@ namespace GUI
             this.inputStaffId.Margin = new System.Windows.Forms.Padding(2);
             this.inputStaffId.Name = "inputStaffId";
             this.inputStaffId.ReadOnly = true;
-            this.inputStaffId.Size = new System.Drawing.Size(121, 34);
+            this.inputStaffId.Size = new System.Drawing.Size(146, 34);
             this.inputStaffId.TabIndex = 19;
             // 
             // label4
@@ -317,7 +317,7 @@ namespace GUI
             // 
             this.btnClearAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnClearAll.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnClearAll.Location = new System.Drawing.Point(111, 209);
+            this.btnClearAll.Location = new System.Drawing.Point(111, 214);
             this.btnClearAll.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(122, 40);
@@ -330,7 +330,7 @@ namespace GUI
             // 
             this.btnUpdateStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnUpdateStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnUpdateStaff.Location = new System.Drawing.Point(603, 466);
+            this.btnUpdateStaff.Location = new System.Drawing.Point(603, 494);
             this.btnUpdateStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateStaff.Name = "btnUpdateStaff";
             this.btnUpdateStaff.Size = new System.Drawing.Size(136, 36);
@@ -343,7 +343,7 @@ namespace GUI
             // 
             this.btnDeleteStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnDeleteStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnDeleteStaff.Location = new System.Drawing.Point(813, 466);
+            this.btnDeleteStaff.Location = new System.Drawing.Point(813, 494);
             this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStaff.Name = "btnDeleteStaff";
             this.btnDeleteStaff.Size = new System.Drawing.Size(109, 36);
@@ -396,7 +396,7 @@ namespace GUI
             // 
             this.btnUpdateProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnUpdateProduct.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnUpdateProduct.Location = new System.Drawing.Point(114, 185);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(114, 205);
             this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(167, 39);
@@ -423,7 +423,7 @@ namespace GUI
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(302, 234);
+            this.groupBox4.Size = new System.Drawing.Size(302, 257);
             this.groupBox4.TabIndex = 33;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Product Infomation";
@@ -431,7 +431,7 @@ namespace GUI
             // inputProductQuantity
             // 
             this.inputProductQuantity.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.inputProductQuantity.Location = new System.Drawing.Point(114, 140);
+            this.inputProductQuantity.Location = new System.Drawing.Point(114, 169);
             this.inputProductQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.inputProductQuantity.Name = "inputProductQuantity";
             this.inputProductQuantity.Size = new System.Drawing.Size(167, 32);
@@ -440,7 +440,7 @@ namespace GUI
             // inputProductCost
             // 
             this.inputProductCost.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.inputProductCost.Location = new System.Drawing.Point(114, 113);
+            this.inputProductCost.Location = new System.Drawing.Point(114, 133);
             this.inputProductCost.Margin = new System.Windows.Forms.Padding(2);
             this.inputProductCost.Name = "inputProductCost";
             this.inputProductCost.Size = new System.Drawing.Size(167, 32);
@@ -449,7 +449,7 @@ namespace GUI
             // inputProductPrice
             // 
             this.inputProductPrice.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.inputProductPrice.Location = new System.Drawing.Point(114, 86);
+            this.inputProductPrice.Location = new System.Drawing.Point(114, 97);
             this.inputProductPrice.Margin = new System.Windows.Forms.Padding(2);
             this.inputProductPrice.Name = "inputProductPrice";
             this.inputProductPrice.Size = new System.Drawing.Size(167, 32);
@@ -458,7 +458,7 @@ namespace GUI
             // inputProductName
             // 
             this.inputProductName.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.inputProductName.Location = new System.Drawing.Point(114, 58);
+            this.inputProductName.Location = new System.Drawing.Point(114, 61);
             this.inputProductName.Margin = new System.Windows.Forms.Padding(2);
             this.inputProductName.Name = "inputProductName";
             this.inputProductName.Size = new System.Drawing.Size(167, 32);
@@ -480,7 +480,7 @@ namespace GUI
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label5.Location = new System.Drawing.Point(11, 143);
+            this.label5.Location = new System.Drawing.Point(10, 169);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 28);
@@ -492,7 +492,7 @@ namespace GUI
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label6.Location = new System.Drawing.Point(47, 113);
+            this.label6.Location = new System.Drawing.Point(47, 133);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 28);
@@ -504,7 +504,7 @@ namespace GUI
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label7.Location = new System.Drawing.Point(44, 85);
+            this.label7.Location = new System.Drawing.Point(44, 97);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 28);
@@ -516,7 +516,7 @@ namespace GUI
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label8.Location = new System.Drawing.Point(34, 58);
+            this.label8.Location = new System.Drawing.Point(34, 61);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 28);
@@ -528,7 +528,7 @@ namespace GUI
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label9.Location = new System.Drawing.Point(61, 28);
+            this.label9.Location = new System.Drawing.Point(62, 25);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 28);
@@ -539,7 +539,7 @@ namespace GUI
             // 
             this.btnShowProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnShowProduct.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnShowProduct.Location = new System.Drawing.Point(768, 205);
+            this.btnShowProduct.Location = new System.Drawing.Point(768, 189);
             this.btnShowProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowProduct.Name = "btnShowProduct";
             this.btnShowProduct.Size = new System.Drawing.Size(154, 35);

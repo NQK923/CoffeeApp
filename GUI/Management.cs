@@ -100,7 +100,7 @@ namespace GUI
             {
                 totalRevenue += order.Total;
             }
-            labelRevenue.Text = totalRevenue.ToString() + "VND";
+            labelRevenue.Text = totalRevenue.ToString() + " VND";
         }
 
         private void btnShowStaff_Click(object sender, EventArgs e)
@@ -146,7 +146,8 @@ namespace GUI
         private void btnCalculateProfit_Click(object sender, EventArgs e)
         {
             decimal profit = userBLL.CalculateProfitForUser(user.UserId);
-            labelProfit.Text = profit.ToString() + "VND";
+            int intprofit = Convert.ToInt32(profit);
+            labelProfit.Text = intprofit.ToString() + " VND";
         }
 
         private void btnShowAttendance_Click(object sender, EventArgs e)
