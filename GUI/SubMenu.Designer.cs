@@ -140,7 +140,7 @@
             this.btnManage.Name = "btnManage";
             this.btnManage.Size = new System.Drawing.Size(212, 80);
             this.btnManage.TabIndex = 6;
-            this.btnManage.Text = "Quản lý";
+            this.btnManage.Text = "Manage";
             this.btnManage.UseVisualStyleBackColor = true;
             this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
             // 
@@ -151,7 +151,7 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(212, 80);
             this.btnLogout.TabIndex = 7;
-            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -160,10 +160,10 @@
             this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.Location = new System.Drawing.Point(3, 261);
             this.Password.Name = "Password";
-            this.Password.Text = "Password";
             this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(210, 30);
             this.Password.TabIndex = 8;
+            this.Password.Text = "Password";
             this.Password.Visible = false;
             // 
             // panel1

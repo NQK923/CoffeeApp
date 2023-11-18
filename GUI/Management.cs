@@ -182,5 +182,12 @@ namespace GUI
                 MessageBox.Show("Please choose an option to show attendance.");
             }
         }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
     }
 }

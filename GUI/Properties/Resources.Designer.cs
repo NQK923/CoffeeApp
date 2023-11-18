@@ -63,6 +63,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BackgroundImage {
+            get {
+                object obj = ResourceManager.GetObject("BackgroundImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dashboardbutton_Image {
             get {
                 object obj = ResourceManager.GetObject("Dashboardbutton.Image", resourceCulture);
@@ -76,6 +86,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap Hambutton_Image {
             get {
                 object obj = ResourceManager.GetObject("Hambutton.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_logo {
+            get {
+                object obj = ResourceManager.GetObject("logout_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

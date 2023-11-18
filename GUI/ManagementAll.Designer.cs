@@ -70,11 +70,13 @@ namespace GUI
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnShowProduct = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.TableShowOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableShowStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.SuspendLayout();
             // 
             // TableShowOrder
@@ -88,7 +90,6 @@ namespace GUI
             this.TableShowOrder.RowTemplate.Height = 33;
             this.TableShowOrder.Size = new System.Drawing.Size(579, 189);
             this.TableShowOrder.TabIndex = 0;
-            this.TableShowOrder.RowHeaderMouseClick += TableShowOrder_RowHeaderMouseClick;
             // 
             // btnShowOrder
             // 
@@ -138,7 +139,6 @@ namespace GUI
             this.TableShowStaff.RowTemplate.Height = 33;
             this.TableShowStaff.Size = new System.Drawing.Size(579, 200);
             this.TableShowStaff.TabIndex = 4;
-            this.TableShowStaff.RowHeaderMouseClick += TableShowStaff_RowHeaderMouseClick;
             // 
             // btnAddStaff
             // 
@@ -548,12 +548,24 @@ namespace GUI
             this.btnShowProduct.UseVisualStyleBackColor = false;
             this.btnShowProduct.Click += new System.EventHandler(this.btnShowProduct_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Image = global::GUI.Properties.Resources.logout_logo;
+            this.btnLogout.Location = new System.Drawing.Point(1227, 274);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(40, 40);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogout.TabIndex = 106;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // ManagementAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1287, 551);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnShowProduct);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btnDeleteStaff);
@@ -577,6 +589,7 @@ namespace GUI
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -622,5 +635,6 @@ namespace GUI
 		private Label label8;
 		private Label label9;
 		private Button btnShowProduct;
-	}
+        private PictureBox btnLogout;
+    }
 }
