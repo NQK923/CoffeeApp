@@ -22,7 +22,8 @@ namespace GUI
 		public Management()
 		{
 			InitializeComponent();
-			AddItemsComboBox();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            AddItemsComboBox();
 
 
 		}  
@@ -155,15 +156,19 @@ namespace GUI
             string option = optionShowAttendance.Text.ToString();
             if (option != "option")
             {
-                List<AttendanceDTO> attendanceList = AttendanceBLL.GetAttendance();
+                List<AttendanceDTO> attendanceList = new List<AttendanceDTO>();
+                attendanceList= AttendanceBLL.GetAttendance();
                 List<AttendanceDTO> filteredAttendance = new List<AttendanceDTO>();
+                System.Console.WriteLine(attendanceList);
 
                 if (option == "Date")
                 {
+                    System.Console.WriteLine("date");
                     filteredAttendance = attendanceList.FindAll(attendance => attendance.DateTime.Date == time.Date
                         && attendance.DateTime.Month == time.Month && attendance.DateTime.Year == time.Year);
                 }
                 else if (option == "Month")
+                    System.Console.WriteLine("date");
                 {
                     filteredAttendance = attendanceList.FindAll(attendance => attendance.DateTime.Month == time.Month
                         && attendance.DateTime.Year == time.Year);

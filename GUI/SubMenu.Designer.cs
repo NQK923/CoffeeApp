@@ -160,8 +160,9 @@
             this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.Location = new System.Drawing.Point(3, 261);
             this.Password.Name = "Password";
+            this.Password.Text = "Password";
             this.Password.PasswordChar = '*';
-            this.Password.Size = new System.Drawing.Size(212, 30);
+            this.Password.Size = new System.Drawing.Size(210, 30);
             this.Password.TabIndex = 8;
             this.Password.Visible = false;
             // 

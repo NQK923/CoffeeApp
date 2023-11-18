@@ -34,13 +34,9 @@ namespace GUI
 		public staff()
 		{
 			InitializeComponent();
-		}
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
         
-
-
-
-		
-
 		public void DeleteRowsByDrinkOrderId(int drinkOrderId)
 		{
 			List<DataGridViewRow> rowsToDelete = new List<DataGridViewRow>();

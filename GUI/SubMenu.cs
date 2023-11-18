@@ -18,9 +18,12 @@ namespace GUI
         public SubMenu()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             PaymentMethods.Items.Add("by Cash");
             Password.Visible = false;
             SetPriceAndName();
+            this.KeyPreview = true;
+            this.KeyDown += SubMenu_KeyDown;
         }
         public void SetDataFromLogin(UserDTO data)
         {
@@ -70,7 +73,7 @@ namespace GUI
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             SubMenu subMenu1 = new SubMenu();
             subMenu1.Show();
         }
@@ -78,7 +81,7 @@ namespace GUI
         private void btnManage_Click(object sender, EventArgs e)
         {
             Password.Visible = true;
-            if (Password.Text == "Password")
+            if (Password.Text == "Password" || Password.Text ==null)
             {
                 MessageBox.Show("Enter password");
             }
@@ -569,6 +572,14 @@ namespace GUI
             else
             {
                 MessageBox.Show("Choose at least one item");
+            }
+        }
+
+        private void SubMenu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnManage_Click(sender, e);
             }
         }
     }

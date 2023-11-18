@@ -121,7 +121,6 @@ namespace GUI
             this.TableShowStaff.RowTemplate.Height = 33;
             this.TableShowStaff.Size = new System.Drawing.Size(626, 152);
             this.TableShowStaff.TabIndex = 4;
-            TableShowStaff.RowHeaderMouseClick += ShowStaff_RowHeaderMouseClick;
             // 
             // btnShowStaff
             // 
@@ -141,7 +140,7 @@ namespace GUI
             this.inputStatus.BackColor = System.Drawing.Color.White;
             this.inputStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.inputStatus.FormattingEnabled = true;
-            this.inputStatus.Location = new System.Drawing.Point(128, 63);
+            this.inputStatus.Location = new System.Drawing.Point(128, 62);
             this.inputStatus.Margin = new System.Windows.Forms.Padding(2);
             this.inputStatus.Name = "inputStatus";
             this.inputStatus.Size = new System.Drawing.Size(146, 36);
@@ -151,7 +150,7 @@ namespace GUI
             // 
             this.inputStaffId.BackColor = System.Drawing.Color.White;
             this.inputStaffId.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.inputStaffId.Location = new System.Drawing.Point(128, 24);
+            this.inputStaffId.Location = new System.Drawing.Point(128, 21);
             this.inputStaffId.Margin = new System.Windows.Forms.Padding(2);
             this.inputStaffId.Name = "inputStaffId";
             this.inputStaffId.ReadOnly = true;
@@ -165,7 +164,7 @@ namespace GUI
             this.btnAddAtendance.Location = new System.Drawing.Point(156, 144);
             this.btnAddAtendance.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddAtendance.Name = "btnAddAtendance";
-            this.btnAddAtendance.Size = new System.Drawing.Size(142, 31);
+            this.btnAddAtendance.Size = new System.Drawing.Size(142, 36);
             this.btnAddAtendance.TabIndex = 12;
             this.btnAddAtendance.Text = "Add Atendance";
             this.btnAddAtendance.UseVisualStyleBackColor = false;
@@ -179,7 +178,7 @@ namespace GUI
             this.inputDateTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.inputDateTime.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.inputDateTime.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.inputDateTime.Location = new System.Drawing.Point(126, 109);
+            this.inputDateTime.Location = new System.Drawing.Point(128, 110);
             this.inputDateTime.Margin = new System.Windows.Forms.Padding(2);
             this.inputDateTime.Name = "inputDateTime";
             this.inputDateTime.Size = new System.Drawing.Size(270, 27);
@@ -212,7 +211,7 @@ namespace GUI
             this.StaffID.AutoSize = true;
             this.StaffID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.StaffID.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.StaffID.Location = new System.Drawing.Point(8, 27);
+            this.StaffID.Location = new System.Drawing.Point(8, 23);
             this.StaffID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StaffID.Name = "StaffID";
             this.StaffID.Size = new System.Drawing.Size(79, 28);
@@ -236,7 +235,7 @@ namespace GUI
             this.Date.AutoSize = true;
             this.Date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.Date.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Date.Location = new System.Drawing.Point(8, 107);
+            this.Date.Location = new System.Drawing.Point(8, 110);
             this.Date.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(57, 28);
@@ -257,7 +256,7 @@ namespace GUI
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(437, 179);
+            this.groupBox1.Size = new System.Drawing.Size(437, 191);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Attendance";
@@ -280,7 +279,7 @@ namespace GUI
             // 
             this.optionShowAttendance.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.optionShowAttendance.FormattingEnabled = true;
-            this.optionShowAttendance.Location = new System.Drawing.Point(182, 29);
+            this.optionShowAttendance.Location = new System.Drawing.Point(182, 26);
             this.optionShowAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.optionShowAttendance.Name = "optionShowAttendance";
             this.optionShowAttendance.Size = new System.Drawing.Size(146, 36);
@@ -333,7 +332,7 @@ namespace GUI
             this.btnShowAttendance.Location = new System.Drawing.Point(5, 26);
             this.btnShowAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowAttendance.Name = "btnShowAttendance";
-            this.btnShowAttendance.Size = new System.Drawing.Size(173, 39);
+            this.btnShowAttendance.Size = new System.Drawing.Size(173, 36);
             this.btnShowAttendance.TabIndex = 28;
             this.btnShowAttendance.Text = "Show Attendance";
             this.btnShowAttendance.UseVisualStyleBackColor = false;

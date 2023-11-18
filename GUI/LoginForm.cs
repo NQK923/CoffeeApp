@@ -11,6 +11,9 @@ namespace GUI
         public LoginForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.KeyPreview = true;
+            this.KeyDown += LoginForm_KeyDown;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -42,11 +45,19 @@ namespace GUI
                     MessageBox.Show("User does not have a valid role.");
                 }
 
-                this.Hide();
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Invalid username or password");
+            }
+        }
+
+        private void LoginForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
             }
         }
     }
