@@ -94,10 +94,10 @@ namespace GUI
             // 
             this.btnCalculateRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCalculateRevenue.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnCalculateRevenue.Location = new System.Drawing.Point(497, 251);
+            this.btnCalculateRevenue.Location = new System.Drawing.Point(497, 250);
             this.btnCalculateRevenue.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculateRevenue.Name = "btnCalculateRevenue";
-            this.btnCalculateRevenue.Size = new System.Drawing.Size(124, 42);
+            this.btnCalculateRevenue.Size = new System.Drawing.Size(124, 40);
             this.btnCalculateRevenue.TabIndex = 2;
             this.btnCalculateRevenue.Text = "Revenue";
             this.btnCalculateRevenue.UseVisualStyleBackColor = false;
@@ -106,10 +106,12 @@ namespace GUI
             // labelRevenue
             // 
             this.labelRevenue.AutoSize = true;
-            this.labelRevenue.Location = new System.Drawing.Point(621, 260);
+            this.labelRevenue.BackColor  = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.labelRevenue.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelRevenue.Location = new System.Drawing.Point(628, 256);
             this.labelRevenue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRevenue.Name = "labelRevenue";
-            this.labelRevenue.Size = new System.Drawing.Size(0, 16);
+            this.labelRevenue.Size = new System.Drawing.Size(0, 40);
             this.labelRevenue.TabIndex = 3;
             // 
             // TableShowStaff
@@ -189,20 +191,22 @@ namespace GUI
             // labelProfit
             // 
             this.labelProfit.AutoSize = true;
-            this.labelProfit.Location = new System.Drawing.Point(806, 263);
+            this.labelProfit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.labelProfit.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelProfit.Location = new System.Drawing.Point(934, 256);
             this.labelProfit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProfit.Name = "labelProfit";
-            this.labelProfit.Size = new System.Drawing.Size(0, 16);
+            this.labelProfit.Size = new System.Drawing.Size(0, 40);
             this.labelProfit.TabIndex = 18;
             // 
             // btnCalculateProfit
             // 
             this.btnCalculateProfit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCalculateProfit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnCalculateProfit.Location = new System.Drawing.Point(716, 251);
+            this.btnCalculateProfit.Location = new System.Drawing.Point(824, 250);
             this.btnCalculateProfit.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculateProfit.Name = "btnCalculateProfit";
-            this.btnCalculateProfit.Size = new System.Drawing.Size(103, 42);
+            this.btnCalculateProfit.Size = new System.Drawing.Size(103, 40);
             this.btnCalculateProfit.TabIndex = 17;
             this.btnCalculateProfit.Text = "Profit";
             this.btnCalculateProfit.UseVisualStyleBackColor = false;

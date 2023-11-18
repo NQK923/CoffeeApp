@@ -61,7 +61,6 @@ namespace DAL
 
                     return userRoles;
                 }
-                return null;
             }
         }
         public int getId(string username, string password)
@@ -89,7 +88,6 @@ namespace DAL
                 }
             }
         }
-
         public decimal CalculateProfitForUser(int userId)
         {
             decimal totalProfit = 0;
@@ -123,8 +121,46 @@ namespace DAL
                     }
                 }
             }
-
             return totalProfit;
+        }
+
+        public bool CheckUsernameExists(string username)
+        {
+            string query = "SELECT COUNT(*) FROM [User] WHERE username = @username"; 
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+
+                    connection.Open();
+                    int count = (int)command.ExecuteScalar();
+
+                    if (count > 0)
+                        return true;
+                    else
+                        return false;
+                }
+            }
+        }
+
+        public string GetEmailFromUserName(string username)
+        {
+            string query = "SELECT Email FROM [User] WHERE username = @username";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+
+                    connection.Open();
+                    string email = command.ExecuteScalar().ToString();
+
+                        return email;
+                }
+            }
         }
     }
 }

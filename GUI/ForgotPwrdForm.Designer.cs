@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.labelUserName = new System.Windows.Forms.Label();
-            this.txtUserNameLogin = new System.Windows.Forms.TextBox();
-            this.btnForgotPwrd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.btnGetOTP = new System.Windows.Forms.Button();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.btnCheckUserName = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnLogout = new System.Windows.Forms.PictureBox();
+            this.labelMess = new System.Windows.Forms.Label();
+            this.txtOTP = new System.Windows.Forms.TextBox();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.labelOTP = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,59 +53,64 @@
             this.labelUserName.TabIndex = 1;
             this.labelUserName.Text = "User Name:";
             // 
-            // txtUserNameLogin
+            // txtUserName
             // 
-            this.txtUserNameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserNameLogin.Location = new System.Drawing.Point(551, 93);
-            this.txtUserNameLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUserNameLogin.Name = "txtUserNameLogin";
-            this.txtUserNameLogin.Size = new System.Drawing.Size(199, 30);
-            this.txtUserNameLogin.TabIndex = 3;
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(551, 93);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(199, 30);
+            this.txtUserName.TabIndex = 3;
             // 
-            // btnForgotPwrd
+            // btnGetOTP
             // 
-            this.btnForgotPwrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnForgotPwrd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForgotPwrd.Location = new System.Drawing.Point(512, 248);
-            this.btnForgotPwrd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnForgotPwrd.Name = "btnForgotPwrd";
-            this.btnForgotPwrd.Size = new System.Drawing.Size(133, 40);
-            this.btnForgotPwrd.TabIndex = 7;
-            this.btnForgotPwrd.Text = "Forgot Password";
-            this.btnForgotPwrd.UseVisualStyleBackColor = false;
+            this.btnGetOTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnGetOTP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetOTP.Location = new System.Drawing.Point(656, 292);
+            this.btnGetOTP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGetOTP.Name = "btnGetOTP";
+            this.btnGetOTP.Size = new System.Drawing.Size(94, 30);
+            this.btnGetOTP.TabIndex = 7;
+            this.btnGetOTP.Text = "Get OTP";
+            this.btnGetOTP.UseVisualStyleBackColor = false;
+            this.btnGetOTP.Visible = false;
+            this.btnGetOTP.Click += new System.EventHandler(this.btnForgotPwrd_Click);
             // 
-            // label1
+            // labelEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label1.Location = new System.Drawing.Point(410, 198);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 28);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Email:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelEmail.Location = new System.Drawing.Point(410, 234);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(63, 28);
+            this.labelEmail.TabIndex = 8;
+            this.labelEmail.Text = "Email:";
+            this.labelEmail.Visible = false;
+            this.labelEmail.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // btnCheckUserName
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(512, 142);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 40);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Check";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCheckUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnCheckUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckUserName.Location = new System.Drawing.Point(512, 142);
+            this.btnCheckUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCheckUserName.Name = "btnCheckUserName";
+            this.btnCheckUserName.Size = new System.Drawing.Size(133, 40);
+            this.btnCheckUserName.TabIndex = 9;
+            this.btnCheckUserName.Text = "Check";
+            this.btnCheckUserName.UseVisualStyleBackColor = false;
+            this.btnCheckUserName.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(551, 196);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 30);
-            this.textBox1.TabIndex = 10;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(551, 234);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(199, 30);
+            this.txtEmail.TabIndex = 10;
+            this.txtEmail.Visible = false;
             // 
             // btnLogout
             // 
@@ -114,19 +123,70 @@
             this.btnLogout.TabIndex = 107;
             this.btnLogout.TabStop = false;
             // 
+            // labelMess
+            // 
+            this.labelMess.AutoSize = true;
+            this.labelMess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMess.Location = new System.Drawing.Point(412, 195);
+            this.labelMess.Name = "labelMess";
+            this.labelMess.Size = new System.Drawing.Size(346, 18);
+            this.labelMess.TabIndex = 108;
+            this.labelMess.Text = "Enter the email associated with your account";
+            this.labelMess.Visible = false;
+            // 
+            // txtOTP
+            // 
+            this.txtOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOTP.Location = new System.Drawing.Point(512, 292);
+            this.txtOTP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtOTP.Name = "txtOTP";
+            this.txtOTP.Size = new System.Drawing.Size(133, 30);
+            this.txtOTP.TabIndex = 109;
+            this.txtOTP.Visible = false;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.Location = new System.Drawing.Point(551, 337);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(94, 40);
+            this.btnConfirm.TabIndex = 110;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Visible = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // labelOTP
+            // 
+            this.labelOTP.AutoSize = true;
+            this.labelOTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.labelOTP.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelOTP.Location = new System.Drawing.Point(410, 292);
+            this.labelOTP.Name = "labelOTP";
+            this.labelOTP.Size = new System.Drawing.Size(51, 28);
+            this.labelOTP.TabIndex = 111;
+            this.labelOTP.Text = "OTP:";
+            this.labelOTP.Visible = false;
+            // 
             // ForgotPwrdForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.BackgroundImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(845, 450);
+            this.Controls.Add(this.labelOTP);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.txtOTP);
+            this.Controls.Add(this.labelMess);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnForgotPwrd);
-            this.Controls.Add(this.txtUserNameLogin);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.btnCheckUserName);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.btnGetOTP);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.labelUserName);
             this.Name = "ForgotPwrdForm";
             this.Text = "Form1";
@@ -139,11 +199,15 @@
         #endregion
 
         private System.Windows.Forms.Label labelUserName;
-        private System.Windows.Forms.TextBox txtUserNameLogin;
-        private System.Windows.Forms.Button btnForgotPwrd;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Button btnGetOTP;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Button btnCheckUserName;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.PictureBox btnLogout;
+        private System.Windows.Forms.Label labelMess;
+        private System.Windows.Forms.TextBox txtOTP;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Label labelOTP;
     }
 }

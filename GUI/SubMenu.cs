@@ -29,7 +29,6 @@ namespace GUI
         {
             user = data;
         }
-        bool menuExpand = false;
         int total = 0;
 
         public void ClearAll()

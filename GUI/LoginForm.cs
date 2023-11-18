@@ -63,6 +63,13 @@ namespace GUI
 
         private void btnForgotPwrd_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            ForgotPwrdForm form = new ForgotPwrdForm();
+            form.Show();
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
 
         }
     }
