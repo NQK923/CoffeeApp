@@ -73,7 +73,7 @@ namespace GUI
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             SubMenu subMenu1 = new SubMenu();
             subMenu1.Show();
         }

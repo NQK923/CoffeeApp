@@ -45,7 +45,7 @@ namespace GUI
                     MessageBox.Show("User does not have a valid role.");
                 }
 
-                this.Close();
+                this.Hide();
             }
             else
             {
@@ -59,6 +59,11 @@ namespace GUI
             {
                 btnLogin_Click(sender, e);
             }
+        }
+
+        private void btnForgotPwrd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -39,6 +39,7 @@ namespace GUI
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnForgotPwrd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,29 +67,31 @@ namespace GUI
             // 
             // txtUserNameLogin
             // 
+            this.txtUserNameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserNameLogin.Location = new System.Drawing.Point(571, 162);
             this.txtUserNameLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserNameLogin.Name = "txtUserNameLogin";
-            this.txtUserNameLogin.Size = new System.Drawing.Size(133, 22);
+            this.txtUserNameLogin.Size = new System.Drawing.Size(133, 30);
             this.txtUserNameLogin.TabIndex = 2;
             // 
             // txtPasswordLogin
             // 
+            this.txtPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPasswordLogin.Location = new System.Drawing.Point(571, 202);
             this.txtPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPasswordLogin.Name = "txtPasswordLogin";
-            this.txtPasswordLogin.Size = new System.Drawing.Size(133, 22);
+            this.txtPasswordLogin.Size = new System.Drawing.Size(133, 30);
             this.txtPasswordLogin.TabIndex = 3;
             this.txtPasswordLogin.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnLogin.Location = new System.Drawing.Point(557, 245);
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(571, 249);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(132, 46);
+            this.btnLogin.Size = new System.Drawing.Size(133, 40);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -114,6 +117,19 @@ namespace GUI
             this.label1.TabIndex = 0;
             this.label1.Text = "SIGN IN";
             // 
+            // btnForgotPwrd
+            // 
+            this.btnForgotPwrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnForgotPwrd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgotPwrd.Location = new System.Drawing.Point(571, 304);
+            this.btnForgotPwrd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnForgotPwrd.Name = "btnForgotPwrd";
+            this.btnForgotPwrd.Size = new System.Drawing.Size(133, 40);
+            this.btnForgotPwrd.TabIndex = 6;
+            this.btnForgotPwrd.Text = "Forgot Password";
+            this.btnForgotPwrd.UseVisualStyleBackColor = false;
+            this.btnForgotPwrd.Click += new System.EventHandler(this.btnForgotPwrd_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -121,6 +137,7 @@ namespace GUI
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(809, 478);
+            this.Controls.Add(this.btnForgotPwrd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPasswordLogin);
@@ -146,5 +163,6 @@ namespace GUI
         private Button btnLogin;
         private Panel panel1;
         private Label label1;
+        private Button btnForgotPwrd;
     }
 }

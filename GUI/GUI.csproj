@@ -46,6 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ForgotPwrdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPwrdForm.Designer.cs">
+      <DependentUpon>ForgotPwrdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SubMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +89,9 @@
     <Compile Include="staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ForgotPwrdForm.resx">
+      <DependentUpon>ForgotPwrdForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubMenu.resx">
       <DependentUpon>SubMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,14 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +137,15 @@
       <Project>{356d6254-ffda-4511-991f-e1f632162dd0}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginIMG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
