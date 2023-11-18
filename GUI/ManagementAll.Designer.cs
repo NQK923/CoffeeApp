@@ -90,6 +90,7 @@ namespace GUI
             this.TableShowOrder.RowTemplate.Height = 33;
             this.TableShowOrder.Size = new System.Drawing.Size(579, 172);
             this.TableShowOrder.TabIndex = 0;
+            this.TableShowOrder.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TableShowOrder_RowHeaderMouseClick);
             // 
             // btnShowOrder
             // 
@@ -139,6 +140,7 @@ namespace GUI
             this.TableShowStaff.RowTemplate.Height = 33;
             this.TableShowStaff.Size = new System.Drawing.Size(579, 182);
             this.TableShowStaff.TabIndex = 4;
+            this.TableShowStaff.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TableShowStaff_RowHeaderMouseClick);
             // 
             // btnAddStaff
             // 

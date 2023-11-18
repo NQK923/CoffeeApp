@@ -52,6 +52,12 @@
     <Compile Include="ForgotPwrdForm.Designer.cs">
       <DependentUpon>ForgotPwrdForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -91,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="ForgotPwrdForm.resx">
       <DependentUpon>ForgotPwrdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubMenu.resx">
       <DependentUpon>SubMenu.cs</DependentUpon>

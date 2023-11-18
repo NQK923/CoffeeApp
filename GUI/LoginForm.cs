@@ -70,7 +70,9 @@ namespace GUI
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ChangePasswordForm changePasswordForm = new ChangePasswordForm(null);
+            changePasswordForm.Show();
         }
     }
 }
