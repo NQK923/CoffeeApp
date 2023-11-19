@@ -45,7 +45,7 @@ namespace GUI
             PaymentMethods.Text = "Payment methods";
 
         }
-
+        //Set tên và giá cho các sản phẩm
         public void SetPriceAndName()
         {
             labelLycheeJellyTea.Text = ProductBLL.GetProductById("1").DrinkName;
@@ -79,6 +79,7 @@ namespace GUI
 
         private void btnManage_Click(object sender, EventArgs e)
         {
+            //kiểm tra mật khẩu của chức năng Manage
             Password.Visible = true;
             if (Password.Text == "Password" || Password.Text ==null)
             {
@@ -86,6 +87,7 @@ namespace GUI
             }
             if (Password.Text == "123")
             {
+                //nếu đúng thì mở Management form
                 management = new Management();
                 management.SetDataFromLogin(user);
                 management.Show();
@@ -98,6 +100,8 @@ namespace GUI
             }
         }
 
+
+        //đăng xuất
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -105,6 +109,8 @@ namespace GUI
             loginForm.Show();
         }
 
+
+        //Xử lý các nút bấm + -, nếu không đủ số lượng trong csdl thì sẽ thông báo
         private void btnMinusAmericano_Click(object sender, EventArgs e)
         {
             int Num = int.Parse(numberAmericano.Text);
@@ -385,6 +391,7 @@ namespace GUI
             }
         }
 
+        //xử lý nút Order
         private void btnOrder_Click(object sender, EventArgs e)
         {
             int DrinkId;
@@ -396,7 +403,7 @@ namespace GUI
             DateTime time = DateTime.Now;
             if (total > 0)
             {
-
+                //Xử lý số lượng các sản phẩm đã chọn
                 if (int.Parse(numberCappuccino.Text) > 0)
                 {
                     DrinkId = ProductBLL.GetDrinkID(labelCappuccino.Text.ToString());
@@ -541,7 +548,6 @@ namespace GUI
                 order.Status = false;
                 order.Total = total;
                 OrderBLL.CreateOrder(order);
-
                 string paymentMethods = PaymentMethods.Text.ToString();
                 if (paymentMethods != "Payment methods")
                 {

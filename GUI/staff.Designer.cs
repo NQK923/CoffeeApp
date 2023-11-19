@@ -36,7 +36,7 @@ namespace GUI
             this.DrinkName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDeleteRows = new System.Windows.Forms.Button();
+            this.btnComplete = new System.Windows.Forms.Button();
             this.NumberOrderComplete = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TableUserOrder)).BeginInit();
@@ -88,18 +88,18 @@ namespace GUI
             this.Price.Name = "Price";
             this.Price.Width = 180;
             // 
-            // btnDeleteRows
+            // btnComplete
             // 
-            this.btnDeleteRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnDeleteRows.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnDeleteRows.Location = new System.Drawing.Point(445, 277);
-            this.btnDeleteRows.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeleteRows.Name = "btnDeleteRows";
-            this.btnDeleteRows.Size = new System.Drawing.Size(134, 37);
-            this.btnDeleteRows.TabIndex = 1;
-            this.btnDeleteRows.Text = "Complete";
-            this.btnDeleteRows.UseVisualStyleBackColor = false;
-            this.btnDeleteRows.Click += new System.EventHandler(this.btnDeleteRows_Click);
+            this.btnComplete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnComplete.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnComplete.Location = new System.Drawing.Point(445, 277);
+            this.btnComplete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnComplete.Name = "btnComplete";
+            this.btnComplete.Size = new System.Drawing.Size(134, 37);
+            this.btnComplete.TabIndex = 1;
+            this.btnComplete.Text = "Complete";
+            this.btnComplete.UseVisualStyleBackColor = false;
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
             // 
             // NumberOrderComplete
             // 
@@ -131,7 +131,7 @@ namespace GUI
             this.ClientSize = new System.Drawing.Size(920, 373);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NumberOrderComplete);
-            this.Controls.Add(this.btnDeleteRows);
+            this.Controls.Add(this.btnComplete);
             this.Controls.Add(this.TableUserOrder);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "staff";
@@ -145,7 +145,7 @@ namespace GUI
 		#endregion
 
 		private DataGridView TableUserOrder;
-		private Button btnDeleteRows;
+		private Button btnComplete;
 		private TextBox NumberOrderComplete;
 		private DataGridViewTextBoxColumn Number;
 		private DataGridViewTextBoxColumn DrinkName;

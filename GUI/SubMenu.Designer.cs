@@ -113,6 +113,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Khaki;
             this.flowLayoutPanel1.Controls.Add(this.btnMenu);
             this.flowLayoutPanel1.Controls.Add(this.btnManage);
             this.flowLayoutPanel1.Controls.Add(this.btnLogout);
@@ -124,39 +125,43 @@
             // 
             // btnMenu
             // 
+            this.btnMenu.BackColor = System.Drawing.Color.Khaki;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.Location = new System.Drawing.Point(3, 3);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(212, 80);
             this.btnMenu.TabIndex = 5;
             this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnManage
             // 
+            this.btnManage.BackColor = System.Drawing.Color.Khaki;
             this.btnManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManage.Location = new System.Drawing.Point(3, 89);
             this.btnManage.Name = "btnManage";
             this.btnManage.Size = new System.Drawing.Size(212, 80);
             this.btnManage.TabIndex = 6;
             this.btnManage.Text = "Manage";
-            this.btnManage.UseVisualStyleBackColor = true;
+            this.btnManage.UseVisualStyleBackColor = false;
             this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
             // 
             // btnLogout
             // 
+            this.btnLogout.BackColor = System.Drawing.Color.Khaki;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Location = new System.Drawing.Point(3, 175);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(212, 80);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // Password
             // 
+            this.Password.BackColor = System.Drawing.Color.Khaki;
             this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.Location = new System.Drawing.Point(3, 261);
             this.Password.Name = "Password";
@@ -168,6 +173,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pricePeachJellyTea);
             this.panel1.Controls.Add(this.labelPeachJellyTea);
             this.panel1.Controls.Add(this.priceGoldenLotusTea);
@@ -234,7 +240,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(230, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(913, 798);
+            this.panel1.Size = new System.Drawing.Size(945, 798);
             this.panel1.TabIndex = 2;
             // 
             // pricePeachJellyTea
@@ -876,7 +882,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 831);
+            this.BackColor = System.Drawing.Color.Khaki;
+            this.ClientSize = new System.Drawing.Size(1177, 814);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "SubMenu";

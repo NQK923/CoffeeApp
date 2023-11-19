@@ -52,7 +52,6 @@
             this.labelUserName.Size = new System.Drawing.Size(112, 28);
             this.labelUserName.TabIndex = 2;
             this.labelUserName.Text = "User Name:";
-            this.labelUserName.Visible = false;
             // 
             // labelPW
             // 
@@ -127,7 +126,6 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(199, 30);
             this.txtUserName.TabIndex = 9;
-            this.txtUserName.Visible = false;
             // 
             // btnConfirm
             // 

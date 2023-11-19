@@ -55,13 +55,11 @@ namespace GUI
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnShowAttendance = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnLogout = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.TableShowOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableShowStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.SuspendLayout();
             // 
             // TableShowOrder
@@ -106,12 +104,12 @@ namespace GUI
             // labelRevenue
             // 
             this.labelRevenue.AutoSize = true;
-            this.labelRevenue.BackColor  = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.labelRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.labelRevenue.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.labelRevenue.Location = new System.Drawing.Point(628, 256);
             this.labelRevenue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRevenue.Name = "labelRevenue";
-            this.labelRevenue.Size = new System.Drawing.Size(0, 40);
+            this.labelRevenue.Size = new System.Drawing.Size(0, 28);
             this.labelRevenue.TabIndex = 3;
             // 
             // TableShowStaff
@@ -125,6 +123,7 @@ namespace GUI
             this.TableShowStaff.RowTemplate.Height = 33;
             this.TableShowStaff.Size = new System.Drawing.Size(626, 152);
             this.TableShowStaff.TabIndex = 4;
+            this.TableShowStaff.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TableShowStaff_RowHeaderMouseClick);
             // 
             // btnShowStaff
             // 
@@ -196,7 +195,7 @@ namespace GUI
             this.labelProfit.Location = new System.Drawing.Point(934, 256);
             this.labelProfit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProfit.Name = "labelProfit";
-            this.labelProfit.Size = new System.Drawing.Size(0, 40);
+            this.labelProfit.Size = new System.Drawing.Size(0, 28);
             this.labelProfit.TabIndex = 18;
             // 
             // btnCalculateProfit
@@ -359,18 +358,6 @@ namespace GUI
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Attendance";
             // 
-            // btnLogout
-            // 
-            this.btnLogout.BackgroundImage = global::GUI.Properties.Resources.logout_logo;
-            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogout.Location = new System.Drawing.Point(1080, 500);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(40, 40);
-            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnLogout.TabIndex = 105;
-            this.btnLogout.TabStop = false;
-            this.btnLogout.Click += new System.EventHandler(this.pictureBox10_Click);
-            // 
             // Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -378,7 +365,6 @@ namespace GUI
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1154, 552);
-            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.labelProfit);
             this.Controls.Add(this.btnCalculateProfit);
@@ -398,7 +384,6 @@ namespace GUI
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,6 +414,5 @@ namespace GUI
 		private GroupBox groupBox2;
 		private Button btnShowAttendance;
 		private GroupBox groupBox3;
-        private PictureBox btnLogout;
     }
 }

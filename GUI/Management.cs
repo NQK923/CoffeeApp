@@ -28,15 +28,6 @@ namespace GUI
 
 
 		}  
-		private void ShowStaff_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-		{
-			if (e.RowIndex >= 0)
-			{
-				DataGridViewRow selectedRow = TableShowStaff.Rows[e.RowIndex];
-				int staffId = (int)selectedRow.Cells["StaffId"].Value;
-				inputStaffId.Text = staffId.ToString();
-			}
-		}
 		public void AddItemsComboBox()
 		{
 			inputStatus.Items.Add("present");
@@ -49,16 +40,18 @@ namespace GUI
 			optionShowOrder.Items.Add("Year");
 
 		}
-
+        //Xử lý sự kiện ShowOrder
         private void btnShowOrder_Click(object sender, EventArgs e)
         {
+            //kiểm tra option đã được chọn hay chưa
             DateTime time = inputTimeShowOrder.Value;
             TableShowOrder.Columns.Clear();
             string option = optionShowOrder.Text.ToString();
             if (option != "option")
             {
+                //xử lý sự kiện show order theo ngày tháng năm và toàn thời gian
                 List<OrderDTO> orders = OrderBLL.GetOrdersByUserId(user.UserId);
-                List<OrderDTO> filteredOrders = new List<OrderDTO>(); // Create a new list for filtered orders
+                List<OrderDTO> filteredOrders = new List<OrderDTO>();
 
                 if (option == "Date")
                 {
@@ -90,12 +83,14 @@ namespace GUI
                 MessageBox.Show("Please choose an option to show orders.");
             }
         }
-
+        //xử lý sự kiện tính doanh thu
         private void btnCalculateRevenue_Click(object sender, EventArgs e)
         {
             string option = optionShowOrder.Text.ToString();
+            //kiểm tra option đã được chọn hay chưa
             if (option != "option")
             {
+                //xử lý sự kiện tính doanh thu theo ngày tháng năm và toàn thời gian
                 List<OrderDTO> filteredOrders = new List<OrderDTO>();
                 filteredOrders = filtedOders(option);
                 int totalRevenue = 0;
@@ -111,6 +106,7 @@ namespace GUI
             }
         }
 
+        //Hiển thị nhân viên
         private void btnShowStaff_Click(object sender, EventArgs e)
         {
             List<StaffDTO> staff = new List<StaffDTO>();
@@ -120,6 +116,8 @@ namespace GUI
             TableShowStaff.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+
+        //Chấm công cho nhân viên có đi làm hay vắng mặt
         private void btnAddAtendance_Click(object sender, EventArgs e)
         {
             if (inputStatus.Text == "")
@@ -151,13 +149,15 @@ namespace GUI
             }
         }
 
+        //Tính lợi nhuận
         private void btnCalculateProfit_Click(object sender, EventArgs e)
         {
             DateTime time = inputTimeShowOrder.Value;
             string option = optionShowOrder.Text.ToString();
-
+            //kiểm tra option đã được chọn hay chưa
             if (option != "option")
             {
+                //xử lý sự kiện tính lãi theo ngày tháng năm và toàn thời gian
                 decimal profit = 0;
                 if (option == "Date")
                 {
@@ -185,8 +185,10 @@ namespace GUI
             }
         }
 
+        //Hiển thị bảng chấm công theo thời gian đã chọn
         private void btnShowAttendance_Click(object sender, EventArgs e)
         {
+
             DateTime time = inputTimeShowAttendance.Value;
             TableShowStaff.Columns.Clear();
             string option = optionShowAttendance.Text.ToString();
@@ -221,7 +223,7 @@ namespace GUI
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
@@ -252,6 +254,16 @@ namespace GUI
             }
 
             return filteredOrders;
+        }
+
+        private void TableShowStaff_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = TableShowStaff.Rows[e.RowIndex];
+                int staffId = (int)selectedRow.Cells["StaffId"].Value;
+                inputStaffId.Text = staffId.ToString();
+            }
         }
     }
 }

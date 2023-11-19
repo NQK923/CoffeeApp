@@ -11,13 +11,14 @@ namespace GUI
         public ChangePasswordForm(string name)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.username = name;
             setVisible(name);
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if(txtUserName.Visible == true)
+            if(txtPW.Visible == true)
             {
                 updatePassword();
             }
@@ -50,12 +51,13 @@ namespace GUI
 
         private bool checkInput()
         {
-            string oldPassword = userBLL.GetPasswordFromUserName(txtUserName.Text);
+            
             if(string.IsNullOrEmpty(txtUserName.Text)||string.IsNullOrEmpty(txtPW.Text)|| string.IsNullOrEmpty(txtNewPW.Text) || string.IsNullOrEmpty(txtConfirmPW.Text)){
                 MessageBox.Show("Please complete all information!!!");
                 return false;
             }
-            else if(!userBLL.CheckUsernameExists(txtUserName.Text)||oldPassword!=txtPW.Text) {
+            string oldPassword = userBLL.GetPasswordFromUserName(txtUserName.Text);
+            if (!userBLL.CheckUsernameExists(txtUserName.Text)||oldPassword!=txtPW.Text) {
                 MessageBox.Show("Wrong username or password!!!");
                 return false;
             }
@@ -89,10 +91,13 @@ namespace GUI
         {
             if(username == null)
             {
-                txtUserName.Visible = true;
                 txtPW.Visible = true;
-                labelUserName.Visible = true;
                 labelPW.Visible = true;
+            }
+            else
+            {
+                txtUserName.Text = username;
+                txtUserName.Enabled = false;
             }
         }
 

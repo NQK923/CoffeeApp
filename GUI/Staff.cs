@@ -9,6 +9,7 @@ namespace GUI
     public partial class staff : Form
 	{
 		private OrderBLL orderBLL=new OrderBLL();
+		//Lấy dữ liệu order từ data của OrderID
 		public void SetDataFromUserOrder(List<int> data, OrderDTO order, int number)
 		{
 			if (TableUserOrder.Columns.Contains("Number") &&
@@ -20,9 +21,9 @@ namespace GUI
 				{
 					Tuple<int, string, decimal> drinkDetails = orderBLL.GetDrinkDetailsByOrderId(item);
 
-					int rowIndex = TableUserOrder.Rows.Add(); // Add a new row
+					int rowIndex = TableUserOrder.Rows.Add(); 
 
-					// Set the values in the specific cells
+					//Set dữ liệu vào bảng
 					TableUserOrder["Number", rowIndex].Value = number.ToString();
 					TableUserOrder["DrinkName", rowIndex].Value = drinkDetails.Item2;
 					TableUserOrder["Quantity", rowIndex].Value = drinkDetails.Item1.ToString();
@@ -36,7 +37,6 @@ namespace GUI
 			InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-        
 		public void DeleteRowsByDrinkOrderId(int drinkOrderId)
 		{
 			List<DataGridViewRow> rowsToDelete = new List<DataGridViewRow>();
@@ -50,15 +50,13 @@ namespace GUI
 					rowsToDelete.Add(row);
 				}
 			}
-
-			// Remove all identified rows
 			foreach (DataGridViewRow row in rowsToDelete)
 			{
 				TableUserOrder.Rows.Remove(row);
 			}
 		}
 
-        private void btnDeleteRows_Click(object sender, EventArgs e)
+        private void btnComplete_Click(object sender, EventArgs e)
         {
             int RowDelete;
             if (int.TryParse(NumberOrderComplete.Text, out RowDelete))
