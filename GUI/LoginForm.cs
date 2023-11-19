@@ -16,6 +16,7 @@ namespace GUI
             this.KeyDown += LoginForm_KeyDown;
         }
 
+        //Xử lý sự kiện đăng nhập
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUserNameLogin.Text;
@@ -27,7 +28,7 @@ namespace GUI
             {
                 var userRoles = new List<string>();
                 userRoles = userBLL.getUserRoles(userId);
-
+                //Nếu là cửa hàng thì hiển thị Submenu Form
                 if (userRoles.Contains("Branch stores"))
                 {
 
@@ -35,6 +36,7 @@ namespace GUI
                     subMenu1.SetDataFromLogin(userBLL.getUserByUsernameAndPassword(username, password));
                     subMenu1.Show();
                 }
+                //Nếu là Admin thì hiển thị ManagementAll form
                 else if (userRoles.Contains("Manager"))
                 {
                     ManagementAll managementAll = new ManagementAll();
@@ -61,6 +63,7 @@ namespace GUI
             }
         }
 
+        //Quên mật khẩu
         private void btnForgotPwrd_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -68,6 +71,7 @@ namespace GUI
             form.Show();
         }
 
+        //Đổi mật khẩu
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             this.Hide();

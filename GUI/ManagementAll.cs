@@ -22,6 +22,7 @@ namespace GUI
 			ShowStaffs();
 		}
 
+        //Hiển thị thông tin nhân viên vào bảng
 		public void ShowStaffs()
 		{
 			List<StaffDTO> staff = new List<StaffDTO>();
@@ -31,9 +32,7 @@ namespace GUI
 			TableShowStaff.Columns[4].HeaderText = "StoreId";
 		}
 
-
-
-
+        //Thêm các lựa chọn vào combobox
 		public void AdditemtoComboBox()
 		{
 			inputShift.Items.Add("9h-12h");
@@ -49,15 +48,17 @@ namespace GUI
 			optionShowOrder.Items.Add("All Order");
 		}
 
+        //xử lý sự kiện showOrder
         private void btnShowOrder_Click(object sender, EventArgs e)
         {
             DateTime time = inputTimeShowOrder.Value;
             TableShowOrder.Columns.Clear();
             string option = optionShowOrder.Text.ToString();
+            //kiểm tra option đã được chọn hay chưa
             if (option != "option")
             {
-                List<OrderDTO> filteredOrders = new List<OrderDTO>(); // Create a new list for filtered orders
-
+                //xử lý sự kiện show order theo ngày tháng năm và toàn thời gian
+                List<OrderDTO> filteredOrders = new List<OrderDTO>();
                 filteredOrders = filtedOders(option);
                 TableShowOrder.DataSource = filteredOrders;
                 TableShowOrder.Columns.Remove("PointUse");
@@ -70,12 +71,14 @@ namespace GUI
                 MessageBox.Show("Please choose an option to show orders.");
             }
         }
-
+        //xử lý sự kiện tính doanh thu
         private void btnCalculateRevenue_Click(object sender, EventArgs e) 
         {
             string option = optionShowOrder.Text.ToString();
+            //kiểm tra option đã được chọn hay chưa
             if (option != "option")
             {
+                //xử lý sự kiện tính doanh thu theo ngày tháng năm và toàn thời gian
                 List<OrderDTO> filteredOrders = new List<OrderDTO>();
                 filteredOrders = filtedOders(option);
                 int totalRevenue = 0;
@@ -91,14 +94,17 @@ namespace GUI
             }
         }
 
+        //Xử lý sự kiện thêm nhân viên
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
+            //kiểm tra đầu vào
             if (inputName.Text == "" || inputSalary.Text == "" || inputShift.Text == "" || inputUserId.Text == "")
             {
                 MessageBox.Show("Please enter all information");
             }
             else
             {
+                //Thêm nhân viên mới vào csdl, UserID dc tạo tự động
                 StaffDTO staff = new StaffDTO();
                 staff.Salary = int.Parse(inputSalary.Text.ToString());
                 staff.Name = inputName.Text.ToString();
@@ -118,13 +124,16 @@ namespace GUI
             inputUserId.Text = string.Empty;
         }
 
+        //Tính lợi nhuận
         private void btnCalculateProfit_Click(object sender, EventArgs e)
         {
+            
             DateTime time = inputTimeShowOrder.Value;
             string option = optionShowOrder.Text.ToString();
-            
+            //kiểm tra option đã được chọn hay chưa
             if (option != "option")
             {
+                //xử lý sự kiện tính lãi theo ngày tháng năm và toàn thời gian
                 decimal profit =0;
                 if (option == "Date")
                 {
@@ -153,6 +162,7 @@ namespace GUI
 
         }
 
+        //update thông tin nhân viên
         private void btnUpdateStaff_Click(object sender, EventArgs e)
         {
             if (inputName.Text == "" || inputSalary.Text == "" || inputShift.Text == "" || inputUserId.Text == "")
@@ -173,6 +183,8 @@ namespace GUI
             }
         }
 
+
+        //Xóa nhân viên(chuyển trại thái từ 1 thành 0)
         private void btnDeleteStaff_Click(object sender, EventArgs e)
         {
             if (inputStaffId.Text == "")
@@ -186,7 +198,7 @@ namespace GUI
 
             }
         }
-
+        // hiển thị product vào bảng
         private void btnShowProduct_Click(object sender, EventArgs e)
         {
             List<ProductDTO> products = new List<ProductDTO>();
@@ -198,6 +210,7 @@ namespace GUI
             TableShowOrder.Columns[4].HeaderText = "Provide Quantity";
         }
 
+        // update thông tin product
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
             if (inputProductId.Text != "")
@@ -220,18 +233,20 @@ namespace GUI
                 MessageBox.Show("choose Product");
             }
         }
-
+        //log out
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
 
+        //Xử lý sự kiện RowHeaderMouseClick của bảng Order
         private void TableShowOrder_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
+                //Nếu có dòng dc chọn thì set data vào text field
                 if(TableShowOrder.Columns.Count > 4)
                 {
                     DataGridViewRow selectedRow = TableShowOrder.Rows[e.RowIndex];
@@ -250,10 +265,12 @@ namespace GUI
             }
         }
 
+        //Xử lý sự kiện RowHeaderMouseClick của bảng Staff
         private void TableShowStaff_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
+                //Nếu có dòng dc chọn thì set data vào text field
                 DataGridViewRow selectedRow = TableShowStaff.Rows[e.RowIndex];
                 int staffId = (int)selectedRow.Cells["StaffId"].Value;
                 string name = (string)selectedRow.Cells["Name"].Value;
@@ -269,6 +286,7 @@ namespace GUI
             }
         }
 
+        //Xử lý lọc Order theo lưa chọn ngày tháng năm
         private List<OrderDTO> filtedOders(string option)
         {
             DateTime time = inputTimeShowOrder.Value;

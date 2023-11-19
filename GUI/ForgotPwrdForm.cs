@@ -16,23 +16,21 @@ namespace GUI
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        //Kiểm tra username nhập vào
+        private void btnCheckUserName_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtUserName.Text))
             {
+                //Thông báo nếu chưa nhập username
+                //Nếu đúng tiếp tục kiểm tra
                 if (userBLL.CheckUsernameExists(txtUserName.Text))
                 {
+                    //Nếu username tồn tại trong CSDL, hiển thị chức năng nhận OTP
                     setVisible();
                 }
                 else
                 {
+                    //Nếu username không tồn tại, thông báo cho người dùng
                     MessageBox.Show("Wrong Username!!!");
                 }
             }
@@ -52,26 +50,32 @@ namespace GUI
             txtOTP.Visible = true;
         }
 
-        private void btnForgotPwrd_Click(object sender, EventArgs e)
+        //Xử lý sự kiện nhận OTP
+        private void btnGetOTP_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(txtEmail.Text)) 
             {
+                //Nếu chưa nhập Email, hiển thị thông báo
                 MessageBox.Show("Enter Email!!!");
             }
             else if(!IsValidEmail(txtEmail.Text))
             {
+                //Nếu Email không ở dạng abc@def.xyz, hiển thị thông báo
                 MessageBox.Show("Not valid Email!!!");
             }
             else if(!CheckEmail(txtEmail.Text)) 
             {
+                //Nếu Email không khớp với Email liên kết với tài khoản trong CSDL, hiển thị thông báo
                 MessageBox.Show("Wrong Email!!!");
             }
             else
             {
+                //Nếu tất cả hợp lệ tiến hành gửi Email
                 otp = SendOtpToEmail(txtEmail.Text);
             }
         }
 
+        //Kiểm tra định dạng Email nhập vào
         private bool IsValidEmail(string email)
         {
             string pattern = @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$";
@@ -79,6 +83,7 @@ namespace GUI
             return regex.IsMatch(email);
         }
 
+        //Kiểm tra Email có khớp với Email liên kết với tài khoản trong CSDL hay không
         private bool CheckEmail(string inputEmail)
         {
             string email = userBLL.GetEmailFromUserName(txtUserName.Text);
@@ -89,6 +94,8 @@ namespace GUI
             return false;
         }
 
+
+        //Gửi OTP qua Email
         private int SendOtpToEmail(string toEmailAddress)
         {
             try
@@ -122,11 +129,11 @@ namespace GUI
             {
                 System.Console.WriteLine(ex.StackTrace);
                 MessageBox.Show("Cant send Email. Error: " + ex.Message);
-                
             }
             return -1;
         }
 
+        //Kiểm tra OTP khi nhấn Confirm
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtOTP.Text))
@@ -139,6 +146,7 @@ namespace GUI
             }
             else
             {
+                //Nếu OTP hợp lệ tiến hành tọa form đổi mật khẩu cho người dùng
                 this.Hide();
                 ChangePasswordForm changePasswordForm = new ChangePasswordForm(txtUserName.Text);
                 changePasswordForm.Show();
@@ -148,7 +156,7 @@ namespace GUI
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             ChangePasswordForm changePasswordForm = new ChangePasswordForm(txtUserName.Text);
             changePasswordForm.Show();
         }

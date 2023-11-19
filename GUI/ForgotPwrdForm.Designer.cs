@@ -75,7 +75,7 @@
             this.btnGetOTP.Text = "Get OTP";
             this.btnGetOTP.UseVisualStyleBackColor = false;
             this.btnGetOTP.Visible = false;
-            this.btnGetOTP.Click += new System.EventHandler(this.btnForgotPwrd_Click);
+            this.btnGetOTP.Click += new System.EventHandler(this.btnGetOTP_Click);
             // 
             // labelEmail
             // 
@@ -88,7 +88,6 @@
             this.labelEmail.TabIndex = 8;
             this.labelEmail.Text = "Email:";
             this.labelEmail.Visible = false;
-            this.labelEmail.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCheckUserName
             // 
@@ -101,7 +100,7 @@
             this.btnCheckUserName.TabIndex = 9;
             this.btnCheckUserName.Text = "Check";
             this.btnCheckUserName.UseVisualStyleBackColor = false;
-            this.btnCheckUserName.Click += new System.EventHandler(this.button1_Click);
+            this.btnCheckUserName.Click += new System.EventHandler(this.btnCheckUserName_Click);
             // 
             // txtEmail
             // 
