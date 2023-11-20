@@ -71,6 +71,8 @@ namespace GUI
             this.label9 = new System.Windows.Forms.Label();
             this.btnShowProduct = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.PictureBox();
+            this.btnExcelOrder = new System.Windows.Forms.Button();
+            this.btnExcelStaff = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TableShowOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableShowStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -561,12 +563,40 @@ namespace GUI
             this.btnLogout.TabStop = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnExcelOrder
+            // 
+            this.btnExcelOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnExcelOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnExcelOrder.Location = new System.Drawing.Point(379, 249);
+            this.btnExcelOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExcelOrder.Name = "btnExcelOrder";
+            this.btnExcelOrder.Size = new System.Drawing.Size(109, 36);
+            this.btnExcelOrder.TabIndex = 107;
+            this.btnExcelOrder.Text = "Excel";
+            this.btnExcelOrder.UseVisualStyleBackColor = false;
+            this.btnExcelOrder.Click += new System.EventHandler(this.btnExcelOrder_Click);
+            // 
+            // btnExcelStaff
+            // 
+            this.btnExcelStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnExcelStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnExcelStaff.Location = new System.Drawing.Point(943, 312);
+            this.btnExcelStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExcelStaff.Name = "btnExcelStaff";
+            this.btnExcelStaff.Size = new System.Drawing.Size(109, 36);
+            this.btnExcelStaff.TabIndex = 108;
+            this.btnExcelStaff.Text = "Excel";
+            this.btnExcelStaff.UseVisualStyleBackColor = false;
+            this.btnExcelStaff.Click += new System.EventHandler(this.btnExcelStaff_Click);
+            // 
             // ManagementAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1287, 551);
+            this.Controls.Add(this.btnExcelStaff);
+            this.Controls.Add(this.btnExcelOrder);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnShowProduct);
             this.Controls.Add(this.groupBox4);
@@ -638,5 +668,7 @@ namespace GUI
 		private Label label9;
 		private Button btnShowProduct;
         private PictureBox btnLogout;
+        private Button btnExcelOrder;
+        private Button btnExcelStaff;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Excel = Microsoft.Office.Interop.Excel;
 using System.Windows.Forms;
 using DTO;
 using BLL;
@@ -341,5 +342,53 @@ namespace GUI
 
             return filteredOrders;
         }
+
+        private void btnExcelOrder_Click(object sender, EventArgs e)
+        {
+            ExportToExcel(TableShowOrder);
+        }
+
+        private void btnExcelStaff_Click(object sender, EventArgs e)
+        {
+            ExportToExcel(TableShowStaff);
+        }
+
+        public void ExportToExcel(DataGridView dataGridView)
+        {
+            if (dataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu để xuất ra Excel!");
+                return;
+            }
+
+            // Tạo một ứng dụng Excel
+            Excel.Application excelApp = new Excel.Application();
+
+            // Tạo một Workbook mới
+            Excel.Workbook excelWorkbook = excelApp.Workbooks.Add(Type.Missing);
+
+            // Tạo một Worksheet mới và đặt nó làm Worksheet đầu tiên
+            Excel.Worksheet excelWorksheet = (Excel.Worksheet)excelWorkbook.Sheets[1];
+
+            // Xuất tiêu đề
+            for (int i = 1; i < dataGridView.Columns.Count + 1; i++)
+            {
+                excelWorksheet.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
+            }
+
+            // Xuất dữ liệu
+            for (int i = 0; i < dataGridView.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView.Columns.Count; j++)
+                {
+                    excelWorksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            // Mở Excel
+            excelApp.Visible = true;
+        }
+
+
     }
 }
