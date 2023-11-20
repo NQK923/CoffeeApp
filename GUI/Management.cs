@@ -23,6 +23,8 @@ namespace GUI
 		public Management()
 		{
 			InitializeComponent();
+            btnCalculateRevenue.Enabled = false;
+            btnCalculateProfit.Enabled = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             AddItemsComboBox();
 
@@ -77,6 +79,8 @@ namespace GUI
                 TableShowOrder.Columns.Remove("Status");
                 TableShowOrder.Columns[1].HeaderText = "StoreId";
                 TableShowOrder.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                btnCalculateProfit.Enabled = true;
+                btnCalculateRevenue.Enabled = true;
             }
             else
             {
@@ -98,7 +102,16 @@ namespace GUI
                 {
                     totalRevenue += order.Total;
                 }
-                labelRevenue.Text = totalRevenue.ToString() + " VND";
+                if (labelRevenue.Text == "")
+                {
+                    labelRevenue.Text = totalRevenue.ToString() + " VND";
+                    labelRevenue.Visible = true;
+                }
+                else
+                {
+                    labelRevenue.Text = "";
+                    labelRevenue.Visible = false;
+                }
             }
             else
             {
@@ -177,7 +190,16 @@ namespace GUI
                 }
 
                 int intprofit = Convert.ToInt32(profit);
-                labelProfit.Text = intprofit.ToString() + " VND";
+                if (labelProfit.Text == "")
+                {
+                    labelProfit.Text = intprofit.ToString() + " VND";
+                    labelProfit.Visible = true;
+                }
+                else
+                {
+                    labelProfit.Text = "";
+                    labelProfit.Visible = false;
+                }        
             }
             else
             {

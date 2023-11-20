@@ -17,6 +17,8 @@ namespace GUI
 		public ManagementAll()
 		{
 			InitializeComponent();
+            btnCalculateProfit.Enabled = false;
+            btnCalculateRevenue.Enabled = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             AdditemtoComboBox();
 			ShowStaffs();
@@ -65,6 +67,8 @@ namespace GUI
                 TableShowOrder.Columns.Remove("Status");
                 TableShowOrder.Columns[1].HeaderText = "StoreId";
                 TableShowOrder.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                btnCalculateRevenue.Enabled = true;
+                btnCalculateProfit.Enabled = true;
             }
             else
             {
@@ -86,7 +90,15 @@ namespace GUI
                 {
                     totalRevenue += order.Total;
                 }
-                labelRevenue.Text = totalRevenue.ToString() + " VND";
+                if (labelRevenue.Text == "")
+                {
+                    labelRevenue.Text = totalRevenue.ToString() + " VND";
+                    labelRevenue.Visible = true;
+                } else
+                {
+                    labelRevenue.Text = "";
+                    labelRevenue.Visible = false;
+                }  
             }
             else
             {
@@ -122,6 +134,7 @@ namespace GUI
             inputShift.Text = string.Empty;
             inputStaffId.Text = string.Empty;
             inputUserId.Text = string.Empty;
+            btnAddStaff.Enabled = true;
         }
 
         //Tính lợi nhuận
@@ -153,7 +166,16 @@ namespace GUI
                 }
 
                 int intprofit = Convert.ToInt32(profit);
-                labelProfit.Text = intprofit.ToString() + " VND";
+                if (labelProfit.Text == "")
+                {
+                    labelProfit.Text = intprofit.ToString() + " VND";
+                    labelProfit.Visible = true;
+                }
+                else
+                {
+                    labelProfit.Text = "";
+                    labelProfit.Visible = false;
+                }
             }
             else
             {
@@ -179,6 +201,7 @@ namespace GUI
                 staff.Salary = int.Parse(inputSalary.Text.ToString());
                 staffBLL.UpdateStaff(staff);
                 ShowStaffs();
+             
 
             }
         }
@@ -195,6 +218,7 @@ namespace GUI
             {
                 staffBLL.UpdateStaffStatus(int.Parse(inputStaffId.Text));
                 ShowStaffs();
+              
 
             }
         }
@@ -208,6 +232,8 @@ namespace GUI
             TableShowOrder.Columns[0].HeaderText = "ProductId";
             TableShowOrder.Columns[1].HeaderText = "Product Name";
             TableShowOrder.Columns[4].HeaderText = "Provide Quantity";
+            btnCalculateProfit.Enabled = false;
+            btnCalculateRevenue.Enabled = false;
         }
 
         // update thông tin product
@@ -283,6 +309,7 @@ namespace GUI
                 inputShift.Text = shift.ToString();
                 inputUserId.Text = storeId.ToString();
                 inputStaffId.Text = staffId.ToString();
+                btnAddStaff.Enabled = false;
             }
         }
 

@@ -18,6 +18,7 @@ namespace GUI
         public SubMenu()
         {
             InitializeComponent();
+            btnMenu.Enabled = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             PaymentMethods.Items.Add("by Cash");
             Password.Visible = false;
