@@ -364,10 +364,7 @@ namespace GUI
             TableShowStaff.Columns[4].HeaderText = "StoreId";
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
-        {
-            textBoxSearch.Text= string.Empty;
-        }
+        
 
 
 
@@ -417,6 +414,6 @@ namespace GUI
             excelApp.Visible = true;
         }
 
-
+        
     }
 }

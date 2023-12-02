@@ -75,7 +75,7 @@ namespace GUI
             this.btnExcelStaff = new System.Windows.Forms.Button();
             this.labelSearch = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonClearSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TableShowOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableShowStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -337,7 +337,7 @@ namespace GUI
             // 
             this.btnUpdateStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnUpdateStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnUpdateStaff.Location = new System.Drawing.Point(502, 494);
+            this.btnUpdateStaff.Location = new System.Drawing.Point(506, 494);
             this.btnUpdateStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateStaff.Name = "btnUpdateStaff";
             this.btnUpdateStaff.Size = new System.Drawing.Size(136, 36);
@@ -350,7 +350,7 @@ namespace GUI
             // 
             this.btnDeleteStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnDeleteStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnDeleteStaff.Location = new System.Drawing.Point(658, 494);
+            this.btnDeleteStaff.Location = new System.Drawing.Point(680, 494);
             this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStaff.Name = "btnDeleteStaff";
             this.btnDeleteStaff.Size = new System.Drawing.Size(109, 36);
@@ -577,18 +577,20 @@ namespace GUI
             this.btnExcelOrder.TabIndex = 107;
             this.btnExcelOrder.Text = "Excel";
             this.btnExcelOrder.UseVisualStyleBackColor = false;
+            this.btnExcelOrder.Click += new System.EventHandler(this.btnExcelOrder_Click);
             // 
             // btnExcelStaff
             // 
             this.btnExcelStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnExcelStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnExcelStaff.Location = new System.Drawing.Point(813, 494);
+            this.btnExcelStaff.Location = new System.Drawing.Point(830, 494);
             this.btnExcelStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelStaff.Name = "btnExcelStaff";
             this.btnExcelStaff.Size = new System.Drawing.Size(109, 36);
             this.btnExcelStaff.TabIndex = 108;
             this.btnExcelStaff.Text = "Excel";
             this.btnExcelStaff.UseVisualStyleBackColor = false;
+            this.btnExcelStaff.Click += new System.EventHandler(this.btnExcelStaff_Click);
             // 
             // labelSearch
             // 
@@ -616,17 +618,17 @@ namespace GUI
             this.textBoxSearch.TabIndex = 110;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
-            // buttonSearch
+            // buttonClearSearch
             // 
-            this.buttonSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.buttonSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonSearch.Location = new System.Drawing.Point(1181, 337);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(86, 41);
-            this.buttonSearch.TabIndex = 111;
-            this.buttonSearch.Text = "Clear";
-            this.buttonSearch.UseVisualStyleBackColor = false;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            this.buttonClearSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttonClearSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonClearSearch.Location = new System.Drawing.Point(1181, 337);
+            this.buttonClearSearch.Name = "buttonClearSearch";
+            this.buttonClearSearch.Size = new System.Drawing.Size(86, 41);
+            this.buttonClearSearch.TabIndex = 111;
+            this.buttonClearSearch.Text = "Clear";
+            this.buttonClearSearch.UseVisualStyleBackColor = false;
+            this.buttonClearSearch.Click += new System.EventHandler(this.buttonClaer_Click);
             // 
             // ManagementAll
             // 
@@ -634,7 +636,7 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1287, 551);
-            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.buttonClearSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.btnExcelStaff);
@@ -714,6 +716,6 @@ namespace GUI
         private Button btnExcelStaff;
         private Label labelSearch;
         private TextBox textBoxSearch;
-        private Button buttonSearch;
+        private Button buttonClearSearch;
     }
 }
