@@ -5,7 +5,7 @@ namespace DAL
 {
     public class DrinkOrderDAL
     {
-        private string connectionString = @"Data Source=DESKTOP-0HUV1DN\SQLEXPRESS;Initial Catalog=Coffee;User ID=sa;Password=123;TrustServerCertificate=true;";
+        private string connectionString = @"Data Source=LAPTOP-AUM0GEB8\VANHAI;Initial Catalog=Coffee;User ID=sa;Password=123456;TrustServerCertificate=true;";
         public decimal CalculateProfit()
         {
             decimal totalProfit = 0;

@@ -204,7 +204,7 @@ namespace GUI
             // 
             this.btnCalculateProfit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCalculateProfit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnCalculateProfit.Location = new System.Drawing.Point(824, 250);
+            this.btnCalculateProfit.Location = new System.Drawing.Point(759, 248);
             this.btnCalculateProfit.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculateProfit.Name = "btnCalculateProfit";
             this.btnCalculateProfit.Size = new System.Drawing.Size(103, 40);
@@ -364,27 +364,25 @@ namespace GUI
             // 
             this.btnExcelOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnExcelOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnExcelOrder.Location = new System.Drawing.Point(1017, 0);
+            this.btnExcelOrder.Location = new System.Drawing.Point(983, 250);
             this.btnExcelOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelOrder.Name = "btnExcelOrder";
             this.btnExcelOrder.Size = new System.Drawing.Size(103, 40);
             this.btnExcelOrder.TabIndex = 30;
             this.btnExcelOrder.Text = "Excel";
             this.btnExcelOrder.UseVisualStyleBackColor = false;
-            this.btnExcelOrder.Click += new System.EventHandler(this.btnExcelOrder_Click);
             // 
             // btnExcelStaff
             // 
             this.btnExcelStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnExcelStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnExcelStaff.Location = new System.Drawing.Point(1017, 476);
+            this.btnExcelStaff.Location = new System.Drawing.Point(1004, 472);
             this.btnExcelStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelStaff.Name = "btnExcelStaff";
             this.btnExcelStaff.Size = new System.Drawing.Size(103, 40);
             this.btnExcelStaff.TabIndex = 31;
             this.btnExcelStaff.Text = "Excel";
             this.btnExcelStaff.UseVisualStyleBackColor = false;
-            this.btnExcelStaff.Click += new System.EventHandler(this.btnExcelStaff_Click);
             // 
             // Management
             // 

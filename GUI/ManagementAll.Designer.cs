@@ -73,6 +73,9 @@ namespace GUI
             this.btnLogout = new System.Windows.Forms.PictureBox();
             this.btnExcelOrder = new System.Windows.Forms.Button();
             this.btnExcelStaff = new System.Windows.Forms.Button();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TableShowOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableShowStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -111,7 +114,7 @@ namespace GUI
             // 
             this.btnCalculateRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCalculateRevenue.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnCalculateRevenue.Location = new System.Drawing.Point(380, 188);
+            this.btnCalculateRevenue.Location = new System.Drawing.Point(360, 194);
             this.btnCalculateRevenue.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculateRevenue.Name = "btnCalculateRevenue";
             this.btnCalculateRevenue.Size = new System.Drawing.Size(108, 36);
@@ -148,7 +151,7 @@ namespace GUI
             // 
             this.btnAddStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAddStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAddStaff.Location = new System.Drawing.Point(376, 494);
+            this.btnAddStaff.Location = new System.Drawing.Point(360, 494);
             this.btnAddStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddStaff.Name = "btnAddStaff";
             this.btnAddStaff.Size = new System.Drawing.Size(112, 36);
@@ -214,7 +217,7 @@ namespace GUI
             // 
             this.btnCalculateProfit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCalculateProfit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnCalculateProfit.Location = new System.Drawing.Point(589, 188);
+            this.btnCalculateProfit.Location = new System.Drawing.Point(516, 195);
             this.btnCalculateProfit.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculateProfit.Name = "btnCalculateProfit";
             this.btnCalculateProfit.Size = new System.Drawing.Size(90, 36);
@@ -334,7 +337,7 @@ namespace GUI
             // 
             this.btnUpdateStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnUpdateStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnUpdateStaff.Location = new System.Drawing.Point(603, 494);
+            this.btnUpdateStaff.Location = new System.Drawing.Point(502, 494);
             this.btnUpdateStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateStaff.Name = "btnUpdateStaff";
             this.btnUpdateStaff.Size = new System.Drawing.Size(136, 36);
@@ -347,7 +350,7 @@ namespace GUI
             // 
             this.btnDeleteStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnDeleteStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnDeleteStaff.Location = new System.Drawing.Point(813, 494);
+            this.btnDeleteStaff.Location = new System.Drawing.Point(658, 494);
             this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStaff.Name = "btnDeleteStaff";
             this.btnDeleteStaff.Size = new System.Drawing.Size(109, 36);
@@ -543,7 +546,7 @@ namespace GUI
             // 
             this.btnShowProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnShowProduct.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnShowProduct.Location = new System.Drawing.Point(768, 189);
+            this.btnShowProduct.Location = new System.Drawing.Point(635, 196);
             this.btnShowProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowProduct.Name = "btnShowProduct";
             this.btnShowProduct.Size = new System.Drawing.Size(154, 35);
@@ -567,27 +570,63 @@ namespace GUI
             // 
             this.btnExcelOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnExcelOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnExcelOrder.Location = new System.Drawing.Point(379, 249);
+            this.btnExcelOrder.Location = new System.Drawing.Point(830, 194);
             this.btnExcelOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelOrder.Name = "btnExcelOrder";
             this.btnExcelOrder.Size = new System.Drawing.Size(109, 36);
             this.btnExcelOrder.TabIndex = 107;
             this.btnExcelOrder.Text = "Excel";
             this.btnExcelOrder.UseVisualStyleBackColor = false;
-            this.btnExcelOrder.Click += new System.EventHandler(this.btnExcelOrder_Click);
             // 
             // btnExcelStaff
             // 
             this.btnExcelStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnExcelStaff.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnExcelStaff.Location = new System.Drawing.Point(943, 312);
+            this.btnExcelStaff.Location = new System.Drawing.Point(813, 494);
             this.btnExcelStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcelStaff.Name = "btnExcelStaff";
             this.btnExcelStaff.Size = new System.Drawing.Size(109, 36);
             this.btnExcelStaff.TabIndex = 108;
             this.btnExcelStaff.Text = "Excel";
             this.btnExcelStaff.UseVisualStyleBackColor = false;
-            this.btnExcelStaff.Click += new System.EventHandler(this.btnExcelStaff_Click);
+            // 
+            // labelSearch
+            // 
+            this.labelSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.labelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelSearch.Location = new System.Drawing.Point(965, 308);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelSearch.Size = new System.Drawing.Size(139, 32);
+            this.labelSearch.TabIndex = 109;
+            this.labelSearch.Text = "Search Staff ";
+            this.labelSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSearch.Location = new System.Drawing.Point(965, 337);
+            this.textBoxSearch.Multiline = true;
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(218, 41);
+            this.textBoxSearch.TabIndex = 110;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttonSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.buttonSearch.Location = new System.Drawing.Point(1181, 337);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(86, 41);
+            this.buttonSearch.TabIndex = 111;
+            this.buttonSearch.Text = "Clear";
+            this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // ManagementAll
             // 
@@ -595,6 +634,9 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1287, 551);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.btnExcelStaff);
             this.Controls.Add(this.btnExcelOrder);
             this.Controls.Add(this.btnLogout);
@@ -670,5 +712,8 @@ namespace GUI
         private PictureBox btnLogout;
         private Button btnExcelOrder;
         private Button btnExcelStaff;
+        private Label labelSearch;
+        private TextBox textBoxSearch;
+        private Button buttonSearch;
     }
 }

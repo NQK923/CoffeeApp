@@ -343,6 +343,34 @@ namespace GUI
             return filteredOrders;
         }
 
+        private void buttonClaer_Click(object sender, EventArgs e)
+        {
+            textBoxSearch.Text = string.Empty;
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            List<StaffDTO> staffList = new List<StaffDTO>();
+            foreach (var staff in staffBLL.GetAllStaff())
+            {
+                String id = Convert.ToString(staff.StaffId);
+                if (id.Contains(textBoxSearch.Text) || staff.Name.Contains(textBoxSearch.Text))
+                {
+                    staffList.Add(staff);
+                }
+            }
+            TableShowStaff.DataSource = staffList;
+            TableShowStaff.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            TableShowStaff.Columns[4].HeaderText = "StoreId";
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            textBoxSearch.Text= string.Empty;
+        }
+
+
+
         private void btnExcelOrder_Click(object sender, EventArgs e)
         {
             ExportToExcel(TableShowOrder);
